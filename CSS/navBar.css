@@ -1,0 +1,165 @@
+.navBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+}
+
+.navBar .navBar-content {
+  background: #155eb1;
+  -webkit-box-shadow: 0 0 10px #000;
+          box-shadow: 0 0 10px #000;
+  width: 100%;
+  z-index: 500;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+}
+
+.navBar .navBar-content .btn-open-navBar {
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: #000;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navBar .navBar-content .btn-open-navBar .line-top {
+  border-radius: 10px;
+  z-index: 100;
+  background: #ffffff;
+  width: 30px;
+  height: 2px;
+  position: absolute;
+}
+
+.navBar .navBar-content .btn-open-navBar .line-bottom {
+  position: absolute;
+  z-index: 100;
+  background: #ffffff;
+  width: 30px;
+  height: 2px;
+  bottom: 0;
+}
+
+.navBar .navBar-content .logo-navBar-area {
+  width: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin: 0;
+  border-bottom: 1px solid #ffffff80;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.navBar .navBar-content .logo-navBar-area img {
+  padding: 5px;
+  background: #ffffff80;
+  border-radius: 25px;
+  width: 75%;
+  margin: 5%;
+  place-self: center;
+}
+
+.navBar .navBar-content .navBar {
+  gap: 30px;
+  margin-left: 5px;
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.navBar .navBar-content .navBar li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 50px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 5px 10px;
+  padding-right: 0;
+  margin-right: 5px;
+}
+
+.navBar .navBar-content .navBar li i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.navBar .navBar-content .navBar li:hover {
+  color: #155db1;
+  background: #ffffff;
+}
+
+.navBar .navBar-content .navBar li:hover::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: #155db1;
+  position: absolute;
+  right: 0;
+  margin-right: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.navBar .navBar-content .navBar li.active {
+  color: #155db1;
+  background: #ffffff;
+}
+
+.navBar .navBar-content .navBar li.active::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: #155db1;
+  position: absolute;
+  right: 0;
+  margin-right: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+/*# sourceMappingURL=navBar.css.map */

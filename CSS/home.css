@@ -1,0 +1,64 @@
+.home {
+  width: calc(100vw - 25.5%);
+  margin-left: 25.1%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 11;
+  grid-column: 1/12;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.home .home-content {
+  width: 100%;
+  background: cornflowerblue;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[6];
+      grid-template-columns: repeat(6, auto);
+  -ms-grid-rows: (auto)[6];
+      grid-template-rows: repeat(6, auto);
+}
+
+.home .home-content .video-area-home {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1/6;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  grid-row: 1/6;
+}
+
+.home .home-content .video-area-home img {
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+}
+
+.home .home-content .video-area-home video {
+  width: 100%;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  place-self: center;
+  z-index: 200;
+  border-radius: 5px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1/6;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  grid-row: 1/6;
+}
+/*# sourceMappingURL=home.css.map */
