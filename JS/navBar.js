@@ -4,47 +4,69 @@
  */
 navBarBtn();
 function navBarBtn() {
-    let navBar = document.documentElement.querySelector('.navBar');
-    let btnNavBar = document.documentElement.querySelector('.btn-open-navBar');
-    let home = document.documentElement.querySelector('.home');
+    let navBar = document.documentElement.querySelector('.navBar'); //contendor de menú de navegación
+    let btnNavBar = document.documentElement.querySelector('.btn-open-navBar'); //btn del menú de navegación
+    let home = document.documentElement.querySelector('.home'); //contenedor de la sección de "home"
+    let backdropBox = document.documentElement.querySelector('.backdrop-box'); //caja para dar opacidad al fondo
 
     /**
-     * ?desktop
+     * todo|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+     * todo|||||||||||||||||||||||||||||||||||||||||All|||||||||||||||||||||||||||||||||||||||||
+     * todo|||||||||||||||||||||||||||||||||All|||||||||||||All|||||||||||||||||||||||||||||||||
+     * todo|||||||||||||||||||||||||All||||||||||||||||||||||||||||||All||||||||||||||||||||||||
+     * todo|||||||||||||||||||||||||||||||||All|||||||||||||All|||||||||||||||||||||||||||||||||
+     * todo|||||||||||||||||||||||||||||||||||||||||All|||||||||||||||||||||||||||||||||||||||||
+     * todo|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+     */
+    backdropBox.addEventListener('click', function () {
+        backdropBox.classList.toggle('active'); //caja para dar opacidad a fondo
+    });
+    /**
+     * todo|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+     * todo|||||||||||||||||||||||||||||||||||||||||Desktop|||||||||||||||||||||||||||||||||||||
+     * todo|||||||||||||||||||||||||||||||||Desktop|||||||||Desktop|||||||||||||||||||||||||||||
+     * todo|||||||||||||||||||||||||Desktop||||||||||||||||||||||||||Desktop||||||||||||||||||||
+     * todo|||||||||||||||||||||||||||||||||Desktop|||||||||Desktop|||||||||||||||||||||||||||||
+     * todo|||||||||||||||||||||||||||||||||||||||||Desktop|||||||||||||||||||||||||||||||||||||
+     * todo|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
      */
     if (document.documentElement.scrollWidth > 750) {
-        navBar.classList.add('active-Desktop');
-        home.classList.add('active-Desktop');
-        
+        navBar.classList.add('active-Desktop'); //contenedor del menú de navegación 
+        home.classList.add('active-Desktop'); //contenedor de la sección de "home"
+
+        // configurando el desplazamiento del menú de navegación
         btnNavBar.addEventListener('click', function () {
-            btnNavBar.classList.toggle('active-Desktop');
-            navBar.classList.toggle('active-Desktop');
-            home.classList.toggle('active-Desktop');
+            btnNavBar.classList.toggle('active-Desktop'); //btn de la menú de navegación
+            navBar.classList.toggle('active-Desktop'); //contenedor de menú de navegación
+            home.classList.toggle('active-Desktop'); //contenedor de sección "home"
+        });
+        // off main and backdrop
+        backdropBox.addEventListener('click', function () { 
+            btnNavBar.classList.toggle('active-Desktop'); //btn de la menú de navegación
+            navBar.classList.toggle('active-Desktop'); //contendor de menú de navegación
+            home.classList.toggle('active-Desktop'); //contenedor de sección "home"
         });
     }
     /**
-     * ?mobile
+     * todo|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+     * todo|||||||||||||||||||||||||||||||||||||||||Mobile||||||||||||||||||||||||||||||||||||||
+     * todo|||||||||||||||||||||||||||||||||Mobile||||||||||Mobile||||||||||||||||||||||||||||||
+     * todo|||||||||||||||||||||||||Mobile|||||||||||||||||||||||||||Mobile|||||||||||||||||||||
+     * todo|||||||||||||||||||||||||||||||||Mobile||||||||||Mobile||||||||||||||||||||||||||||||
+     * todo|||||||||||||||||||||||||||||||||||||||||Mobile||||||||||||||||||||||||||||||||||||||
+     * todo|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
      */
+
+    // ocultando menú de navegación (click en btn "navBar")
     btnNavBar.addEventListener('click', function () {
-        btnNavBar.classList.toggle('active');
-        navBar.classList.toggle('active');
+        backdropBox.classList.toggle('active'); //caja para dar opacidad  a fondo
+        btnNavBar.classList.toggle('active'); //btn del menú de navegación
+        navBar.classList.toggle('active'); //contenedor del menú de navegación 
     });
-
-    /**
-     * ?backdrop box...
-     */
-    // dando opacidad al toda la pantalla para que el menú quede resaltado
-    let backdropBox = document.documentElement.querySelector('.backdrop-box');
-
-    // on Off opacity back
-    btnNavBar.addEventListener('click',function () {
-        backdropBox.classList.toggle('active');
-    });
-    // off main and backdrop
+    // ocultando menú de navegación y quitar opacidad de fondo (click contenedor backdrop)
     backdropBox.addEventListener('click', function () {
-        backdropBox.classList.toggle('active');
-        btnNavBar.classList.toggle('active-Desktop');
-        navBar.classList.toggle('active-Desktop');
-        home.classList.toggle('active-Desktop');
+        btnNavBar.classList.toggle('active'); // btn para el menú de navegación
+        navBar.classList.toggle('active'); //contenedor del menú de navegación
     });
 };
 
