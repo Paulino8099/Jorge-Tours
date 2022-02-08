@@ -6,48 +6,46 @@
   height: 100%;
   -webkit-transition: .5s;
   transition: .5s;
-  z-index: 1000;
+  z-index: 11000;
   display: -ms-grid;
   display: grid;
 }
 
-.navBar.activeDesktop .navBar-content {
+.navBar.active-Desktop .navBar-content {
   width: 50px;
 }
 
-.navBar.activeDesktop .navBar-content .logo-navBar-area {
+.navBar.active-Desktop .navBar-content .logo-navBar-area {
   width: 50px;
   height: 55px;
 }
 
-.navBar.activeDesktop .navBar-content .logo-navBar-area .logo-navBar {
+.navBar.active-Desktop .navBar-content .logo-navBar-area .logo-navBar {
   opacity: 0;
 }
 
-.navBar.activeDesktop .navBar-content .logo-navBar-area .palmera-navBar {
+.navBar.active-Desktop .navBar-content .logo-navBar-area .palmera-navBar {
   background: none;
   opacity: 1;
 }
 
-.navBar.activeDesktop .navBar-content .main li {
+.navBar.active-Desktop .navBar-content .main li {
   width: 30px;
   height: 30px;
   padding: 5px;
   border-radius: 50px;
-  place-items: center;
-  display: -ms-grid;
-  display: grid;
+  place-content: center;
 }
 
-.navBar.activeDesktop .navBar-content .main li::after {
-  display: none;
+.navBar.active-Desktop .navBar-content .main li::after {
+  opacity: 0;
 }
 
-.navBar.activeDesktop .navBar-content .main li i {
+.navBar.active-Desktop .navBar-content .main li i {
   margin-right: 0;
 }
 
-.navBar.activeDesktop .navBar-content .main li h3 {
+.navBar.active-Desktop .navBar-content .main li h3 {
   display: none;
 }
 
@@ -121,7 +119,7 @@
   transition: .5s;
 }
 
-.navBar .navBar-content .btn-open-navBar.activeDesktop .line-top {
+.navBar .navBar-content .btn-open-navBar.active-Desktop .line-top {
   width: 35px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -129,12 +127,12 @@
   place-self: center;
 }
 
-.navBar .navBar-content .btn-open-navBar.activeDesktop .line-bottom {
+.navBar .navBar-content .btn-open-navBar.active-Desktop .line-bottom {
   width: 0;
   height: 0;
 }
 
-.navBar .navBar-content .btn-open-navBar.activeDesktop .line-bottom::after {
+.navBar .navBar-content .btn-open-navBar.active-Desktop .line-bottom::after {
   width: 35px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -151,6 +149,7 @@
   border-bottom: 1px solid #ffffff80;
   -webkit-transition: .5s;
   transition: .5s;
+  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-column: 1;
@@ -162,26 +161,27 @@
 }
 
 .navBar .navBar-content .logo-navBar-area img {
+  background: #202f3d;
   padding: 5px;
   border-radius: 25px;
   width: 75%;
   margin: 5%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   place-self: center;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s cubic-bezier(0.95, 0.02, 0.38, 1.25);
+  transition: 0.5s cubic-bezier(0.95, 0.02, 0.38, 1.25);
 }
 
 .navBar .navBar-content .logo-navBar-area .palmera-navBar {
   opacity: 0;
-  margin-top: -80%;
-  -webkit-transition: .5s;
-  transition: .5s;
+  position: absolute;
 }
 
 .navBar .navBar-content .main {
   gap: 30px;
   margin-left: 5px;
-  position: relative;
   width: 100%;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -206,9 +206,8 @@
   list-style: none;
   color: #ffffff;
   cursor: pointer;
-  border-radius: 50px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   padding: 5px 10px;
   padding-right: 0;
   margin-right: 5px;
@@ -232,22 +231,8 @@
   background: #155db1;
   position: absolute;
   right: 0;
-  margin-right: 5px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.navBar .navBar-content .main li i {
-  margin-right: 10px;
-  font-size: 1.5rem;
-}
-
-.navBar .navBar-content .main li h3 {
-  font-size: .9rem;
-  -webkit-transition: .5s;
-  transition: .5s;
 }
 
 .navBar .navBar-content .main li:hover {
@@ -262,11 +247,22 @@
   background: #155db1;
   position: absolute;
   right: 0;
-  margin-right: 5px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  -webkit-transition: 0;
-  transition: 0;
+}
+
+.navBar .navBar-content .main li:active {
+  color: #155db1bf;
+  background: #ffffffbf;
+}
+
+.navBar .navBar-content .main li i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.navBar .navBar-content .main li h3 {
+  font-size: .9rem;
 }
 
 @media (max-width: 750px) {
@@ -319,6 +315,14 @@
   }
   .navBar .navBar-content .main {
     gap: 50px;
+  }
+  .navBar .navBar-content .main li:hover {
+    color: #ffffff;
+    background: #155db1;
+  }
+  .navBar .navBar-content .main li:active {
+    color: #155db1;
+    background: #ffffff;
   }
 }
 /*# sourceMappingURL=navBar.css.map */

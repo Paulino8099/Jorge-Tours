@@ -13,10 +13,10 @@
 	width: 175px;
 	height: 100%;
 	transition: .5s;
-	z-index: 1000;
+	z-index: 11000;
 
 	display: grid;
-	&.activeDesktop {
+	&.active-Desktop {
 		.navBar-content {
 			width: 50px; //edit(remove: 100%, add: 50px)
 			.logo-navBar-area {
@@ -34,13 +34,12 @@
 				li {
 					width: 30px; //edit(add: width)
 					height: 30px; //edit(add: height)
-					padding: 5px; //edit(add: 5px all)
-					border-radius: 50px; //edit(add: 50px all)
-					place-items: center; //edit(add: place-items)
-
-					display: grid;
+					padding: 5px; //edit(add: 5px-all)
+					border-radius: 50px; //edit(remove: [50px 50px 0 0], add: 50px-all)
+					place-content: center; //edit(add: place-items)
 					&::after {
-						display: none; //edit(add: display)
+						opacity: 0;
+						// display: none; //edit(add: display)
 					}
 					i {
 						margin-right: 0; //edit(remove: 10px, add: 0)
@@ -105,7 +104,7 @@
 					transition: .5s;
 				}
 			}
-			&.activeDesktop {
+			&.active-Desktop {
 				.line-top {
 					width: 35px; //edit(remove: 30px, add: 35px)
 					transform: rotate(45deg); //edit(add: transform)
@@ -131,29 +130,30 @@
 			margin: 0;
 			border-bottom: 1px solid #ffffff80;
 			transition: .5s;
+			position: relative;
 
 			display: grid;
 			grid-column: 1/3;
 			grid-row: 1/2;
 			img {
+				background: #202f3d;
 				padding: 5px;
 				border-radius: 25px;
 				width: 75%;
 				margin: 5%;
+				height: min-content;
 				place-self: center;
-				transition: .5s;
+				transition: .5s cubic-bezier(.95,.02,.38,1.25);
 			}
 			.palmera-navBar {
-				opacity: 0;
-				margin-top: -80%;
-				transition: .5s;
+				opacity: 0; 
+				position: absolute;
 			}
 		}
 		// main
 		.main {
 			gap: 30px;
 			margin-left: 5px;
-			position: relative;
 			width: 100%;
 			align-content: center;
 			transition: .5s;
@@ -166,9 +166,8 @@
 				list-style: none;
 				color: #ffffff;
 				cursor: pointer;
-				border-radius: 50px;
-				border-top-right-radius: 0;
-				border-bottom-right-radius: 0;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 50px;
 				padding: 5px 10px;
 				padding-right: 0;
 				margin-right: 5px;
@@ -185,21 +184,9 @@
 						background: #155db1;
 						position: absolute;
 						right: 0;
-						margin-right: 5px;
 						border-top-left-radius: 5px;
 						border-bottom-left-radius: 5px;
-						transition: .5s;
 					}
-				}
-				// logo
-				i {
-					margin-right: 10px;
-					font-size: 1.5rem;
-				}
-				// text
-				h3 {
-					font-size: .9rem;
-					transition: .5s;
 				}
 				&:hover {
 					color: #155db1;
@@ -211,11 +198,22 @@
 						background: #155db1;
 						position: absolute;
 						right: 0;
-						margin-right: 5px;
 						border-top-left-radius: 5px;
 						border-bottom-left-radius: 5px;
-						transition: 0;
 					}
+				}
+				&:active {
+					color: #155db1bf;
+					background: #ffffffbf;
+				}
+				// logo
+				i {
+					margin-right: 10px;
+					font-size: 1.5rem;
+				}
+				// text
+				h3 {
+					font-size: .9rem;
 				}
 			}
 		}
@@ -224,7 +222,7 @@
 
 @media (max-width: 750px) {
 	.navBar {
-		height: 500px;
+		height: 500px; //edit (remove: 100%, add: 500px)
 		transform: translateX(-101%); //edit(add: transform)
 		&.active {
 			transform: translateX(0); //edit(remove: -100%, add: 0)
@@ -267,7 +265,17 @@
 				}
 			}
 			.main {
-				gap: 50px;
+				gap: 50px; //edit (remove: 30px, add: 50px)
+				li {
+					&:hover {
+						color: #ffffff;
+						background: #155db1;
+					}
+					&:active {
+						color: #155db1;
+						background: #ffffff;
+					}
+				}
 			}
 		}
 	}

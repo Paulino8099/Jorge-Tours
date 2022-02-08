@@ -1,6 +1,6 @@
 
 /**
- * ?navBar...
+ * ?navBar active...
  */
 navBarBtn();
 function navBarBtn() {
@@ -12,13 +12,13 @@ function navBarBtn() {
      * ?desktop
      */
     if (document.documentElement.scrollWidth > 750) {
-        navBar.classList.add('activeDesktop');
-        home.classList.add('activeDesktop');
+        navBar.classList.add('active-Desktop');
+        home.classList.add('active-Desktop');
         
         btnNavBar.addEventListener('click', function () {
-            btnNavBar.classList.toggle('activeDesktop');
-            navBar.classList.toggle('activeDesktop');
-            home.classList.toggle('activeDesktop');
+            btnNavBar.classList.toggle('active-Desktop');
+            navBar.classList.toggle('active-Desktop');
+            home.classList.toggle('active-Desktop');
         });
     }
     /**
@@ -27,6 +27,24 @@ function navBarBtn() {
     btnNavBar.addEventListener('click', function () {
         btnNavBar.classList.toggle('active');
         navBar.classList.toggle('active');
+    });
+
+    /**
+     * ?backdrop box...
+     */
+    // dando opacidad al toda la pantalla para que el menú quede resaltado
+    let backdropBox = document.documentElement.querySelector('.backdrop-box');
+
+    // on Off opacity back
+    btnNavBar.addEventListener('click',function () {
+        backdropBox.classList.toggle('active');
+    });
+    // off main and backdrop
+    backdropBox.addEventListener('click', function () {
+        backdropBox.classList.toggle('active');
+        btnNavBar.classList.toggle('active-Desktop');
+        navBar.classList.toggle('active-Desktop');
+        home.classList.toggle('active-Desktop');
     });
 };
 
@@ -49,8 +67,8 @@ function observadorSection() {
                 /**
                  * ?home...
                  */
-                if (entry.target.classList == 'home section') {
-                    alert(51)
+                //si detecta que la section captada tiene algunas de las siguientes clases hará lo indicado a continuación
+                if (entry.target.classList == 'home section' | entry.target.classList == 'home section active-Desktop') {
                     btnHome.classList.add('active');
                 }
             };
