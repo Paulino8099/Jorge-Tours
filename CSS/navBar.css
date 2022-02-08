@@ -2,10 +2,53 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 25%;
+  width: 175px;
   height: 100%;
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: 1000;
   display: -ms-grid;
   display: grid;
+}
+
+.navBar.activeDesktop .navBar-content {
+  width: 50px;
+}
+
+.navBar.activeDesktop .navBar-content .logo-navBar-area {
+  width: 50px;
+  height: 55px;
+}
+
+.navBar.activeDesktop .navBar-content .logo-navBar-area .logo-navBar {
+  opacity: 0;
+}
+
+.navBar.activeDesktop .navBar-content .logo-navBar-area .palmera-navBar {
+  background: none;
+  opacity: 1;
+}
+
+.navBar.activeDesktop .navBar-content .main li {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 50px;
+  place-items: center;
+  display: -ms-grid;
+  display: grid;
+}
+
+.navBar.activeDesktop .navBar-content .main li::after {
+  display: none;
+}
+
+.navBar.activeDesktop .navBar-content .main li i {
+  margin-right: 0;
+}
+
+.navBar.activeDesktop .navBar-content .main li h3 {
+  display: none;
 }
 
 .navBar .navBar-content {
@@ -15,6 +58,8 @@
   width: 100%;
   z-index: 500;
   position: relative;
+  -webkit-transition: .3s;
+  transition: .3s;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[2];
@@ -24,20 +69,23 @@
 }
 
 .navBar .navBar-content .btn-open-navBar {
-  right: 0;
+  right: -30px;
   width: 30px;
   height: 30px;
-  background: #000;
+  border-bottom-right-radius: 5px;
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
   position: absolute;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: -ms-grid;
+  display: grid;
 }
 
 .navBar .navBar-content .btn-open-navBar .line-top {
@@ -46,16 +94,52 @@
   background: #ffffff;
   width: 30px;
   height: 2px;
-  position: absolute;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .navBar .navBar-content .btn-open-navBar .line-bottom {
-  position: absolute;
+  border-radius: 10px;
   z-index: 100;
   background: #ffffff;
-  width: 30px;
+  width: 25px;
+  height: 2px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.navBar .navBar-content .btn-open-navBar .line-bottom::after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  z-index: 100;
+  background: #ffffff;
+  width: 20px;
   height: 2px;
   bottom: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.navBar .navBar-content .btn-open-navBar.activeDesktop .line-top {
+  width: 35px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: 9px;
+  place-self: center;
+}
+
+.navBar .navBar-content .btn-open-navBar.activeDesktop .line-bottom {
+  width: 0;
+  height: 0;
+}
+
+.navBar .navBar-content .btn-open-navBar.activeDesktop .line-bottom::after {
+  width: 35px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  place-self: center;
+  margin-bottom: 14px;
 }
 
 .navBar .navBar-content .logo-navBar-area {
@@ -65,6 +149,8 @@
   height: min-content;
   margin: 0;
   border-bottom: 1px solid #ffffff80;
+  -webkit-transition: .3s;
+  transition: .3s;
   display: -ms-grid;
   display: grid;
   -ms-grid-column: 1;
@@ -82,13 +168,24 @@
   width: 75%;
   margin: 5%;
   place-self: center;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
-.navBar .navBar-content .navBar {
+.navBar .navBar-content .logo-navBar-area .palmera-navBar {
+  opacity: 0;
+  position: absolute;
+}
+
+.navBar .navBar-content .main {
   gap: 30px;
   margin-left: 5px;
   position: relative;
   width: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transition: .3s;
+  transition: .3s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,33 +201,58 @@
   grid-row: 2/3;
 }
 
-.navBar .navBar-content .navBar li {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.navBar .navBar-content .main li {
   list-style: none;
   color: #ffffff;
   cursor: pointer;
-  font-size: 1rem;
   border-radius: 50px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   padding: 5px 10px;
   padding-right: 0;
   margin-right: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.navBar .navBar-content .navBar li i {
+.navBar .navBar-content .main li i {
   margin-right: 10px;
   font-size: 1.5rem;
 }
 
-.navBar .navBar-content .navBar li:hover {
+.navBar .navBar-content .main li h3 {
+  font-size: .9rem;
+}
+
+.navBar .navBar-content .main li:hover {
   color: #155db1;
   background: #ffffff;
 }
 
-.navBar .navBar-content .navBar li:hover::after {
+.navBar .navBar-content .main li:hover::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: #155db1;
+  position: absolute;
+  right: 0;
+  margin-right: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -webkit-transition: 0;
+  transition: 0;
+}
+
+.navBar .navBar-content .main li.active {
+  color: #155db1;
+  background: #ffffff;
+}
+
+.navBar .navBar-content .main li.active::after {
   content: "";
   width: 25px;
   height: 25px;
@@ -144,22 +266,32 @@
   transition: .3s;
 }
 
-.navBar .navBar-content .navBar li.active {
-  color: #155db1;
-  background: #ffffff;
-}
-
-.navBar .navBar-content .navBar li.active::after {
-  content: "";
-  width: 25px;
-  height: 25px;
-  background: #155db1;
-  position: absolute;
-  right: 0;
-  margin-right: 5px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  -webkit-transition: .3s;
-  transition: .3s;
+@media (max-width: 750px) {
+  .navBar {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  .navBar.active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .navBar .navBar-content .btn-open-navBar.active .line-top {
+    width: 35px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin-top: 9px;
+    place-self: center;
+  }
+  .navBar .navBar-content .btn-open-navBar.active .line-bottom {
+    width: 0;
+    height: 0;
+  }
+  .navBar .navBar-content .btn-open-navBar.active .line-bottom::after {
+    width: 35px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    place-self: center;
+    margin-bottom: 14px;
+  }
 }
 /*# sourceMappingURL=navBar.css.map */
