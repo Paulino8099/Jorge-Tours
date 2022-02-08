@@ -12,41 +12,41 @@
 	left: 0;
 	width: 175px;
 	height: 100%;
-	transition: .3s;
+	transition: .5s;
 	z-index: 1000;
 
 	display: grid;
 	&.activeDesktop {
 		.navBar-content {
-			width: 50px; //edit (remove: 100%, add: 50px)
+			width: 50px; //edit(remove: 100%, add: 50px)
 			.logo-navBar-area {
-				width: 50px; //edit (remove: 100%, add: 50px)
-				height: 55px; //edit (remove: min-content, add: 55px)
+				width: 50px; //edit(remove: 100%, add: 50px)
+				height: 55px; //edit(remove: min-content, add: 55px)
 				.logo-navBar {
-					opacity: 0; //edit (add: opacity)
+					opacity: 0; //edit(add: opacity)
 				}
 				.palmera-navBar {
-					background: none; //edit (remove: #ffffff80, add: none)
-					opacity: 1; //edit (remove: 0, add: 1)
+					background: none; //edit(remove: #ffffff80, add: none)
+					opacity: 1; //edit(remove: 0, add: 1)
 				}
 			}
 			.main {
 				li {
-					width: 30px; //edit (add: width)
-					height: 30px; //edit (add: height)
-					padding: 5px; //edit (add: 5px all)
-					border-radius: 50px; //edit (add: 50px all)
-					place-items: center; //edit (add: place-items)
+					width: 30px; //edit(add: width)
+					height: 30px; //edit(add: height)
+					padding: 5px; //edit(add: 5px all)
+					border-radius: 50px; //edit(add: 50px all)
+					place-items: center; //edit(add: place-items)
 
 					display: grid;
 					&::after {
-						display: none; //edit (add: display)
+						display: none; //edit(add: display)
 					}
 					i {
-						margin-right: 0; //edit (remove: 10px, add: 0)
+						margin-right: 0; //edit(remove: 10px, add: 0)
 					}
 					h3 {
-						display: none; //edit (add: display)
+						display: none; //edit(add: display)
 					}
 				}
 			}
@@ -58,7 +58,7 @@
 		width: 100%;
 		z-index: 500;
 		position: relative;
-		transition: .3s;
+		transition: .5s;
 
 		display: grid;
 		grid-template-columns: repeat(2, auto);
@@ -75,7 +75,7 @@
 			cursor: pointer;
 			overflow: hidden;
 			z-index: 1000;
-			transition: .3s;
+			transition: .5s;
 
 			display: grid;
 			.line-top {
@@ -84,7 +84,7 @@
 				background: #ffffff;
 				width: 30px;
 				height: 2px;
-				transition: .3s;
+				transition: .5s;
 			}
 			.line-bottom {
 				border-radius: 10px;
@@ -92,7 +92,7 @@
 				background: #ffffff;
 				width: 25px;
 				height: 2px;
-				transition: .3s;
+				transition: .5s;
 				&::after {
 					content: "";
 					position: absolute;
@@ -102,24 +102,24 @@
 					width: 20px;
 					height: 2px;
 					bottom: 0;
-					transition: .3s;
+					transition: .5s;
 				}
 			}
 			&.activeDesktop {
 				.line-top {
-					width: 35px; //edit (remove: 30px, add: 35px)
-					transform: rotate(45deg); //edit (add: transform)
-					margin-top: 9px; //edit (add: margin-top)
-					place-self: center; //edit (ad: place-self)
+					width: 35px; //edit(remove: 30px, add: 35px)
+					transform: rotate(45deg); //edit(add: transform)
+					margin-top: 9px; //edit(add: margin-top)
+					place-self: center; //edit(ad: place-self)
 				}
 				.line-bottom {
-					width: 0; //edit (remove: 30px, add: 0)
-					height: 0; //edit (remove: 2px, add: 0)
+					width: 0; //edit(remove: 30px, add: 0)
+					height: 0; //edit(remove: 2px, add: 0)
 					&::after {
-						width: 35px; //edit (remove: 20px, add: 35px)
-						transform: rotate(-45deg); //edit (add: transform)
-						place-self: center; //edit (add: place-self)
-						margin-bottom: 14px; //edit (add: margin-bottom)
+						width: 35px; //edit(remove: 20px, add: 35px)
+						transform: rotate(-45deg); //edit(add: transform)
+						place-self: center; //edit(add: place-self)
+						margin-bottom: 14px; //edit(add: margin-bottom)
 					}
 				}
 			}
@@ -130,23 +130,23 @@
 			height: min-content;
 			margin: 0;
 			border-bottom: 1px solid #ffffff80;
-			transition: .3s;
+			transition: .5s;
 
 			display: grid;
 			grid-column: 1/3;
 			grid-row: 1/2;
 			img {
 				padding: 5px;
-				background: #ffffff80;
 				border-radius: 25px;
 				width: 75%;
 				margin: 5%;
 				place-self: center;
-				transition: .3s;
+				transition: .5s;
 			}
 			.palmera-navBar {
 				opacity: 0;
-				position: absolute;
+				margin-top: -80%;
+				transition: .5s;
 			}
 		}
 		// main
@@ -156,7 +156,7 @@
 			position: relative;
 			width: 100%;
 			align-content: center;
-			transition: .3s;
+			transition: .5s;
 
 			display: flex;
 			flex-direction: column;
@@ -175,6 +175,22 @@
 				align-items: center;
 
 				display: flex;
+				&.active {
+					color: #155db1;
+					background: #ffffff;
+					&::after {
+						content: "";
+						width: 25px;
+						height: 25px;
+						background: #155db1;
+						position: absolute;
+						right: 0;
+						margin-right: 5px;
+						border-top-left-radius: 5px;
+						border-bottom-left-radius: 5px;
+						transition: .5s;
+					}
+				}
 				// logo
 				i {
 					margin-right: 10px;
@@ -183,6 +199,7 @@
 				// text
 				h3 {
 					font-size: .9rem;
+					transition: .5s;
 				}
 				&:hover {
 					color: #155db1;
@@ -200,22 +217,6 @@
 						transition: 0;
 					}
 				}
-				&.active {
-					color: #155db1;
-					background: #ffffff;
-					&::after {
-						content: "";
-						width: 25px;
-						height: 25px;
-						background: #155db1;
-						position: absolute;
-						right: 0;
-						margin-right: 5px;
-						border-top-left-radius: 5px;
-						border-bottom-left-radius: 5px;
-						transition: .3s;
-					}
-				}
 			}
 		}
 	}
@@ -223,30 +224,50 @@
 
 @media (max-width: 750px) {
 	.navBar {
-		transform: translateX(-100%); //edit (add: transform)
+		height: 500px;
+		transform: translateX(-101%); //edit(add: transform)
 		&.active {
-			transform: translateX(0); //edit (remove: -100%, add: 0)
+			transform: translateX(0); //edit(remove: -100%, add: 0)
 		}
 		.navBar-content {
+			border-bottom-right-radius: 10px;
 			.btn-open-navBar {
+				right: -50px; //edit(remove: -30px, add: -50px)
+				width: 50px; //edit(remove: 30px)
+				height: 50px; //edit(remove: 30px)
+				.line-top {
+					width: 50px; //edit(remove: 30px, add: 50px)
+					height: 4px; //edit(remove: 2px, add: 4px)
+				}
+				.line-bottom {
+					width: 40px; //edit(remove: 25px, add: 40px)
+					height: 4px; //edit(remove: 2px, add: 4px)
+					&::after {
+						width: 30px; //edit(remove: 20px, add: 30px)
+						height: 4px; //edit(remove: 2px, add: 4px)
+					}
+				}
 				&.active {
 					.line-top {
-						width: 35px; //edit (remove: 30px, add: 35px)
-						transform: rotate(45deg); //edit (add: transform)
-						margin-top: 9px; //edit (add: margin-top)
-						place-self: center; //edit (ad: place-self)
+						width: 60px; //edit(remove: 35px, add: 60px)
+						transform: rotate(45deg);
+						margin-top: 13px; //edit(remove: 9px, add: 13px)
+						place-self: center;
 					}
 					.line-bottom {
-						width: 0; //edit (remove: 30px, add: 0)
-						height: 0; //edit (remove: 2px, add: 0)
+						width: 0;
+						height: 0;
 						&::after {
-							width: 35px; //edit (remove: 20px, add: 35px)
-							transform: rotate(-45deg); //edit (add: transform)
-							place-self: center; //edit (add: place-self)
-							margin-bottom: 14px; //edit (add: margin-bottom)
+							width: 60px; //edit(remove: 35px, add: 60px)
+							transform: rotate(-45deg);
+							place-self: center;
+							margin-bottom: 23px; //edit(remove: 14, add: 23px)
 						}
 					}
 				}
+			}
+			.main {
+				gap: 50px;
 			}
 		}
 	}

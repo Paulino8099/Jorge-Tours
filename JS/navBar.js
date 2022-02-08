@@ -1,5 +1,7 @@
 
-
+/**
+ * ?navBar...
+ */
 navBarBtn();
 function navBarBtn() {
     let navBar = document.documentElement.querySelector('.navBar');
@@ -10,8 +12,9 @@ function navBarBtn() {
      * ?desktop
      */
     if (document.documentElement.scrollWidth > 750) {
-        btnNavBar.classList.add('activeDesktop');
-
+        navBar.classList.add('activeDesktop');
+        home.classList.add('activeDesktop');
+        
         btnNavBar.addEventListener('click', function () {
             btnNavBar.classList.toggle('activeDesktop');
             navBar.classList.toggle('activeDesktop');
@@ -27,6 +30,9 @@ function navBarBtn() {
     });
 };
 
+/**
+ * ?observando secciones...
+ */
 observadorSection();
 function observadorSection() {
     let sections = document.documentElement.querySelectorAll('.section');
@@ -44,6 +50,7 @@ function observadorSection() {
                  * ?home...
                  */
                 if (entry.target.classList == 'home section') {
+                    alert(51)
                     btnHome.classList.add('active');
                 }
             };
