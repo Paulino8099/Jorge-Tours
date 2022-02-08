@@ -175,6 +175,7 @@
 }
 
 .navBar .navBar-content .logo-navBar-area .palmera-navBar {
+  width: 40px;
   opacity: 0;
   position: absolute;
 }
