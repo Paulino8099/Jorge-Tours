@@ -31,7 +31,8 @@
 			.main {
 				li {
 					padding: 5px; //edit(add: 5px-all)
-					border-radius: 10px; //edit(remove: [50px 50px 0 0], add: 10px-all)
+					border-bottom-left-radius: 10px; //edit(remove: 50px, add: 10px)
+					border-top-left-radius: 10px; //edit(remove: 50px, add: 10px)
 					&.active {
 						&::after {
 							width: 8px; //edit (remove: 25px, add: 8px)
@@ -43,6 +44,7 @@
 						}
 					}
 					h3 {
+						font-size: 0rem; //edit (remove: .9rem, 0rem) 
 						opacity: 0; //edit (add: opacity)
 					}
 				}

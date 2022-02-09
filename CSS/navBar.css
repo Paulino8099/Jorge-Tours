@@ -29,7 +29,8 @@
 
 .navBar.active-Desktop .navBar-content .main li {
   padding: 5px;
-  border-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .navBar.active-Desktop .navBar-content .main li.active::after {
@@ -41,6 +42,7 @@
 }
 
 .navBar.active-Desktop .navBar-content .main li h3 {
+  font-size: 0rem;
   opacity: 0;
 }
 
