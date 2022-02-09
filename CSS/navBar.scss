@@ -12,7 +12,7 @@
 	left: 0;
 	width: 200px;
 	height: 100%;
-	transition: .5s;
+	transition: .4s;
 	z-index: 11000;
 
 	display: grid;
@@ -20,44 +20,42 @@
 		.navBar-content {
 			width: 50px; //edit(remove: 100%, add: 50px)
 			.logo-navBar-area {
-				width: 50px; //edit(remove: 100%, add: 50px)
-				height: 55px; //edit(remove: min-content, add: 55px)
+				padding: 10px 0; //edit (add: [10px, 0])
 				.logo-navBar {
 					opacity: 0; //edit(add: opacity)
 				}
 				.palmera-navBar {
-					background: none; //edit(remove: #ffffff80, add: none)
 					opacity: 1; //edit(remove: 0, add: 1)
 				}
 			}
 			.main {
 				li {
-					width: 30px; //edit(add: width)
-					height: 30px; //edit(add: height)
 					padding: 5px; //edit(add: 5px-all)
-					border-radius: 50px; //edit(remove: [50px 50px 0 0], add: 50px-all)
-					place-content: center; //edit(add: place-items)
-					&::after {
-						opacity: 0;
-						// display: none; //edit(add: display)
+					border-radius: 10px; //edit(remove: [50px 50px 0 0], add: 10px-all)
+					&.active {
+						&::after {
+							width: 8px; //edit (remove: 25px, add: 8px)
+						}
 					}
-					i {
-						margin-right: 0; //edit(remove: 10px, add: 0)
+					&:hover {
+						&::after {
+							width: 8px; //edit (remove: 25px, add: 8px)
+						}
 					}
 					h3 {
-						display: none; //edit(add: display)
+						opacity: 0; //edit (add: opacity)
 					}
 				}
 			}
 		}
 	}
 	.navBar-content {
-		background: #155eb1;
+		background: #15aab2;
 		box-shadow: 0 0 10px #000;
 		width: 100%;
 		z-index: 500;
 		position: relative;
-		transition: .5s;
+		transition: .4s;
 
 		display: grid;
 		grid-template-columns: repeat(2, auto);
@@ -74,7 +72,7 @@
 			cursor: pointer;
 			overflow: hidden;
 			z-index: 1000;
-			transition: .5s;
+			transition: .4s;
 
 			display: grid;
 			.line-top {
@@ -83,7 +81,7 @@
 				background: #ffffff;
 				width: 30px;
 				height: 2px;
-				transition: .5s;
+				transition: .4s;
 			}
 			.line-bottom {
 				border-radius: 10px;
@@ -91,7 +89,7 @@
 				background: #ffffff;
 				width: 25px;
 				height: 2px;
-				transition: .5s;
+				transition: .4s;
 				&::after {
 					content: "";
 					position: absolute;
@@ -101,7 +99,7 @@
 					width: 20px;
 					height: 2px;
 					bottom: 0;
-					transition: .5s;
+					transition: .4s;
 				}
 			}
 			&.active-Desktop {
@@ -129,8 +127,8 @@
 			height: min-content;
 			margin: 0;
 			border-bottom: 1px solid #ffffff80;
-			transition: .5s;
 			position: relative;
+			transition: .4s;
 
 			display: grid;
 			grid-column: 1/3;
@@ -143,10 +141,12 @@
 				margin: 5%;
 				height: min-content;
 				place-self: center;
-				transition: .5s cubic-bezier(.95,.02,.38,1.25);
+				transition: .5s cubic-bezier(.95, .02, .38, 1.25);
 			}
 			.palmera-navBar {
-				opacity: 0; 
+				width: 35px;
+				background: none;
+				opacity: 0;
 				position: absolute;
 			}
 		}
@@ -156,7 +156,8 @@
 			margin-left: 5px;
 			width: 100%;
 			align-content: center;
-			transition: .5s;
+			transition: .4s;
+			overflow: hidden;
 
 			display: flex;
 			flex-direction: column;
@@ -172,6 +173,7 @@
 				padding-right: 0;
 				margin-right: 5px;
 				align-items: center;
+				transition: .4s;
 
 				display: flex;
 				&.active {
@@ -181,25 +183,34 @@
 						content: "";
 						width: 25px;
 						height: 25px;
-						background: #155db1;
+						background: #15aab2;
 						position: absolute;
 						right: 0;
 						border-top-left-radius: 5px;
 						border-bottom-left-radius: 5px;
+						transition: .4s;
 					}
 				}
 				&:hover {
+					transition: 0s;
 					color: #155db1;
 					background: #ffffff;
 					&::after {
 						content: "";
 						width: 25px;
 						height: 25px;
-						background: #155db1;
+						background: #15aab2;
 						position: absolute;
 						right: 0;
 						border-top-left-radius: 5px;
 						border-bottom-left-radius: 5px;
+						transition: 0s;
+					}
+					i {
+						transition: 0s;
+					}
+					h3 {
+						transition: 0s;
 					}
 				}
 				&:active {
@@ -214,6 +225,7 @@
 				// text
 				h3 {
 					font-size: .9rem;
+					transition: .4s;
 				}
 			}
 		}
@@ -228,7 +240,7 @@
 			transform: translateX(0); //edit(remove: -100%, add: 0)
 		}
 		.navBar-content {
-			border-bottom-right-radius: 10px;
+			border-bottom-right-radius: 10px; //edit(add: border-top-right-radius)
 			.btn-open-navBar {
 				right: -50px; //edit(remove: -30px, add: -50px)
 				width: 50px; //edit(remove: 30px)
@@ -268,12 +280,12 @@
 				gap: 50px; //edit (remove: 30px, add: 50px)
 				li {
 					&:hover {
-						color: #ffffff;
-						background: #155db1;
+						color: #ffffff; //edit(remove: #15aab2, add: #ffffff)
+						background: #15aab2; //edit (remove: #ffffff, add: #15aab2)
 					}
-					&:active {
-						color: #155db1;
-						background: #ffffff;
+					&:active { //edit(add: active)
+						color: #155db1; 
+						background: #ffffff; 
 					}
 				}
 			}
