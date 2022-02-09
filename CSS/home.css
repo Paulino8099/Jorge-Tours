@@ -55,7 +55,6 @@
   z-index: 100;
   -webkit-transition: .4s;
   transition: .4s;
-  display: none;
 }
 
 .home .home-content .video-area-home video {
