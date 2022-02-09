@@ -51,6 +51,8 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+				-moz-object-fit: cover;
+				-webkit-object-fit: cover;
 				filter: blur(1px);
 				position: absolute;
 				top: 0;
@@ -91,7 +93,6 @@
 		h3 {
 			z-index: 300;
 			color: #15aab2;
-			// text-shadow: 0 0 5px #ffffff;
 			text-align: center;
 			width: max-content;
 			background: #ffffff;
@@ -99,8 +100,8 @@
 			padding-right: 0;
 			border-bottom-left-radius: 10px;
 			font-size: calc(.5em + 1vw);
-			align-self: flex-start;
-			justify-self: end;
+			right: 0;
+			top: 0;
 			overflow: hidden;
 			position: absolute;
 
@@ -139,6 +140,7 @@
 				color: #ffffff;
 				background: #15aab2;
 				padding: 5px 10px;
+				padding-left: 1px;
 			}
 		}
 	}
