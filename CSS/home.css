@@ -55,7 +55,6 @@
   z-index: 100;
   -webkit-transition: .4s;
   transition: .4s;
-  display: none;
 }
 
 .home .home-content .video-area-home video {
@@ -75,6 +74,7 @@
   border-radius: 5px;
   -webkit-transition: .4s;
   transition: .4s;
+  display: none;
   -ms-grid-column: 1;
   -ms-grid-column-span: 6;
   grid-column: 1/7;

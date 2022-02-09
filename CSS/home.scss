@@ -43,7 +43,7 @@
 				z-index: 100;
 				transition: .4s;
 
-				display: none; //nop
+				// display: ; //nop
 			}
 			video {
 				width: 100%;
@@ -60,6 +60,7 @@
 				border-radius: 5px;
 				transition: .4s;
 
+				display: none;
 				grid-column: 1/7;
 				grid-row: 1/7;
 			}
