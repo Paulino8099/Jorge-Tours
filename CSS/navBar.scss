@@ -125,7 +125,7 @@
 		// logo
 		.logo-navBar-area {
 			width: 100%;
-			height: min-content;
+			max-height: 150px;
 			margin: 0;
 			border-bottom: 1px solid #ffffff80;
 			position: relative;
@@ -138,7 +138,6 @@
 				border-radius: 25px;
 				width: 75%;
 				margin: 5%;
-				height: min-content;
 				place-self: center;
 				transition: .5s cubic-bezier(.95, .02, .38, 1.25);
 			}
