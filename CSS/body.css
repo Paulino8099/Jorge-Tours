@@ -1,4 +1,6 @@
 * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-family: 'Source Serif 4', sans-serif;
   scroll-behavior: smooth;
@@ -23,15 +25,32 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  background: #202f3d;
+  background: #def7ff;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[12];
       grid-template-columns: repeat(12, auto);
   -ms-grid-rows: (auto)[12];
       grid-template-rows: repeat(12, auto);
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background: #15aab240;
+}
+
+body::-webkit-scrollbar-thumb {
+  width: 100%;
+  background: #15aab2;
+  border-radius: 15px;
+  -webkit-box-shadow: inset 0 0 10px #fff;
+          box-shadow: inset 0 0 10px #fff;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  -webkit-box-shadow: inset 0 0 10px #fff;
+          box-shadow: inset 0 0 10px #fff;
+  background: #155db1;
 }
 
 body .backdrop-box {
@@ -43,14 +62,16 @@ body .backdrop-box {
       justify-self: center;
   height: 104%;
   position: fixed;
+  -webkit-transition: .5s;
+  transition: .5s;
   opacity: 0;
-  z-index: 1;
-  -webkit-transition: .5s .3s;
-  transition: .5s .3s;
+  z-index: 0;
+  pointer-events: none;
 }
 
 body .backdrop-box.active {
   z-index: 10000;
   opacity: 1;
+  pointer-events: visible;
 }
 /*# sourceMappingURL=body.css.map */

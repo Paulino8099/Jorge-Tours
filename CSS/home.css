@@ -1,22 +1,17 @@
 .home {
-  width: calc(100vw - 200px);
-  margin-left: 200px;
+  width: calc(100% - 50px);
   height: 100vh;
+  margin-left: 50px;
   -webkit-transition: .4s;
   transition: .4s;
   display: -ms-grid;
   display: grid;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 11;
-  grid-column: 1/12;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-}
-
-.home.active-Desktop {
-  width: calc(100vw - 50px);
-  margin-left: 50px;
 }
 
 .home .home-content {
@@ -60,6 +55,7 @@
   z-index: 100;
   -webkit-transition: .4s;
   transition: .4s;
+  display: none;
 }
 
 .home .home-content .video-area-home video {

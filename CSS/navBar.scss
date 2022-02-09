@@ -7,45 +7,41 @@
 // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 .navBar {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
-	width: 200px;
+	width: 50px;
 	height: 100%;
 	transition: .4s;
 	z-index: 11000;
 
 	display: grid;
-	&.active-Desktop {
+	&.active {
+		width: 200px;
+		transform: translateX(0);
 		.navBar-content {
-			width: 50px; //edit(remove: 100%, add: 50px)
 			.logo-navBar-area {
-				padding: 10px 0; //edit (add: [10px, 0])
 				.logo-navBar {
-					opacity: 0; //edit(add: opacity)
+					opacity: 1;
 				}
-				.palmera-navBar {
-					opacity: 1; //edit(remove: 0, add: 1)
+				.logo-palmera-navBar {
+					opacity: 0;
 				}
 			}
 			.main {
 				li {
-					padding: 5px; //edit(add: 5px-all)
-					border-bottom-left-radius: 10px; //edit(remove: 50px, add: 10px)
-					border-top-left-radius: 10px; //edit(remove: 50px, add: 10px)
+					h3 {
+						font-size: .9rem;
+					}
 					&.active {
 						&::after {
-							width: 8px; //edit (remove: 25px, add: 8px)
+							width: 25px;
 						}
 					}
 					&:hover {
 						&::after {
-							width: 8px; //edit (remove: 25px, add: 8px)
+							width: 25px;
 						}
-					}
-					h3 {
-						font-size: 0rem; //edit (remove: .9rem, 0rem) 
-						opacity: 0; //edit (add: opacity)
 					}
 				}
 			}
@@ -57,11 +53,11 @@
 		width: 100%;
 		z-index: 500;
 		position: relative;
-		transition: .4s;
+		transition: 1s cubic-bezier(.02, .07, .01, .96);
 
 		display: flex;
 		flex-direction: column;
-		// btn open
+		// btn
 		.btn-open-navBar {
 			right: -30px;
 			width: 30px;
@@ -69,55 +65,51 @@
 			border-bottom-right-radius: 5px;
 			backdrop-filter: blur(100px);
 			position: absolute;
-			justify-content: center;
+			justify-items: center;
 			cursor: pointer;
 			overflow: hidden;
 			z-index: 1000;
 			transition: .4s;
 
 			display: grid;
-			.line-top {
-				border-radius: 10px;
-				z-index: 100;
+			.lines-btn-navBar {
+				position: relative;
+				align-self: center;
 				background: #ffffff;
-				width: 30px;
-				height: 2px;
-				transition: .4s;
-			}
-			.line-bottom {
-				border-radius: 10px;
-				z-index: 100;
-				background: #ffffff;
+				margin-left: -3px;
 				width: 25px;
 				height: 2px;
-				transition: .4s;
+				transition: .5s;
 				&::after {
 					content: "";
+					background: #ffffff;
 					position: absolute;
-					border-radius: 10px;
-					z-index: 100;
+					width: 30px;
+					height: 2px;
+					top: -14px;
+					align-self: center;
+					transition: .5s;
+				}
+				&::before {
+					content: "";
+					position: absolute;
 					background: #ffffff;
 					width: 20px;
 					height: 2px;
-					bottom: 0;
-					transition: .4s;
+					top: 14px;
+					transition: .5s;
 				}
-			}
-			&.active-Desktop {
-				.line-top {
-					width: 35px; //edit(remove: 30px, add: 35px)
-					transform: rotate(45deg); //edit(add: transform)
-					margin-top: 9px; //edit(add: margin-top)
-					place-self: center; //edit(ad: place-self)
-				}
-				.line-bottom {
-					width: 0; //edit(remove: 30px, add: 0)
-					height: 0; //edit(remove: 2px, add: 0)
+				&.active {
+					width: 35px;
+					transform: rotate(-45deg);
 					&::after {
-						width: 35px; //edit(remove: 20px, add: 35px)
-						transform: rotate(-45deg); //edit(add: transform)
-						place-self: center; //edit(add: place-self)
-						margin-bottom: 14px; //edit(add: margin-bottom)
+						opacity: 0;
+						top: 0;
+					}
+					&::before {
+						top: 0;
+						width: 35px;
+						transform: rotate(-90deg);
 					}
 				}
 			}
@@ -127,6 +119,7 @@
 			width: 100%;
 			max-height: 150px;
 			margin: 0;
+			padding: 10px 0;
 			border-bottom: 1px solid #ffffff80;
 			position: relative;
 			transition: .4s;
@@ -139,12 +132,17 @@
 				width: 75%;
 				margin: 5%;
 				place-self: center;
-				transition: .5s cubic-bezier(.95, .02, .38, 1.25);
+				transition: .5s cubic-bezier(.02, .07, .01, .96);
 			}
-			.palmera-navBar {
+			.logo-navBar {
+				opacity: 0;
+				z-index: 60;
+			}
+			.logo-palmera-navBar {
 				width: 35px;
 				background: none;
-				opacity: 0;
+				opacity: 1;
+				z-index: 50;
 				position: absolute;
 			}
 		}
@@ -164,9 +162,9 @@
 				list-style: none;
 				color: #ffffff;
 				cursor: pointer;
-				border-top-left-radius: 50px;
-				border-bottom-left-radius: 50px;
-				padding: 5px 10px;
+				border-top-left-radius: 10px;
+				border-bottom-left-radius: 10px;
+				padding: 5px 5px;
 				padding-right: 0;
 				margin-right: 5px;
 				align-items: center;
@@ -178,7 +176,7 @@
 					background: #ffffff;
 					&::after {
 						content: "";
-						width: 25px;
+						width: 8px;
 						height: 25px;
 						background: #15aab2;
 						position: absolute;
@@ -194,7 +192,7 @@
 					background: #ffffff;
 					&::after {
 						content: "";
-						width: 25px;
+						width: 8px;
 						height: 25px;
 						background: #15aab2;
 						position: absolute;
@@ -221,55 +219,43 @@
 				}
 				// text
 				h3 {
-					font-size: .9rem;
+					font-size: 0rem;
 					transition: .4s;
 				}
 			}
 		}
 	}
 }
-
+// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+// |||||||||||||||||||||||||||||||||||||||||Mobiel||||||||||||||||||||||||||||||||||||||||||||||
+// ||||||||||||||||||||||||||||||||||||Mobiel|||||||Mobiel||||||||||||||||||||||||||||||||||||||
+// ||||||||||||||||||||||||||||||Mobiel||||||||||||||||||Mobiel|||||||||||||||||||||||||||||||||
+// ||||||||||||||||||||||||||||||||||||Mobiel|||||||Mobiel||||||||||||||||||||||||||||||||||||||
+// |||||||||||||||||||||||||||||||||||||||||Mobiel||||||||||||||||||||||||||||||||||||||||||||||
+// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 @media (max-width: 750px) {
 	.navBar {
 		height: 500px; //edit (remove: 100%, add: 500px)
-		transform: translateX(-101%); //edit(add: transform)
-		&.active {
-			transform: translateX(0); //edit(remove: -100%, add: 0)
-		}
+		transform: translateX(-105%); //edit(add: transform)
 		.navBar-content {
 			border-bottom-right-radius: 10px; //edit(add: border-top-right-radius)
 			.btn-open-navBar {
-				right: -50px; //edit(remove: -30px, add: -50px)
-				width: 50px; //edit(remove: 30px)
-				height: 50px; //edit(remove: 30px)
-				.line-top {
-					width: 50px; //edit(remove: 30px, add: 50px)
-					height: 4px; //edit(remove: 2px, add: 4px)
-				}
-				.line-bottom {
-					width: 40px; //edit(remove: 25px, add: 40px)
-					height: 4px; //edit(remove: 2px, add: 4px)
+				right: -50px; //edit (remove: 30px, add: 50px)
+				width: 50px; //edit (remove: 30px, add: 50px)
+				height: 50px; //edit (remove: 30px, add: 50px)
+				.lines-btn-navBar {
+					margin-left: -10px; //edit (remove: -3px, add: -10px)
+					width: 30px; //edit (remove: 25px, add: 30px)
+					height: 4px; //edit (remove: 2px, add: 4px)
 					&::after {
-						width: 30px; //edit(remove: 20px, add: 30px)
-						height: 4px; //edit(remove: 2px, add: 4px)
+						width: 40px; //edit (remove: 30px, add: 40px)
+						height: 4px; //edit (remove: 2px, add: 4px)
 					}
-				}
-				&.active {
-					.line-top {
-						width: 60px; //edit(remove: 35px, add: 60px)
-						transform: rotate(45deg);
-						margin-top: 13px; //edit(remove: 9px, add: 13px)
-						place-self: center;
+					&::before {
+						height: 4px; //edit (remove: 2px, add: 4px)
 					}
-					.line-bottom {
-						width: 0;
-						height: 0;
-						&::after {
-							width: 60px; //edit(remove: 35px, add: 60px)
-							transform: rotate(-45deg);
-							place-self: center;
-							margin-bottom: 23px; //edit(remove: 14, add: 23px)
-						}
+					&.active {
+						margin-left: 0; //edit (margin-left)
 					}
 				}
 			}
@@ -280,9 +266,10 @@
 						color: #ffffff; //edit(remove: #15aab2, add: #ffffff)
 						background: #15aab2; //edit (remove: #ffffff, add: #15aab2)
 					}
-					&:active { //edit(add: active)
-						color: #155db1; 
-						background: #ffffff; 
+					&:active {
+						//edit(add: active)
+						color: #155db1;
+						background: #ffffff;
 					}
 				}
 			}

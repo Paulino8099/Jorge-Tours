@@ -6,18 +6,14 @@
 // |||||||||||||||||||||||||||||||||||||||||Desktop|||||||||||||||||||||||||||||||||||||||||||||
 // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 .home {
-	width: calc(100vw - 200px);
-	margin-left: 200px;
+	width: calc(100% - 50px);
 	height: 100vh;
+	margin-left: 50px;
 	transition: .4s;
 
 	display: grid;
-	grid-column: 1/12;
+	grid-column: 1/13;
 	grid-row: 1/2;
-	&.active-Desktop {
-		width: calc(100vw - 50px);
-		margin-left: 50px;
-	}
 	.home-content {
 		width: 100%;
 		height: 100%;
@@ -46,6 +42,8 @@
 				object-fit: cover;
 				z-index: 100;
 				transition: .4s;
+
+				display: none; //nop
 			}
 			video {
 				width: 100%;

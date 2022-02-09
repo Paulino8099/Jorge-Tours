@@ -1,8 +1,8 @@
 .navBar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 50px;
   height: 100%;
   -webkit-transition: .4s;
   transition: .4s;
@@ -11,39 +11,30 @@
   display: grid;
 }
 
-.navBar.active-Desktop .navBar-content {
-  width: 50px;
+.navBar.active {
+  width: 200px;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
-.navBar.active-Desktop .navBar-content .logo-navBar-area {
-  padding: 10px 0;
-}
-
-.navBar.active-Desktop .navBar-content .logo-navBar-area .logo-navBar {
-  opacity: 0;
-}
-
-.navBar.active-Desktop .navBar-content .logo-navBar-area .palmera-navBar {
+.navBar.active .navBar-content .logo-navBar-area .logo-navBar {
   opacity: 1;
 }
 
-.navBar.active-Desktop .navBar-content .main li {
-  padding: 5px;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-}
-
-.navBar.active-Desktop .navBar-content .main li.active::after {
-  width: 8px;
-}
-
-.navBar.active-Desktop .navBar-content .main li:hover::after {
-  width: 8px;
-}
-
-.navBar.active-Desktop .navBar-content .main li h3 {
-  font-size: 0rem;
+.navBar.active .navBar-content .logo-navBar-area .logo-palmera-navBar {
   opacity: 0;
+}
+
+.navBar.active .navBar-content .main li h3 {
+  font-size: .9rem;
+}
+
+.navBar.active .navBar-content .main li.active::after {
+  width: 25px;
+}
+
+.navBar.active .navBar-content .main li:hover::after {
+  width: 25px;
 }
 
 .navBar .navBar-content {
@@ -53,8 +44,8 @@
   width: 100%;
   z-index: 500;
   position: relative;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 1s cubic-bezier(0.02, 0.07, 0.01, 0.96);
+  transition: 1s cubic-bezier(0.02, 0.07, 0.01, 0.96);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,9 +63,7 @@
   -webkit-backdrop-filter: blur(100px);
           backdrop-filter: blur(100px);
   position: absolute;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-items: center;
   cursor: pointer;
   overflow: hidden;
   z-index: 1000;
@@ -84,64 +73,67 @@
   display: grid;
 }
 
-.navBar .navBar-content .btn-open-navBar .line-top {
-  border-radius: 10px;
-  z-index: 100;
+.navBar .navBar-content .btn-open-navBar .lines-btn-navBar {
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   background: #ffffff;
-  width: 30px;
-  height: 2px;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.navBar .navBar-content .btn-open-navBar .line-bottom {
-  border-radius: 10px;
-  z-index: 100;
-  background: #ffffff;
+  margin-left: -3px;
   width: 25px;
   height: 2px;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-.navBar .navBar-content .btn-open-navBar .line-bottom::after {
+.navBar .navBar-content .btn-open-navBar .lines-btn-navBar::after {
+  content: "";
+  background: #ffffff;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  top: -14px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.navBar .navBar-content .btn-open-navBar .lines-btn-navBar::before {
   content: "";
   position: absolute;
-  border-radius: 10px;
-  z-index: 100;
   background: #ffffff;
   width: 20px;
   height: 2px;
-  bottom: 0;
-  -webkit-transition: .4s;
-  transition: .4s;
+  top: 14px;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-.navBar .navBar-content .btn-open-navBar.active-Desktop .line-top {
-  width: 35px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  margin-top: 9px;
-  place-self: center;
-}
-
-.navBar .navBar-content .btn-open-navBar.active-Desktop .line-bottom {
-  width: 0;
-  height: 0;
-}
-
-.navBar .navBar-content .btn-open-navBar.active-Desktop .line-bottom::after {
+.navBar .navBar-content .btn-open-navBar .lines-btn-navBar.active {
   width: 35px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  place-self: center;
-  margin-bottom: 14px;
+}
+
+.navBar .navBar-content .btn-open-navBar .lines-btn-navBar.active::after {
+  opacity: 0;
+  top: 0;
+}
+
+.navBar .navBar-content .btn-open-navBar .lines-btn-navBar.active::before {
+  top: 0;
+  width: 35px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .navBar .navBar-content .logo-navBar-area {
   width: 100%;
   max-height: 150px;
   margin: 0;
+  padding: 10px 0;
   border-bottom: 1px solid #ffffff80;
   position: relative;
   -webkit-transition: .4s;
@@ -157,14 +149,20 @@
   width: 75%;
   margin: 5%;
   place-self: center;
-  -webkit-transition: 0.5s cubic-bezier(0.95, 0.02, 0.38, 1.25);
-  transition: 0.5s cubic-bezier(0.95, 0.02, 0.38, 1.25);
+  -webkit-transition: 0.5s cubic-bezier(0.02, 0.07, 0.01, 0.96);
+  transition: 0.5s cubic-bezier(0.02, 0.07, 0.01, 0.96);
 }
 
-.navBar .navBar-content .logo-navBar-area .palmera-navBar {
+.navBar .navBar-content .logo-navBar-area .logo-navBar {
+  opacity: 0;
+  z-index: 60;
+}
+
+.navBar .navBar-content .logo-navBar-area .logo-palmera-navBar {
   width: 35px;
   background: none;
-  opacity: 0;
+  opacity: 1;
+  z-index: 50;
   position: absolute;
 }
 
@@ -191,9 +189,9 @@
   list-style: none;
   color: #ffffff;
   cursor: pointer;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-  padding: 5px 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 5px 5px;
   padding-right: 0;
   margin-right: 5px;
   -webkit-box-align: center;
@@ -213,7 +211,7 @@
 
 .navBar .navBar-content .main li.active::after {
   content: "";
-  width: 25px;
+  width: 8px;
   height: 25px;
   background: #15aab2;
   position: absolute;
@@ -233,7 +231,7 @@
 
 .navBar .navBar-content .main li:hover::after {
   content: "";
-  width: 25px;
+  width: 8px;
   height: 25px;
   background: #15aab2;
   position: absolute;
@@ -265,7 +263,7 @@
 }
 
 .navBar .navBar-content .main li h3 {
-  font-size: .9rem;
+  font-size: 0rem;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -273,12 +271,8 @@
 @media (max-width: 750px) {
   .navBar {
     height: 500px;
-    -webkit-transform: translateX(-101%);
-            transform: translateX(-101%);
-  }
-  .navBar.active {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateX(-105%);
+            transform: translateX(-105%);
   }
   .navBar .navBar-content {
     border-bottom-right-radius: 10px;
@@ -288,35 +282,20 @@
     width: 50px;
     height: 50px;
   }
-  .navBar .navBar-content .btn-open-navBar .line-top {
-    width: 50px;
-    height: 4px;
-  }
-  .navBar .navBar-content .btn-open-navBar .line-bottom {
-    width: 40px;
-    height: 4px;
-  }
-  .navBar .navBar-content .btn-open-navBar .line-bottom::after {
+  .navBar .navBar-content .btn-open-navBar .lines-btn-navBar {
+    margin-left: -10px;
     width: 30px;
     height: 4px;
   }
-  .navBar .navBar-content .btn-open-navBar.active .line-top {
-    width: 60px;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    margin-top: 13px;
-    place-self: center;
+  .navBar .navBar-content .btn-open-navBar .lines-btn-navBar::after {
+    width: 40px;
+    height: 4px;
   }
-  .navBar .navBar-content .btn-open-navBar.active .line-bottom {
-    width: 0;
-    height: 0;
+  .navBar .navBar-content .btn-open-navBar .lines-btn-navBar::before {
+    height: 4px;
   }
-  .navBar .navBar-content .btn-open-navBar.active .line-bottom::after {
-    width: 60px;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    place-self: center;
-    margin-bottom: 23px;
+  .navBar .navBar-content .btn-open-navBar .lines-btn-navBar.active {
+    margin-left: 0;
   }
   .navBar .navBar-content .main {
     gap: 50px;
