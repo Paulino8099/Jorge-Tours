@@ -175,7 +175,6 @@
       align-content: center;
   -webkit-transition: .4s;
   transition: .4s;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

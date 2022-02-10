@@ -1,0 +1,12 @@
+.excursions {
+    width: calc(100% - 50px);
+    transform: translateX(50px);
+    background: blueviolet;
+
+    display: none;
+    grid-column: 1/13;
+    grid-row: 2/3;
+    .excursions-content {
+        width: 100%;
+    }
+}

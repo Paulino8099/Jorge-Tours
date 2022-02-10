@@ -46,7 +46,6 @@
 
 .contact .contact-content .wraper-contact {
   width: 100%;
-  padding: 25px 0;
   display: -ms-grid;
   display: grid;
 }
@@ -58,20 +57,20 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  overflow: hidden;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(120px, auto))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(120px, auto));
-  grid-gap: 10px;
+  -ms-grid-columns: (minmax(175px, max-content))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(175px, -webkit-max-content));
+      grid-template-columns: repeat(auto-fit, minmax(175px, max-content));
   grid-auto-flow: dense;
 }
 
 .contact .contact-content .wraper-contact .wraper-contact-content div {
   -ms-grid-column-align: center;
       justify-self: center;
-  display: -ms-grid;
-  display: grid;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  display: block;
 }
 
 .contact .contact-content .wraper-contact .wraper-contact-content div a {
@@ -80,6 +79,27 @@
   cursor: default;
   display: -ms-grid;
   display: grid;
+}
+
+.contact .contact-content .wraper-contact .wraper-contact-content div a::-webkit-scrollbar {
+  background: #44444440;
+  height: 10px;
+}
+
+.contact .contact-content .wraper-contact .wraper-contact-content div a::-webkit-scrollbar-thumb {
+  background: #155db1;
+}
+
+.contact .contact-content .wraper-contact .wraper-contact-content div a svg {
+  width: calc(1.5em + 1vw);
+  -ms-grid-column-align: center;
+      justify-self: center;
+  fill: #15aab2;
+  cursor: pointer;
+}
+
+.contact .contact-content .wraper-contact .wraper-contact-content div a svg:hover {
+  fill: #155db1;
 }
 
 .contact .contact-content .wraper-contact .wraper-contact-content div a i {
@@ -99,8 +119,6 @@
   font-size: calc(.5em + 1vw);
   margin-top: 10px;
   cursor: pointer;
-  -ms-grid-column-align: center;
-      justify-self: center;
   letter-spacing: 1px;
 }
 

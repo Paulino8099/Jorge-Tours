@@ -60,31 +60,38 @@ function navBarBtn() {
  */
 observadorSection();
 function observadorSection() {
-    let sections = document.documentElement.querySelectorAll('.section');
+    let sections = document.documentElement.querySelectorAll('.sections');
 
-    const visor = (entry, salida) => {
+    function obser(entry, salida) {
         // var btns
         let btnHome = document.documentElement.querySelector('.btn-home-navBar');
-        let btnAbout = document.documentElement.querySelector('.btn-about-navBar');
+        let btnExcursions = document.documentElement.querySelector('.btn-excursions-navBar');
         let btnExperiences = document.documentElement.querySelector('.btn-experiences-navBar');
+        let btnAbout = document.documentElement.querySelector('.btn-about-navBar');
         let btnContact = document.documentElement.querySelector('.btn-contact-navBar');
 
         entry.forEach(function (entry) {
             if (entry.isIntersecting) {
+                console.log(entry.target.classList.value)
                 /**
                  * ?home...
                  */
                 //si detecta que la section captada tiene algunas de las siguientes clases hará lo indicado a continuación
-                if (entry.target.classList == 'home section' | entry.target.classList == 'home section active-Desktop') {
+                if (entry.target.classList == 'home sections') {
                     btnHome.classList.add('active');
+                    btnExcursions.classList.remove('active');
                 }
+                else if (entry.target.classList == 'excursions sections') {
+                    btnHome.classList.remove('active');
+                    btnExcursions.classList.add('active');
+                } 
             };
-        });
+        })
     };
 
-    const observador = new IntersectionObserver(visor, {
+    const observador = new IntersectionObserver(obser, {
         root: null,
-        rootMargin: "-50%"
+        rootMargin: "-50%",
     });
 
     sections.forEach(e => {

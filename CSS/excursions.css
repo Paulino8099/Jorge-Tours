@@ -1,0 +1,18 @@
+.excursions {
+  width: calc(100% - 50px);
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  background: blueviolet;
+  display: none;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.excursions .excursions-content {
+  width: 100%;
+}
+/*# sourceMappingURL=excursions.css.map */

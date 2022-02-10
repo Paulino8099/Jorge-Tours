@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACR,KAAK,EAAE,iBAAiB;EACxB,SAAS,EAAE,gBAAgB;EAC3B,UAAU,EAAE,UAAU;EAEtB,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,IAAI;EACjB,QAAQ,EAAE,GAAG;CAIhB;;AAXD,AAQI,WARO,CAQP,mBAAmB,CAAC;EAChB,KAAK,EAAE,IAAI;CACd",
+    "sources": [
+        "excursions.scss"
+    ],
+    "names": [],
+    "file": "excursions.css"
+}

@@ -37,24 +37,23 @@
 		}
 		.wraper-contact {
 			width: 100%;
-			padding: 25px 0;
 
 			display: grid;
 			.wraper-contact-content {
 				justify-self: center;
 				width: 90%;
 				justify-content: space-between;
-				overflow: hidden;
 
 				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(120px, auto));
-				grid-gap: 10px;
+				grid-template-columns: repeat(auto-fit, minmax(175px, max-content));
 				grid-auto-flow: dense;
 				// box container redes
 				div {
 					justify-self: center;
+					margin-top: 10px;
+					margin-bottom: 25px;
 
-					display: grid;
+					display: block;
 					// box content redes
 					a {
 						gap: 10px;
@@ -62,6 +61,22 @@
 						cursor: default;
 
 						display: grid;
+						&::-webkit-scrollbar {
+							background: #44444440;
+							height: 10px;
+						}
+						&::-webkit-scrollbar-thumb {
+							background: #155db1;
+						}
+						svg {
+							width: calc(1.5em + 1vw);
+							justify-self: center;
+							fill: #15aab2;
+							cursor: pointer;
+							&:hover {
+								fill: #155db1;
+							}
+						}
 						i {
 							font-size: calc(1.5em + 1vw);
 							justify-self: center;
@@ -76,7 +91,6 @@
 							font-size: calc(.5em + 1vw);
 							margin-top: 10px;
 							cursor: pointer;
-							justify-self: center;
 							letter-spacing: 1px;
 							&:hover {
 								text-decoration: underline;
