@@ -80,10 +80,16 @@ function observadorSection() {
                 if (entry.target.classList == 'home sections') {
                     btnHome.classList.add('active');
                     btnExcursions.classList.remove('active');
+                    btnContact.classList.remove('active');
                 }
                 else if (entry.target.classList == 'excursions sections') {
                     btnHome.classList.remove('active');
                     btnExcursions.classList.add('active');
+                }
+                else if (entry.target.classList == 'contact sections') {
+                    btnHome.classList.remove('active');
+                    btnExcursions.classList.remove('active');
+                    btnContact.classList.add('active');
                 } 
             };
         })

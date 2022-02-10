@@ -40,18 +40,19 @@
 
 			display: grid;
 			.wraper-contact-content {
+				background: blueviolet;
 				justify-self: center;
 				width: 90%;
-				justify-content: space-between;
+				justify-content: space-evenly;
 
 				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(175px, max-content));
-				grid-auto-flow: dense;
+				grid-template-columns: repeat(auto-fill, minmax(175px, max-content));
 				// box container redes
 				div {
 					justify-self: center;
 					margin-top: 10px;
 					margin-bottom: 25px;
+					background: #155db1;
 
 					display: block;
 					// box content redes

@@ -51,18 +51,18 @@
 }
 
 .contact .contact-content .wraper-contact .wraper-contact-content {
+  background: blueviolet;
   -ms-grid-column-align: center;
       justify-self: center;
   width: 90%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(175px, max-content))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(175px, -webkit-max-content));
-      grid-template-columns: repeat(auto-fit, minmax(175px, max-content));
-  grid-auto-flow: dense;
+  -ms-grid-columns: (minmax(175px, max-content))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(175px, -webkit-max-content));
+      grid-template-columns: repeat(auto-fill, minmax(175px, max-content));
 }
 
 .contact .contact-content .wraper-contact .wraper-contact-content div {
@@ -70,6 +70,7 @@
       justify-self: center;
   margin-top: 10px;
   margin-bottom: 25px;
+  background: #155db1;
   display: block;
 }
 

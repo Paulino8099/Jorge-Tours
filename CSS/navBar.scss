@@ -149,8 +149,8 @@
 		// main
 		.main {
 			gap: 30px;
-			margin-left: 5px;
 			margin-top: 30px;
+			margin-left: 5px;
 			width: 100%;
 			align-content: center;
 			transition: .4s;
@@ -260,16 +260,15 @@
 				}
 			}
 			.main {
-				gap: 50px; //edit (remove: 30px, add: 50px)
 				li {
 					&:hover {
 						color: #ffffff; //edit(remove: #15aab2, add: #ffffff)
 						background: #15aab2; //edit (remove: #ffffff, add: #15aab2)
 					}
 					&:active {
-						//edit(add: active)
 						color: #155db1;
 						background: #ffffff;
+						//edit(add: active)
 					}
 				}
 			}
