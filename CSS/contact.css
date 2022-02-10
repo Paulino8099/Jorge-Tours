@@ -51,7 +51,6 @@
 }
 
 .contact .contact-content .wraper-contact .wraper-contact-content {
-  background: blueviolet;
   -ms-grid-column-align: center;
       justify-self: center;
   width: 90%;
@@ -70,7 +69,6 @@
       justify-self: center;
   margin-top: 10px;
   margin-bottom: 25px;
-  background: #155db1;
   display: block;
 }
 
@@ -131,6 +129,23 @@
   .contact {
     width: 100%;
     margin-left: 0;
+  }
+  .contact .contact-content .wraper-contact .wraper-contact-content div a {
+    padding: 0 10px;
+    border-radius: 25px;
+    padding-bottom: 5px;
+  }
+  .contact .contact-content .wraper-contact .wraper-contact-content div a:active {
+    -webkit-transition: .2s;
+    transition: .2s;
+    -webkit-box-shadow: inset 0 0 10px #00000080;
+            box-shadow: inset 0 0 10px #00000080;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .contact .contact-content .wraper-contact .wraper-contact-content div a i:hover {
+    fill: #15aab3;
+    color: #15aab2;
   }
 }
 /*# sourceMappingURL=contact.css.map */

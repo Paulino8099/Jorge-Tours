@@ -40,7 +40,6 @@
 
 			display: grid;
 			.wraper-contact-content {
-				background: blueviolet;
 				justify-self: center;
 				width: 90%;
 				justify-content: space-evenly;
@@ -52,7 +51,6 @@
 					justify-self: center;
 					margin-top: 10px;
 					margin-bottom: 25px;
-					background: #155db1;
 
 					display: block;
 					// box content redes
@@ -114,5 +112,30 @@
 	.contact {
 		width: 100%; //edit (remove: [100% - 50px], add: 100%)
 		margin-left: 0; //edit (remove: 50px add: 0)
+		.contact-content {
+			.wraper-contact {
+				.wraper-contact-content {
+					div {
+						a {
+							padding: 0 10px;
+							border-radius: 25px;
+							padding-bottom: 5px;
+							&:active {
+								transition: .2s;
+								box-shadow: inset 0 0 10px #00000080;
+
+								transform: scale(1.2);
+							}
+							i {
+								&:hover {
+									fill: #15aab3;
+									color: #15aab2;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
