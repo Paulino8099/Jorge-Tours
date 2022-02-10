@@ -275,6 +275,8 @@
             transform: translateX(-105%);
   }
   .navBar .navBar-content {
+    -webkit-box-shadow: none;
+            box-shadow: none;
     border-bottom-right-radius: 10px;
   }
   .navBar .navBar-content .btn-open-navBar {

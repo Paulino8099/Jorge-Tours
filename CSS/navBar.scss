@@ -238,6 +238,7 @@
 		height: 500px; //edit (remove: 100%, add: 500px)
 		transform: translateX(-105%); //edit(add: transform)
 		.navBar-content {
+			box-shadow: none; //edit (remove: 0 0 10px #000, add: none)
 			border-bottom-right-radius: 10px; //edit(add: border-top-right-radius)
 			.btn-open-navBar {
 				right: -50px; //edit (remove: 30px, add: 50px)
