@@ -181,4 +181,12 @@
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content div div aside div h5 {
   margin-top: 5px;
 }
+
+@media (max-width: 750px) {
+  .excursions {
+    width: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 /*# sourceMappingURL=excursions.css.map */
