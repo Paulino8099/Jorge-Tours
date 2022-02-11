@@ -1,12 +1,146 @@
 .excursions {
-    width: calc(100% - 50px);
-    transform: translateX(50px);
-    background: blueviolet;
+	width: calc(100% - 50px);
+	transform: translateX(50px);
 
-    display: none;
-    grid-column: 1/13;
-    grid-row: 2/3;
-    .excursions-content {
-        width: 100%;
-    }
+	display: grid;
+	grid-column: 1/13;
+	grid-row: 2/3;
+	.excursions-content {
+		margin-top: 50px;
+		width: 90%;
+		justify-self: center;
+
+		display: grid;
+		// title
+		.title-excursions {
+			justify-self: center;
+			width: 100%;
+
+			display: grid;
+			.title-excursions-content {
+				justify-self: center;
+				h1 {
+					color: #15aab2;
+					font-size: 2rem;
+				}
+			}
+		}
+		// wraper
+		.wraper-excursions {
+			width: 100%;
+
+			display: grid;
+			.wraper-excursions-content {
+				width: 100%;
+				justify-content: space-evenly;
+				row-gap: 20px;
+				column-gap: 10px;
+
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+				grid-template-rows: repeat(auto-fit, minmax(100px, auto));
+				// cards excursions (container)
+				div {
+					border-bottom-left-radius: 15px;
+					border-top-right-radius: 15px;
+					// background: cornflowerblue;
+
+					display: block;
+					// cards excursions (content)
+					div {
+						display: grid;
+						// media
+						div {
+							width: 90%;
+							justify-self: center;
+							justify-content: space-evenly;
+
+							display: block;
+							// media content
+							div {
+								width: 100%;
+								justify-content: space-between;
+								gap: 10px;
+								align-content: center;
+
+								display: flex;
+								// img area
+								span {
+									border: 2px solid #155db1;
+									border-radius: 50px;
+									overflow: hidden;
+									width: 80%;
+									max-height: 50px;
+									background: cadetblue;
+
+									display: flex;
+									// img
+									img {
+										object-fit: cover;
+										height: 100%;
+										width: 100%;
+									}
+								}
+							}
+						}
+						// title (container)
+						span {
+							margin-top: 10px;
+							justify-self: center;
+							// title (content)
+							div {
+								width: 100%;
+								display: block;
+								h3 {
+									font-size: 1.3rem;
+									color: #155db1;
+								}
+							}
+						}
+						// details (container)
+						aside {
+							justify-self: center;
+							width: 100%;
+							height: 100px;
+							margin-top: 10px;
+							overflow: auto;
+
+							display: grid;
+							&::-webkit-scrollbar {
+								width: 10px;
+								background: #15aab240;
+                                border-radius: 10px;
+							}
+							&::-webkit-scrollbar-thumb {
+								width: 100%;
+								background: #15aab2;
+								border-radius: 15px;
+								box-shadow: inset 0 0 10px #fff;
+								&:hover {
+									box-shadow: inset 0 0 10px #fff;
+									background: #155db1;
+								}
+							}
+							// details (content)
+							div {
+								align-self: center;
+								p {
+									color: #000000;
+									font-weight: 300;
+									font-size: 1rem;
+									font-weight: 500;
+                                    b {
+                                        color: #15aab2;
+                                    }
+								}
+								h5 {
+									margin-top: 5px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

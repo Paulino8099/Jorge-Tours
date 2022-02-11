@@ -166,7 +166,7 @@
   position: absolute;
 }
 
-.navBar .navBar-content .main {
+.navBar .navBar-content .main a {
   gap: 30px;
   margin-top: 30px;
   margin-left: 5px;
@@ -175,6 +175,8 @@
       align-content: center;
   -webkit-transition: .4s;
   transition: .4s;
+  list-style: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,7 +186,7 @@
           flex-direction: column;
 }
 
-.navBar .navBar-content .main li {
+.navBar .navBar-content .main a li {
   list-style: none;
   color: #ffffff;
   cursor: pointer;
@@ -203,12 +205,12 @@
   display: flex;
 }
 
-.navBar .navBar-content .main li.active {
+.navBar .navBar-content .main a li.active {
   color: #155db1;
   background: #ffffff;
 }
 
-.navBar .navBar-content .main li.active::after {
+.navBar .navBar-content .main a li.active::after {
   content: "";
   width: 8px;
   height: 25px;
@@ -221,14 +223,14 @@
   transition: .4s;
 }
 
-.navBar .navBar-content .main li:hover {
+.navBar .navBar-content .main a li:hover {
   -webkit-transition: 0s;
   transition: 0s;
   color: #155db1;
   background: #ffffff;
 }
 
-.navBar .navBar-content .main li:hover::after {
+.navBar .navBar-content .main a li:hover::after {
   content: "";
   width: 8px;
   height: 25px;
@@ -241,27 +243,27 @@
   transition: 0s;
 }
 
-.navBar .navBar-content .main li:hover i {
+.navBar .navBar-content .main a li:hover i {
   -webkit-transition: 0s;
   transition: 0s;
 }
 
-.navBar .navBar-content .main li:hover h3 {
+.navBar .navBar-content .main a li:hover h3 {
   -webkit-transition: 0s;
   transition: 0s;
 }
 
-.navBar .navBar-content .main li:active {
+.navBar .navBar-content .main a li:active {
   color: #155db1bf;
   background: #ffffffbf;
 }
 
-.navBar .navBar-content .main li i {
+.navBar .navBar-content .main a li i {
   margin-right: 10px;
   font-size: 1.5rem;
 }
 
-.navBar .navBar-content .main li h3 {
+.navBar .navBar-content .main a li h3 {
   font-size: 0rem;
   -webkit-transition: .4s;
   transition: .4s;
@@ -298,11 +300,11 @@
   .navBar .navBar-content .btn-open-navBar .lines-btn-navBar.active {
     margin-left: 0;
   }
-  .navBar .navBar-content .main li:hover {
+  .navBar .navBar-content .main a li:hover {
     color: #ffffff;
     background: #15aab2;
   }
-  .navBar .navBar-content .main li:active {
+  .navBar .navBar-content .main a li:active {
     color: #155db1;
     background: #ffffff;
   }
