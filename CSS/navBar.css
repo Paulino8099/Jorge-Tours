@@ -6,12 +6,13 @@
   height: 100%;
   -webkit-transition: .4s;
   transition: .4s;
-  z-index: 11000;
+  z-index: 500;
   display: -ms-grid;
   display: grid;
 }
 
 .navBar.active {
+  z-index: 11000;
   width: 200px;
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -71,6 +72,24 @@
   transition: .4s;
   display: -ms-grid;
   display: grid;
+}
+
+.navBar .navBar-content .btn-open-navBar:hover .lines-btn-navBar {
+  -webkit-transition: .2s;
+  transition: .2s;
+  background: #ff0000;
+}
+
+.navBar .navBar-content .btn-open-navBar:hover .lines-btn-navBar::after {
+  -webkit-transition: .2s;
+  transition: .2s;
+  background: #ff0000;
+}
+
+.navBar .navBar-content .btn-open-navBar:hover .lines-btn-navBar::before {
+  -webkit-transition: .2s;
+  transition: .2s;
+  background: #ff0000;
 }
 
 .navBar .navBar-content .btn-open-navBar .lines-btn-navBar {
@@ -284,6 +303,36 @@
     right: -50px;
     width: 50px;
     height: 50px;
+  }
+  .navBar .navBar-content .btn-open-navBar:hover .lines-btn-navBar {
+    -webkit-transition: .4s;
+    transition: .4s;
+    background: white;
+  }
+  .navBar .navBar-content .btn-open-navBar:hover .lines-btn-navBar::after {
+    -webkit-transition: .4s;
+    transition: .4s;
+    background: white;
+  }
+  .navBar .navBar-content .btn-open-navBar:hover .lines-btn-navBar::before {
+    -webkit-transition: .4s;
+    transition: .4s;
+    background: white;
+  }
+  .navBar .navBar-content .btn-open-navBar:active .lines-btn-navBar {
+    -webkit-transition: .2s;
+    transition: .2s;
+    background: #ff0000;
+  }
+  .navBar .navBar-content .btn-open-navBar:active .lines-btn-navBar::after {
+    -webkit-transition: .2s;
+    transition: .2s;
+    background: #ff0000;
+  }
+  .navBar .navBar-content .btn-open-navBar:active .lines-btn-navBar::before {
+    -webkit-transition: .2s;
+    transition: .2s;
+    background: #ff0000;
   }
   .navBar .navBar-content .btn-open-navBar .lines-btn-navBar {
     margin-left: -10px;

@@ -37,13 +37,13 @@ body {
 	display: grid;
 	grid-template-columns: repeat(12, auto);
 	grid-template-rows: repeat(12, auto);
-	// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-	// |||||||||||||||||||||||||||||||||||||||||Backdrop Box|||||||||||||||||||||||||||||||||||||||||||||
-	// ||||||||||||||||||||||||||||||||||||backdrop Box||||||backdrop Box||||||||||||||||||||||||||||||||
-	// ||||||||||||||||||||||||||||||backdrop Box|||||||||||||||||backdrop Box|||||||||||||||||||||||||||
-	// ||||||||||||||||||||||||||||||||||||backdrop Box||||||backdrop Box||||||||||||||||||||||||||||||||
-	// |||||||||||||||||||||||||||||||||||||||||backdrop Box|||||||||||||||||||||||||||||||||||||||||||||
-	// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+	// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+	// ||||||||||||||||||||||||||||||||||||||||Backdrop|||||||||||||||||||||||||||||||||||||||||
+	// |||||||||||||||||||||||||||||||backdrop||||||||||backdrop||||||||||||||||||||||||||||||||
+	// ||||||||||||||||||||||backdrop||||||||||||||||||||||||||||backdrop|||||||||||||||||||||||
+	// |||||||||||||||||||||||||||||||backdrop||||||||||backdrop||||||||||||||||||||||||||||||||
+	// ||||||||||||||||||||||||||||||||||||||||backdrop|||||||||||||||||||||||||||||||||||||||||
+	// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 	.backdrop-box {
 		backdrop-filter: blur(5px);
 		background: #000000bf;
@@ -61,6 +61,98 @@ body {
 			pointer-events: visible;
 		}
 	}
+	
+	// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+	// ||||||||||||||||||||||||||||||||||||||||Excurisions||||||||||||||||||||||||||||||||||||||
+	// ||||||||||||||||||||||||||||Excurisions|||||||||||||Excurisions||||||||||||||||||||||||||
+	// ||||||||||||||||Excurisions|||||||||||||||||||||||||||||||||||||Excurisions||||||||||||||
+	// ||||||||||||||||||||||||||||Excurisions|||||||||||||Excurisions||||||||||||||||||||||||||
+	// ||||||||||||||||||||||||||||||||||||||||Excurisions||||||||||||||||||||||||||||||||||||||
+	// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+	// wraper medias excursions
+	.medias-excursions {
+		position: fixed;
+		width: 35%;
+		height: max-content;
+		z-index: 800;
+		border-radius: 10px;
+		background: #def7ff;
+		box-shadow: 0 0 10px 2px #00000090;
+		overflow: hidden;
+		opacity: 0;
+		pointer-events: none;
+		transition: .3s;
+
+		display: grid;
+		&.active {
+			z-index: 11000;
+			opacity: 1;
+			pointer-events: visible;
+		}
+		.medias-excursions-content {
+			width: 100%;
+			place-content: center;
+			position: relative;
+
+			display: flex;
+			flex-direction: column;
+			// btn
+			.btn-medias-excursions {
+				position: absolute;
+				top: 2px;
+				right: 5px;
+				i {
+					color: #444444;
+					font-size: calc(.8rem + 1vw);
+					&:hover {
+						color: #ff0000;
+					}
+				}
+			}
+			// title
+			.title-medias-excursions {
+				width: 100%;
+				text-align: center;
+
+				display: grid;
+				h3 {
+					justify-self: center;
+					font-size: calc(.8rem + 1vw);
+					color: #155db1;
+					text-shadow: 0 0 5px #00000080;
+				}
+			}
+			// img
+			.img-medias-excursions {
+				width: 100%;
+				place-items: center;
+				border-radius: 10px;
+				transition: .5s;
+
+				display: grid;
+				&.active {
+					z-index: 11000;
+				}
+				img {
+					transition: .5s;
+					width: 100%;
+				}
+			}
+			// description
+			.des-medias-excursions {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index: 100;
+				margin: 5px;
+				text-shadow: 0 0 5px #ffffff;
+				color: #444444;
+			}
+		}
+	}
 	@media (max-width: 750px) {
+		.medias-excursions {
+			width: 90%;
+		}
 	}
 }

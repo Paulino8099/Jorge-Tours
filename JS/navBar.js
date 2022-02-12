@@ -11,15 +11,6 @@ function navBarBtn() {
     let linesNavBarBtn = document.documentElement.querySelector('.lines-btn-navBar'); //lineas del btn del navBar
 
     /**
-     * todo|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-     * todo|||||||||||||||||||||||||||||||||||||||||Desktop|||||||||||||||||||||||||||||||||||||
-     * todo|||||||||||||||||||||||||||||||||Desktop|||||||||Desktop|||||||||||||||||||||||||||||
-     * todo|||||||||||||||||||||||||Desktop||||||||||||||||||||||||||Desktop||||||||||||||||||||
-     * todo|||||||||||||||||||||||||||||||||Desktop|||||||||Desktop|||||||||||||||||||||||||||||
-     * todo|||||||||||||||||||||||||||||||||||||||||Desktop|||||||||||||||||||||||||||||||||||||
-     * todo|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-     */
-    /**
      * ?onOff navBar
      */
     openNavBar();
@@ -37,22 +28,13 @@ function navBarBtn() {
          * ?box backdrop
          */
         backdropBox.addEventListener('click', function () {
-            navBar.classList.toggle('active');
-            backdropBox.classList.toggle('active');
-            btnNavBar.classList.toggle('active');
-            linesNavBarBtn.classList.toggle('active');
+            navBar.classList.remove('active');
+            backdropBox.classList.remove('active');
+            btnNavBar.classList.remove('active');
+            linesNavBarBtn.classList.remove('active');
         });
 
     };
-    /**
-     * todo|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-     * todo|||||||||||||||||||||||||||||||||||||||||Mobile||||||||||||||||||||||||||||||||||||||
-     * todo|||||||||||||||||||||||||||||||||Mobile||||||||||Mobile||||||||||||||||||||||||||||||
-     * todo|||||||||||||||||||||||||Mobile|||||||||||||||||||||||||||Mobile|||||||||||||||||||||
-     * todo|||||||||||||||||||||||||||||||||Mobile||||||||||Mobile||||||||||||||||||||||||||||||
-     * todo|||||||||||||||||||||||||||||||||||||||||Mobile||||||||||||||||||||||||||||||||||||||
-     * todo|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-     */
 };
 
 /**
@@ -72,25 +54,32 @@ function observadorSection() {
 
         entry.forEach(function (entry) {
             if (entry.isIntersecting) {
-                console.log(entry.target.classList.value)
+                console.log(entry.target.classList.value);
                 /**
                  * ?home...
                  */
-                //si detecta que la section captada tiene algunas de las siguientes clases hará lo indicado a continuación
-                if (entry.target.classList == 'home sections') {
+                //si se detecta que la el nombre de cada clase coincide con los parametros de cada sentencia, se le indicará qué hacer indicado por cada sentencia de lo contrario no se va a ejecutar ninguna función
+                if (entry.target.classList.value == 'home sections') {
                     btnHome.classList.add('active');
+
+                } else if (!(entry.target.classList.value == 'home sections')) {
+                    btnHome.classList.remove('active');
+                }
+                if (entry.target.classList.value == 'excursions sections') {
+                    btnExcursions.classList.add('active');
+                } if (!(entry.target.classList.value == 'excursions sections')) {
                     btnExcursions.classList.remove('active');
+                }
+                if (entry.target.classList.value == 'contact sections') {
+                    btnContact.classList.add('active');
+                } if (!(entry.target.classList.value == 'contact sections')) {
                     btnContact.classList.remove('active');
                 }
-                else if (entry.target.classList == 'excursions sections') {
-                    btnHome.classList.remove('active');
-                    btnExcursions.classList.add('active');
-                }
-                else if (entry.target.classList == 'contact sections') {
-                    btnHome.classList.remove('active');
-                    btnExcursions.classList.remove('active');
-                    btnContact.classList.add('active');
-                } 
+                // else if (!(entry.target.classList == 'home sections' || entry.target.classList == 'contact sections' || entry.target.classList == 'excursions sections')){
+                //     btnHome.classList.remove('active');
+                //     btnExcursions.classList.remove('active');
+                //     btnContact.classList.remove('active');
+                // }
             };
         })
     };

@@ -13,10 +13,11 @@
 	width: 50px;
 	height: 100%;
 	transition: .4s;
-	z-index: 11000;
+	z-index: 500;
 
 	display: grid;
 	&.active {
+		z-index: 11000;
 		width: 200px;
 		transform: translateX(0);
 		.navBar-content {
@@ -72,6 +73,20 @@
 			transition: .4s;
 
 			display: grid;
+			&:hover {
+				.lines-btn-navBar {
+					transition: .2s;
+					background: #ff0000;
+					&::after {
+						transition: .2s;
+						background: #ff0000;
+					}
+					&::before {
+						transition: .2s;
+						background: #ff0000;
+					}
+				}
+			}
 			.lines-btn-navBar {
 				position: relative;
 				align-self: center;
@@ -247,6 +262,36 @@
 				right: -50px; //edit (remove: 30px, add: 50px)
 				width: 50px; //edit (remove: 30px, add: 50px)
 				height: 50px; //edit (remove: 30px, add: 50px)
+				&:hover {
+					.lines-btn-navBar {
+						transition: .4s;
+						background: white;
+						&::after {
+							transition: .4s;
+							background: white;
+						}
+						&::before {
+							transition: .4s;
+							background: white;
+						}
+					}
+					//edit (remove: "hover")
+				}
+				&:active {
+					.lines-btn-navBar {
+						transition: .2s;
+						background: #ff0000;
+						&::after {
+							transition: .2s;
+							background: #ff0000;
+						}
+						&::before {
+							transition: .2s;
+							background: #ff0000;
+						}
+					}
+					//edit (remove: "active")
+				}
 				.lines-btn-navBar {
 					margin-left: -10px; //edit (remove: -3px, add: -10px)
 					width: 30px; //edit (remove: 25px, add: 30px)

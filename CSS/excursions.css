@@ -108,10 +108,17 @@
 }
 
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content div div div div span img {
+  -webkit-transition: .5s;
+  transition: .5s;
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
   width: 100%;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div div div span img:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content div div span {

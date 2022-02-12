@@ -74,4 +74,109 @@ body .backdrop-box.active {
   opacity: 1;
   pointer-events: visible;
 }
+
+body .medias-excursions {
+  position: fixed;
+  width: 35%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  z-index: 800;
+  border-radius: 10px;
+  background: #def7ff;
+  -webkit-box-shadow: 0 0 10px 2px #00000090;
+          box-shadow: 0 0 10px 2px #00000090;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: -ms-grid;
+  display: grid;
+}
+
+body .medias-excursions.active {
+  z-index: 11000;
+  opacity: 1;
+  pointer-events: visible;
+}
+
+body .medias-excursions .medias-excursions-content {
+  width: 100%;
+  place-content: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .medias-excursions .medias-excursions-content .btn-medias-excursions {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+}
+
+body .medias-excursions .medias-excursions-content .btn-medias-excursions i {
+  color: #444444;
+  font-size: calc(.8rem + 1vw);
+}
+
+body .medias-excursions .medias-excursions-content .btn-medias-excursions i:hover {
+  color: #ff0000;
+}
+
+body .medias-excursions .medias-excursions-content .title-medias-excursions {
+  width: 100%;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+}
+
+body .medias-excursions .medias-excursions-content .title-medias-excursions h3 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-size: calc(.8rem + 1vw);
+  color: #155db1;
+  text-shadow: 0 0 5px #00000080;
+}
+
+body .medias-excursions .medias-excursions-content .img-medias-excursions {
+  width: 100%;
+  place-items: center;
+  border-radius: 10px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  display: -ms-grid;
+  display: grid;
+}
+
+body .medias-excursions .medias-excursions-content .img-medias-excursions.active {
+  z-index: 11000;
+}
+
+body .medias-excursions .medias-excursions-content .img-medias-excursions img {
+  -webkit-transition: .5s;
+  transition: .5s;
+  width: 100%;
+}
+
+body .medias-excursions .medias-excursions-content .des-medias-excursions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  margin: 5px;
+  text-shadow: 0 0 5px #ffffff;
+  color: #444444;
+}
+
+@media (max-width: 750px) {
+  body .medias-excursions {
+    width: 90%;
+  }
+}
 /*# sourceMappingURL=body.css.map */
