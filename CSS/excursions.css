@@ -112,6 +112,7 @@
   transition: .5s;
   -o-object-fit: cover;
      object-fit: cover;
+  cursor: pointer;
   height: 100%;
   width: 100%;
 }

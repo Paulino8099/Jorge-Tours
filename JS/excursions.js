@@ -23,17 +23,11 @@ function dataFloat() {
      *///agregando eventos o fuunciones a cada imagen en particular del contenedor "excursions"
     targetAllImg.forEach((e) => {
         e.addEventListener('click', function (e) {
-            if (x < (widthBox)) {
-                x = 250;
-            }
 
             mediaExcursions.classList.add('active'); //active
-            mediaExcursions.style.top = `${y + (e.target.offsetWidth / 3) + 'px'}`;
-            mediaExcursions.style.left = x - widthBox + 'px';
             if (document.documentElement.scrollWidth <= 750) {
                 mediaExcursions.style.left = 0;
                 mediaExcursions.style.right = 0;
-
                 mediaExcursions.style.left = 5 + '%';
             };
             /**
@@ -50,48 +44,92 @@ function dataFloat() {
             let title = document.documentElement.querySelector('.textTitle-medias-excursions');
             let description = document.documentElement.querySelector('.text-des-medias-excursions');
 
-            //refilling img
+            //refilling the img
             img.innerHTML = `<img src="${e.target.src}" alt="">`;
 
-            // refilling title
+            // refilling the title
             title.innerHTML = e.target.parentNode.parentNode.parentNode.parentNode.children[1].children[0].children[0].childNodes[0].nodeValue;
 
-            // refilling description
-            if (title.innerHTML == 'Ballenas y Cayo Levantado') {
-                description.innerHTML = `${title.innerHTML}, Samaná (República Dominicana)`;
-            }
-            else if (title.innerHTML == 'Haitises y Cayo') {
-                description.innerHTML = `${title.innerHTML}, Samaná (República Dominicana)`;
-            }
-            else if (title.innerHTML == 'Playa el Rincón') {
-                description.innerHTML = `${title.innerHTML}, Samaná (República Dominicana)`;
-            }
-            else if (title.innerHTML == 'Playa Madama') {
-                description.innerHTML = `${title.innerHTML}, Samaná (República Dominicana)`;
-            }
-            else if (title.innerHTML == 'Salto el Limón') {
-                description.innerHTML = `${title.innerHTML}, Samaná (República Dominicana)`;
-            }
-            else if (title.innerHTML == 'Las Terrenas') {
-                description.innerHTML = `${title.innerHTML}, Samaná (República Dominicana)`;
+            // refilling the description
+            refillingDescription();
+            function refillingDescription() {
+                /**
+                 * ?ballena jorobada
+                 */
+                if (img.innerHTML.includes('ballena-jorobada1')) {
+                    description.innerHTML = `Ballena Jorobada, Samaná (República Dominicana)`;
+                }
+                /**
+                 * ?cayo levantado
+                 */
+                else if (img.innerHTML.includes('cayo-levantado1')) {
+                    description.innerHTML = `Cayo Levantado, Samaná (República Dominicana)`;
+                }
+                /**
+                 * ?ballena jorobada
+                 */
+                else if (img.innerHTML.includes('ballena-jorobada2')) {
+                    description.innerHTML = `Ballena Jorobada, Samaná (República Dominicana)`;
+                }
+                /**
+                 * ?los haitises
+                 */
+                else if (img.innerHTML.includes('los-haitises1')) {
+                    description.innerHTML = `Los Haitises, Samaná (República Dominicana)`;
+                }
+                /**
+                 * ?cayo levantado
+                 */
+                else if (img.innerHTML.includes('cayo-levantado2')) {
+                    description.innerHTML = `Cayo Levantado, Samaná (República Dominicana)`;
+                }
+                /**
+                 * ?los haitises
+                 */
+                else if (img.innerHTML.includes('los-haitises2')) {
+                    description.innerHTML = `Los Haitises, Samaná (República Dominicana)`;
+                }
+                /**
+                 * ?playas el rincón
+                 */
+                else if (img.innerHTML.includes('playa-rincon1') || img.innerHTML.includes('playa-rincon2') || img.innerHTML.includes('playa-rincon3')) {
+                    description.innerHTML = `Playa el Rincón, Samaná (República Dominicana)`;
+                }
+                /**
+                 * ?playas madamas
+                 */
+                else if (img.innerHTML.includes('playa-madama1') || img.innerHTML.includes('playa-madama2') || img.innerHTML.includes('playa-madama3')) {
+                    description.innerHTML = `Playa el Madama, Samaná (República Dominicana)`;
+                }
+                /**
+                 * ?salto el limón
+                 */
+                else if (img.innerHTML.includes('salto-el-limon1') || img.innerHTML.includes('salto-el-limon2') || img.innerHTML.includes('salto-el-limon3')) {
+                    description.innerHTML = `Salto el Limón, Samaná (República Dominicana)`;
+                }
+                /**
+                 * ?las terrenas
+                 */
+                else if (img.innerHTML.includes('las-terrenas1') || img.innerHTML.includes('las-terrenas2') || img.innerHTML.includes('las-terrenas3')) {
+                    description.innerHTML = `Las Terrenas, Samaná (República Dominicana)`;
+                }
             };
         });
     });
 
     /**
-     * ?cancelando o ocultando ventana "dataFloat"
+     * ?on/off ventana "dataFloat"
      */
-    btnCancel.addEventListener('click', function () {
-        mediaExcursions.classList.remove('active');
-        backdropBox.classList.remove('active');
-    });
+    dataFloat1();
+    function dataFloat1() {
+        btnCancel.addEventListener('click', function () {
+            mediaExcursions.classList.remove('active');
+            backdropBox.classList.remove('active');
+        });
 
-    backdropBox.addEventListener('click', function () {
-        mediaExcursions.classList.remove('active');
-        backdropBox.classList.remove('active');
-    });
-    window.addEventListener('scroll', () => {
-        mediaExcursions.classList.remove('active');
-        backdropBox.classList.remove('active');
-    });
+        backdropBox.addEventListener('click', function () {
+            mediaExcursions.classList.remove('active');
+            backdropBox.classList.remove('active');
+        });
+    }
 };

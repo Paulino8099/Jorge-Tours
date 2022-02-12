@@ -54,9 +54,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 body .backdrop-box {
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  background: #000000bf;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  background: #000000f6;
   width: 110%;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -77,10 +77,10 @@ body .backdrop-box.active {
 
 body .medias-excursions {
   position: fixed;
-  width: 35%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  width: 60%;
+  max-height: 460px;
+  top: 5%;
+  left: 20%;
   z-index: 800;
   border-radius: 10px;
   background: #def7ff;
@@ -159,9 +159,12 @@ body .medias-excursions .medias-excursions-content .img-medias-excursions.active
 }
 
 body .medias-excursions .medias-excursions-content .img-medias-excursions img {
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-transition: .5s;
   transition: .5s;
   width: 100%;
+  height: 410px;
 }
 
 body .medias-excursions .medias-excursions-content .des-medias-excursions {
@@ -176,7 +179,13 @@ body .medias-excursions .medias-excursions-content .des-medias-excursions {
 
 @media (max-width: 750px) {
   body .medias-excursions {
+    top: 25%;
     width: 90%;
+  }
+  body .medias-excursions .medias-excursions-content .img-medias-excursions img {
+    max-height: -webkit-min-content;
+    max-height: -moz-min-content;
+    max-height: min-content;
   }
 }
 /*# sourceMappingURL=body.css.map */
