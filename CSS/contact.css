@@ -108,6 +108,8 @@
       justify-self: center;
   color: #15aab2;
   cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .contact .contact-content .wraper-contact .wraper-contact-content div a i:hover {
@@ -116,7 +118,7 @@
 
 .contact .contact-content .wraper-contact .wraper-contact-content div a h3 {
   color: #444444;
-  font-size: calc(.5em + 1vw);
+  font-size: 1rem;
   margin-top: 10px;
   cursor: pointer;
   letter-spacing: 1px;

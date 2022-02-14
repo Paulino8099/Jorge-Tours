@@ -75,15 +75,15 @@
 			display: grid;
 			&:hover {
 				.lines-btn-navBar {
-					transition: .2s;
-					background: #ff0000;
+					transition: .1s;
+					background: #999999;
 					&::after {
-						transition: .2s;
-						background: #ff0000;
+						transition: .1s;
+						background: #999999;
 					}
 					&::before {
-						transition: .2s;
-						background: #ff0000;
+						transition: .1s;
+						background: #999999;
 					}
 				}
 			}

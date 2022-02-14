@@ -82,13 +82,14 @@
 							justify-self: center;
 							color: #15aab2;
 							cursor: pointer;
+							transition: .3s;
 							&:hover {
 								color: #155db1;
 							}
 						}
 						h3 {
 							color: #444444;
-							font-size: calc(.5em + 1vw);
+							font-size: 1rem;
 							margin-top: 10px;
 							cursor: pointer;
 							letter-spacing: 1px;

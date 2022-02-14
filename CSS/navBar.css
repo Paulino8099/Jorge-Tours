@@ -75,21 +75,21 @@
 }
 
 .navBar .navBar-content .btn-open-navBar:hover .lines-btn-navBar {
-  -webkit-transition: .2s;
-  transition: .2s;
-  background: #ff0000;
+  -webkit-transition: .1s;
+  transition: .1s;
+  background: #999999;
 }
 
 .navBar .navBar-content .btn-open-navBar:hover .lines-btn-navBar::after {
-  -webkit-transition: .2s;
-  transition: .2s;
-  background: #ff0000;
+  -webkit-transition: .1s;
+  transition: .1s;
+  background: #999999;
 }
 
 .navBar .navBar-content .btn-open-navBar:hover .lines-btn-navBar::before {
-  -webkit-transition: .2s;
-  transition: .2s;
-  background: #ff0000;
+  -webkit-transition: .1s;
+  transition: .1s;
+  background: #999999;
 }
 
 .navBar .navBar-content .btn-open-navBar .lines-btn-navBar {

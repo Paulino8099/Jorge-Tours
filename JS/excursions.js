@@ -6,6 +6,7 @@ function dataFloat() {
     let btnCancel = document.documentElement.querySelector('.btn-medias-excursions');
     let navBar = document.documentElement.querySelector('.navBar');
     let backdropBox = document.documentElement.querySelector('.backdrop-box');
+    let body = document.documentElement.querySelector('body');
 
     let y = 0;
     let x = 0;
@@ -23,19 +24,12 @@ function dataFloat() {
      *///agregando eventos o fuunciones a cada imagen en particular del contenedor "excursions"
     targetAllImg.forEach((e) => {
         e.addEventListener('click', function (e) {
-
-            mediaExcursions.classList.add('active'); //active
-            if (document.documentElement.scrollWidth <= 750) {
-                mediaExcursions.style.left = 0;
-                mediaExcursions.style.right = 0;
-                mediaExcursions.style.left = 5 + '%';
-            };
             /**
-             * ?activating backdrop
+             * ?activating backdrop & dataFloat
              */
+            mediaExcursions.classList.add('active'); //active            
+            body.classList.add('active');
             backdropBox.classList.add('active');
-            e.target.parentNode.style.zIndex = '11000';
-            console.log(e.target.parentNode.parentNode)
 
             /**
              * ?refilling dataFloat
@@ -114,22 +108,27 @@ function dataFloat() {
                     description.innerHTML = `Las Terrenas, Samaná (República Dominicana)`;
                 }
             };
+
         });
+
+        /**
+         * ?disable ventana "dataFloat"
+         */
+        offDataFloat();
+        function offDataFloat() {
+            btnCancel.addEventListener('click', function () {
+                mediaExcursions.classList.remove('active');
+                backdropBox.classList.remove('active');
+                body.classList.remove('active');
+
+            });
+
+            backdropBox.addEventListener('click', function () {
+                mediaExcursions.classList.remove('active');
+                backdropBox.classList.remove('active');
+                body.classList.remove('active');
+            });
+        }
     });
 
-    /**
-     * ?on/off ventana "dataFloat"
-     */
-    dataFloat1();
-    function dataFloat1() {
-        btnCancel.addEventListener('click', function () {
-            mediaExcursions.classList.remove('active');
-            backdropBox.classList.remove('active');
-        });
-
-        backdropBox.addEventListener('click', function () {
-            mediaExcursions.classList.remove('active');
-            backdropBox.classList.remove('active');
-        });
-    }
 };

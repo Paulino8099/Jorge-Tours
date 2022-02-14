@@ -53,14 +53,18 @@ body::-webkit-scrollbar-thumb:hover {
   background: #155db1;
 }
 
+body.active {
+  overflow: hidden;
+}
+
 body .backdrop-box {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-  background: #000000e5;
-  width: 110%;
+  background: #000000f7;
+  width: 100vw;
+  height: 100vh;
   -ms-grid-column-align: center;
       justify-self: center;
-  height: 104%;
   position: fixed;
   -webkit-transition: .5s;
   transition: .5s;
@@ -173,13 +177,17 @@ body .medias-excursions .medias-excursions-content .des-medias-excursions {
   left: 0;
   z-index: 100;
   margin: 5px;
+  background: #ffffff80;
   text-shadow: 0 0 5px #ffffff;
   color: #444444;
+  border-radius: 15px;
+  padding: 0 5px;
 }
 
 @media (max-width: 750px) {
   body .medias-excursions {
     top: 25%;
+    left: 5%;
     width: 90%;
   }
   body .medias-excursions .medias-excursions-content .img-medias-excursions img {
