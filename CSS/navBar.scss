@@ -91,17 +91,17 @@
 				position: relative;
 				align-self: center;
 				background: #ffffff;
-				margin-left: -3px;
-				width: 25px;
+				width: 20px;
 				height: 2px;
 				transition: .5s;
+				margin-left: -3px;
 				&::after {
 					content: "";
 					background: #ffffff;
 					position: absolute;
-					width: 30px;
+					width: 24px;
 					height: 2px;
-					top: -14px;
+					top: -12px;
 					align-self: center;
 					transition: .5s;
 				}
@@ -109,9 +109,9 @@
 					content: "";
 					position: absolute;
 					background: #ffffff;
-					width: 20px;
+					width: 15px;
 					height: 2px;
-					top: 14px;
+					top: 12px;
 					transition: .5s;
 				}
 				&.active {
@@ -297,10 +297,12 @@
 					width: 30px; //edit (remove: 25px, add: 30px)
 					height: 4px; //edit (remove: 2px, add: 4px)
 					&::after {
+						top: -14px; //edit (remove: -12px , add: -14px)
 						width: 40px; //edit (remove: 30px, add: 40px)
 						height: 4px; //edit (remove: 2px, add: 4px)
 					}
 					&::before {
+						top: 14px; //edit (remove: 12px , add: 14px)
 						height: 4px; //edit (remove: 2px, add: 4px)
 					}
 					&.active {

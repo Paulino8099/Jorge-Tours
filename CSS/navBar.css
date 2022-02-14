@@ -98,20 +98,20 @@
       -ms-grid-row-align: center;
       align-self: center;
   background: #ffffff;
-  margin-left: -3px;
-  width: 25px;
+  width: 20px;
   height: 2px;
   -webkit-transition: .5s;
   transition: .5s;
+  margin-left: -3px;
 }
 
 .navBar .navBar-content .btn-open-navBar .lines-btn-navBar::after {
   content: "";
   background: #ffffff;
   position: absolute;
-  width: 30px;
+  width: 24px;
   height: 2px;
-  top: -14px;
+  top: -12px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -123,9 +123,9 @@
   content: "";
   position: absolute;
   background: #ffffff;
-  width: 20px;
+  width: 15px;
   height: 2px;
-  top: 14px;
+  top: 12px;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -340,10 +340,12 @@
     height: 4px;
   }
   .navBar .navBar-content .btn-open-navBar .lines-btn-navBar::after {
+    top: -14px;
     width: 40px;
     height: 4px;
   }
   .navBar .navBar-content .btn-open-navBar .lines-btn-navBar::before {
+    top: 14px;
     height: 4px;
   }
   .navBar .navBar-content .btn-open-navBar .lines-btn-navBar.active {
