@@ -9,7 +9,7 @@ function navBarBtn() {
     let home = document.documentElement.querySelector('.home'); //contenedor de la sección de "home"
     let backdropBox = document.documentElement.querySelector('.backdrop-box'); //caja para dar opacidad al fondo
     let linesNavBarBtn = document.documentElement.querySelector('.lines-btn-navBar'); //lineas del btn del navBar
-    let home1 = document.documentElement.querySelector('#back-home'); //contenedor de la sección de home
+    let body = document.documentElement.querySelector('body'); //contenedor de la sección de home
 
     /**
      * ?onOff navBar
@@ -20,18 +20,20 @@ function navBarBtn() {
          * ?btn navBar
          */
         btnNavBar.addEventListener('click', function () {
+            body.classList.toggle('active');
             navBar.classList.toggle('active');
             btnNavBar.classList.toggle('active');
             backdropBox.classList.toggle('active');
             linesNavBarBtn.classList.toggle('active');
         });
         /**
-         * ?box backdrop
+         * ?box backdrop (off)
          */
         backdropBox.addEventListener('click', function () {
+            body.classList.remove('active');
             navBar.classList.remove('active');
-            backdropBox.classList.remove('active');
             btnNavBar.classList.remove('active');
+            backdropBox.classList.remove('active');
             linesNavBarBtn.classList.remove('active');
         });
     }
