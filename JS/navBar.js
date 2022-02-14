@@ -57,7 +57,7 @@ function navBarBtn() {
     function ColorBtn() {
         addEventListener('scroll', function () {
             if (document.documentElement.scrollTop > home.offsetHeight) {
-                btnNavBar.style.background = "#555db1";
+                btnNavBar.style.background = "#155db1";
             }
             else {
                 btnNavBar.style.background = "none";

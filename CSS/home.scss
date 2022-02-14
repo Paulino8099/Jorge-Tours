@@ -79,7 +79,7 @@
 			z-index: 300;
 			right: 0;
 			top: 0;
-			padding: 0 5px;
+			padding: 1px 5px;
 			background: linear-gradient(90deg, #ffffff 0%, #ffffff 50%, #15aab2 50%, #15aab2 100%);
 
 			grid-column: 1/7;
@@ -90,12 +90,12 @@
 				font-size: calc(.5em + 1vw);
 				overflow: hidden;
 				position: relative;
-				font-weight: 550;
+				font-weight: 700;
 				b {
 					color: #ffffff;
 					padding: 5px 10px;
 					padding-left: 1px;
-					font-weight: 550;
+					font-weight: 700;
 				}
 				&::after {
 					content: "";

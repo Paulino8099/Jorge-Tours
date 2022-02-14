@@ -98,7 +98,7 @@
   z-index: 300;
   right: 0;
   top: 0;
-  padding: 0 5px;
+  padding: 1px 5px;
   background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(50%, #ffffff), color-stop(50%, #15aab2), to(#15aab2));
   background: linear-gradient(90deg, #ffffff 0%, #ffffff 50%, #15aab2 50%, #15aab2 100%);
   -ms-grid-column: 1;
@@ -115,14 +115,14 @@
   font-size: calc(.5em + 1vw);
   overflow: hidden;
   position: relative;
-  font-weight: 550;
+  font-weight: 700;
 }
 
 .home .home-content .comment-home h3 b {
   color: #ffffff;
   padding: 5px 10px;
   padding-left: 1px;
-  font-weight: 550;
+  font-weight: 700;
 }
 
 .home .home-content .comment-home h3::after {
