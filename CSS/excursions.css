@@ -140,37 +140,35 @@
   -ms-grid-column-align: center;
       justify-self: center;
   width: 100%;
-  max-height: 125px;
   margin-top: 10px;
-  overflow: auto;
   display: -ms-grid;
   display: grid;
 }
 
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div aside::-webkit-scrollbar {
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div aside div {
+  width: 85%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div aside div::-webkit-scrollbar {
   width: 10px;
   background: #15aab240;
   border-radius: 10px;
 }
 
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div aside::-webkit-scrollbar-thumb {
-  width: 100%;
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div aside div::-webkit-scrollbar-thumb {
   background: #15aab2;
   border-radius: 15px;
   -webkit-box-shadow: inset 0 0 10px #fff;
           box-shadow: inset 0 0 10px #fff;
 }
 
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div aside::-webkit-scrollbar-thumb:hover {
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div aside div::-webkit-scrollbar-thumb:hover {
   -webkit-box-shadow: inset 0 0 10px #fff;
           box-shadow: inset 0 0 10px #fff;
   background: #155db1;
-}
-
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div aside div {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content div div aside div p {

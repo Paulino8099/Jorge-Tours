@@ -108,7 +108,6 @@ function dataFloat() {
                     description.innerHTML = `Las Terrenas, Samaná (República Dominicana)`;
                 }
             };
-
         });
 
         /**
@@ -131,4 +130,10 @@ function dataFloat() {
         }
     });
 
+    addEventListener('scroll', function () {
+        let detailsBTC = document.documentElement.querySelector('.details-BCL-content');
+        if (detailsBTC.offsetHeight > 75) {
+            detailsBTC.getElementsByClassName.overflow = 'auto'
+        };
+    });
 };

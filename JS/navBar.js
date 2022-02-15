@@ -38,13 +38,14 @@ function navBarBtn() {
         });
     }
         /**
-     * ?btns navigation
+     * ?btns navigation (off)
      */
     btnsNavigation();
     function btnsNavigation() {
         let mainContent = document.documentElement.querySelector('.main').children;
         for (let i = 0; i < mainContent.length; i++) {
             mainContent[i].addEventListener('click', function () {
+                body.classList.remove('active');
                 navBar.classList.remove('active');
                 btnNavBar.classList.remove('active');
                 backdropBox.classList.remove('active');

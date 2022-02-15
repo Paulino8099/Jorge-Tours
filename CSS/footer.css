@@ -1,0 +1,86 @@
+.footer {
+  width: calc(100% - 50px);
+  margin-left: 50px;
+  background: #222222;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+  -ms-grid-row: 12;
+  -ms-grid-row-span: 1;
+  grid-row: 12/13;
+}
+
+.footer .footer-content {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[6];
+      grid-template-columns: repeat(6, auto);
+  -ms-grid-rows: (auto)[6];
+      grid-template-rows: repeat(6, auto);
+}
+
+.footer .footer-content .authors {
+  justify-self: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  color: #999999;
+  font-size: calc(.3em + 1vw);
+  gap: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.footer .footer-content .authors i {
+  font-size: calc(.4rem + 1vw);
+}
+
+.footer .footer-content .authors h3 a {
+  color: #999999;
+}
+
+.footer .footer-content .authors h3 a:hover {
+  color: #155db2;
+}
+
+.footer .footer-content .copyRight {
+  color: #999999;
+  font-size: calc(.3em + 1vw);
+  gap: 5px;
+  margin: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.footer .footer-content .copyRight i {
+  font-size: calc(.4rem + 1vw);
+}
+
+@media (max-width: 750px) {
+  .footer {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+/*# sourceMappingURL=footer.css.map */
