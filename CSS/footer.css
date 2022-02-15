@@ -50,8 +50,18 @@
   color: #999999;
 }
 
-.footer .footer-content .authors h3 a:hover {
+.footer .footer-content .authors h3 a b {
+  text-decoration: underline;
+  color: #999999;
+}
+
+.footer .footer-content .authors h3 a b:hover {
   color: #155db2;
+}
+
+.footer .footer-content .authors h3 b {
+  color: #666666;
+  margin-left: 5px;
 }
 
 .footer .footer-content .copyRight {

@@ -25,9 +25,17 @@
 			h3 {
 				a {
 					color: #999999;
-                    &:hover {
-                        color: #155db2;
-                    }
+					b {
+                        text-decoration: underline;
+					color: #999999;
+                        &:hover {
+                            color: #155db2;
+                        }
+					}
+				}
+				b {
+					color: #666666;
+					margin-left: 5px;
 				}
 			}
 
