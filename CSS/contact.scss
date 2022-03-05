@@ -68,15 +68,6 @@
 						&::-webkit-scrollbar-thumb {
 							background: #155db1;
 						}
-						svg {
-							width: calc(1.5em + 1vw);
-							justify-self: center;
-							fill: #15aab2;
-							cursor: pointer;
-							&:hover {
-								fill: #155db1;
-							}
-						}
 						i {
 							font-size: calc(1.5em + 1vw);
 							justify-self: center;

@@ -90,18 +90,6 @@
   background: #155db1;
 }
 
-.contact .contact-content .wraper-contact .wraper-contact-content div a svg {
-  width: calc(1.5em + 1vw);
-  -ms-grid-column-align: center;
-      justify-self: center;
-  fill: #15aab2;
-  cursor: pointer;
-}
-
-.contact .contact-content .wraper-contact .wraper-contact-content div a svg:hover {
-  fill: #155db1;
-}
-
 .contact .contact-content .wraper-contact .wraper-contact-content div a i {
   font-size: calc(1.5em + 1vw);
   -ms-grid-column-align: center;
