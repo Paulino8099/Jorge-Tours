@@ -157,19 +157,19 @@
 					h4 {
 						color: #ffffff;
 						font-size: calc(1rem + 1vw);
-						animation: presentintComment 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+						animation: presentintComment 2s cubic-bezier(0.1, 0.100, 0.855, 0.06) infinite;
 						animation-delay: calc(.2s * var(--i));
 					}
 					@keyframes presentintComment {
 						0% {
-							color: #55aab2;
+							color: #ffffff;
 							transform: scale(1) translateY(0);
-							text-shadow: 0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 5px #ffffff;
+							text-shadow: none;
 						}
 						50% {
 							color: #55aab2;
 							transform: scale(1.3) translateY(-10px);
-							text-shadow: 0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 5px #ffffff;
+							text-shadow: 0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 5px #00ff00, 0 0 5px #00ff00;
 						}
 						100% {
 							color: #ffffff;
