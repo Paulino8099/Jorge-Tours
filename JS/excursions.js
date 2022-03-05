@@ -10,7 +10,6 @@ function dataFloat() {
 
     let y = 0;
     let x = 0;
-    let widthBox = mediaExcursions.offsetWidth / 2; //ancho de la contenedor de medias flotante
 
     /**
      * ?buscando coordenadas del puntero mouse

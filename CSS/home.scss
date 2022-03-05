@@ -198,5 +198,13 @@
 		width: 100vw; //edit (remove: [100vw - 200px], add: 100vw)
 		height: 50vh; //edit (remove: 100vh, add: 50vh)
 		margin-left: 0; //edit (remove: 200px, add: 0)
+		.home-content {
+			// logo
+			.logo-area-home {
+				img {
+					width: 40%;
+				}
+			}
+		}
 	}
 }
