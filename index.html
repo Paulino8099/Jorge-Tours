@@ -2,18 +2,18 @@
 <html lang="es">
 
 <head>
-    <title>Jorge Tours</title>
+    <title>GEDEON TOURS</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Jorge Tours" />
+    <meta name="description" content="Gedeon Tours" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:type" content="website" />
     <meta property="og:title" name="twitter:title" content="Turismo interno en RD" />
-    <meta property="og:image" name="twitter:image" content="./IMG/playa.jpg" />
+    <meta property="og:image" name="twitter:image" content="./IMG/home.jpg" />
     <meta property="og:url" name="twitter:url" content="https://jorge-tours" />
-    <meta property="og:description" name="twitter:description" content="Jorge Tours created by David Paulino" />
+    <meta property="og:description" name="twitter:description" content="Gedeon Tours created by David Paulino-Eleazar Garcia" />
     <meta name="theme-color" content="#15aab2">
     <meta name="msaplication-navbutton-color" content="#15aab2">
     <meta name="apple-mobile-web-app-status-bar-style" content="#15aab2">
@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="./CSS/navBar.css">
     <link rel="stylesheet" href="./CSS/home.css">
     <link rel="stylesheet" href="./CSS/excursions.css">
+    <link rel="stylesheet" href="./CSS/aboutUs.css">
     <link rel="stylesheet" href="./CSS/contact.css">
     <link rel="stylesheet" href="./CSS/footer.css">
 
@@ -66,16 +67,16 @@
     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
     <div class="backdrop-box"></div>
     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
-    <!-- |||||||||||||||||||||||||||||||||||||||||Main|||||||||||||||||||||||||||||||||||||||||| -->
-    <!-- ||||||||||||||||||||||||||||||||||||Main||||||Main||||||||||||||||||||||||||||||||||||| -->
-    <!-- ||||||||||||||||||||||||||||||Main|||||||||||||||||Main|||||||||||||||||||||||||||||||| -->
-    <!-- ||||||||||||||||||||||||||||||||||||Main||||||Main||||||||||||||||||||||||||||||||||||| -->
-    <!-- |||||||||||||||||||||||||||||||||||||||||Main|||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- |||||||||||||||||||||||||||||||||||||||||navBar|||||||||||||||||||||||||||||||||||||||| -->
+    <!-- ||||||||||||||||||||||||||||||||||||navBar||||||navBar||||||||||||||||||||||||||||||||| -->
+    <!-- ||||||||||||||||||||||||||||||navBar|||||||||||||||||navBar|||||||||||||||||||||||||||| -->
+    <!-- ||||||||||||||||||||||||||||||||||||navBar||||||navBar||||||||||||||||||||||||||||||||| -->
+    <!-- |||||||||||||||||||||||||||||||||||||||||navBar|||||||||||||||||||||||||||||||||||||||| -->
     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
     <div class="navBar">
         <!-- content -->
         <div class="navBar-content">
-            <!-- btn -->
+            <!-- btn on/off -->
             <div class="btn-open-navBar">
                 <span class="lines-btn-navBar"></span>
             </div>
@@ -86,31 +87,41 @@
             </span>
             <!-- main vertical -->
             <ul class="main">
-                <a href="#back-home">
+                <a href="#back-home" class="btn-main">
                     <li class="btn-home-navBar" title="Inicio">
                         <i class="fas fa-home"></i>
                         <h3>Inicio</h3>
                     </li>
                 </a>
-                <a href="#back-excursions">
+                <a href="#back-excursions" class="btn-main">
                     <li class="btn-excursions-navBar" title="Excursiones">
                         <i class="fa-solid fa-suitcase-rolling"></i>
                         <h3>Excursiones</h3>
                     </li>
                 </a>
-                <a href="#back-about">
+                <a href="#back-about" class="btn-main">
                     <li class="btn-about-navBar" title="Acerca de nosotros">
                         <i class="fas fa-user"></i>
                         <h3>Sobre Nosotros</h3>
                     </li>
                 </a>
-                <a href="#back-contact">
+                <a href="#back-contact" class="btn-main">
                     <li class="btn-contact-navBar" title="Contáctanos">
                         <i class="fas fa-id-card-alt"></i>
                         <h3>Contacto</h3>
                     </li>
                 </a>
             </ul>
+            <!-- personal information -->
+            <div class="info-person">
+                <div class="info-person-content">
+                    <img src="./IMG/gedeon-castillo-ft.jpeg">
+                    <span>
+                        <h3>Gedeón Amparo Castillo</h3>
+                        <h4>Excusionista de Samaná</h4>
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
     <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
@@ -162,9 +173,7 @@
         <div id="back-excursions" class="excursions-content">
             <!-- title -->
             <div class="title-excursions">
-                <div class="title-excursions-content">
-                    <h1>Excursiones</h1>
-                </div>
+                <h1>Excursiones</h1>
             </div>
             <!-- wraper -->
             <div class="wraper-excursions">
@@ -386,14 +395,9 @@
                             <!-- details -->
                             <aside class="details-LT">
                                 <div class="details-LT-content">
-                                    <p>Reservamos alojamiento en Bellas villas, apartamento y
-                                        hoteles
-                                        ajustado a
-                                        tu
-                                        presupuesto, hacemos tus vacaciones llenas de emociones y
-                                        recuerdos
-                                        inolvidables
-                                        en un ambiente familiar.</p>
+                                    <p>Reservamos alojamiento en Bellas villas, apartamentos y hoteles
+                                        ajustado a tu presupuesto, hacemos tus vacaciones llenas de emociones y
+                                        recuerdos inolvidables en un ambiente familiar.</p>
                                 </div>
                             </aside>
                         </div>
@@ -402,13 +406,44 @@
             </div>
         </div>
     </section>
-    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
-    <!-- ||||||||||||||||||||||||||||||||||||||Contact|||||||||||||||||||||||||||||||||||||||||| -->
-    <!-- |||||||||||||||||||||||||||||||||Contact|||Contact||||||||||||||||||||||||||||||||||||| -->
-    <!-- |||||||||||||||||||||||||||Contact||||||||||||||Contact|||||||||||||||||||||||||||||||| -->
-    <!-- |||||||||||||||||||||||||||||||||Contact|||Contact||||||||||||||||||||||||||||||||||||| -->
-    <!-- ||||||||||||||||||||||||||||||||||||||Contact|||||||||||||||||||||||||||||||||||||||||| -->
-    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- |||||||||||||||||||||||||||||||||||||about us||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- ||||||||||||||||||||||||||about us||||||||||||about us|||||||||||||||||||||||||||||||| -->
+    <!-- |||||||||||||||about us||||||||||||||||||||||||||||||||||about us||||||||||||||||||||| -->
+    <!-- ||||||||||||||||||||||||||about us||||||||||||about us|||||||||||||||||||||||||||||||| -->
+    <!-- |||||||||||||||||||||||||||||||||||||about us||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <section class="about-us sections">
+        <div class="about-us-content" id="back-about">
+            <!-- title -->
+            <div class="title-about-us">
+                <h1>Sobre nosotros</h1>
+            </div>
+            <!-- wraper -->
+            <div class="wraper-about-us">
+                <div class="wraper-about-us-content">
+                    <div class="card-presentation">
+                        <!-- title content -->
+                        <div class="title">
+                            <img src="./IMG/gedeon-castillo-ft.jpeg" alt="">
+                            <span>
+                                <h3>Gedeón Amparo Castillo</h3>
+                                <h4>Escursionista para viajes a samaná</h4>
+                            </span>
+                        </div>
+                        <p><b>Hola!</b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat dolores quas consequatur nobis obcaecati expedita delectus enim blanditiis laudantium facilis sit cumque, quidem deleniti minima voluptatem culpa tenetur mollitia. Perferendis aliquam laudantium commodi eaque, dolorum illo asperiores molestiae, voluptates reiciendis odit iste nihil quis, facere aspernatur cupiditate necessitatibus. Quisquam, molestias?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- ||||||||||||||||||||||||||||||||||||||Contact||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- |||||||||||||||||||||||||||||||||Contact|||Contact|||||||||||||||||||||||||||||||||||| -->
+    <!-- |||||||||||||||||||||||||||Contact||||||||||||||Contact||||||||||||||||||||||||||||||| -->
+    <!-- |||||||||||||||||||||||||||||||||Contact|||Contact|||||||||||||||||||||||||||||||||||| -->
+    <!-- ||||||||||||||||||||||||||||||||||||||Contact||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
     <section id="back-contact" class="contact sections">
         <div class="contact-content">
             <!-- title -->

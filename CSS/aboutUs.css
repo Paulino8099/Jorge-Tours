@@ -1,0 +1,168 @@
+.about-us {
+  width: calc(100% - 50px);
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+.about-us .about-us-content {
+  margin-top: 50px;
+  width: 90%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  display: -ms-grid;
+  display: grid;
+}
+
+.about-us .about-us-content .title-about-us {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  display: -ms-grid;
+  display: grid;
+}
+
+.about-us .about-us-content .title-about-us h1 {
+  color: #15aab2;
+  font-size: 2rem;
+}
+
+.about-us .about-us-content .wraper-about-us {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+}
+
+.about-us .about-us-content .wraper-about-us .wraper-about-us-content {
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  row-gap: 50px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[8];
+      grid-template-columns: repeat(8, auto);
+  -ms-grid-rows: (auto)[8];
+      grid-template-rows: repeat(8, auto);
+}
+
+.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation {
+  width: 30%;
+  gap: 15px;
+  justify-self: flex-end;
+  -webkit-box-shadow: 0 0 5px #00000080, inset 0 0 10px #15aab2;
+          box-shadow: 0 0 5px #00000080, inset 0 0 10px #15aab2;
+  border-radius: 15px;
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-column: 1/9;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation::after {
+  z-index: 30;
+  content: "";
+  background: -webkit-gradient(linear, left top, right top, from(#155db1), color-stop(50%, #155db1), color-stop(50%, #155db1), to(#155db1));
+  background: linear-gradient(90deg, #155db1 0%, #155db1 50%, #155db1 50%, #155db1 100%);
+  width: 500px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 250px);
+}
+
+@-webkit-keyframes animate-line {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes animate-line {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation::before {
+  background: #def7ff;
+  z-index: 50;
+  content: "";
+  width: 98%;
+  height: 98%;
+  border-radius: 15px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+
+.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation .title {
+  width: 100%;
+  gap: 15px;
+  padding: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+  border-radius: 15px;
+  background: #15aab280;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation .title img {
+  width: 30%;
+  border-radius: 10px;
+}
+
+.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation .title span {
+  text-align: center;
+}
+
+.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation .title span h3 {
+  color: #fff;
+  text-align: center;
+}
+
+.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation .title span h4 {
+  color: #555555;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation p {
+  padding: 10px;
+  z-index: 100;
+}
+
+@media (max-width: 750px) {
+  .about-us {
+    width: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation {
+    width: 95%;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+/*# sourceMappingURL=aboutUs.css.map */

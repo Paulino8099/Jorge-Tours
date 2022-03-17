@@ -12,14 +12,14 @@ function dataFloat() {
     let x = 0;
 
     /**
-     * ?buscando coordenadas del puntero mouse
+     * *buscando coordenadas del puntero mouse
      *///redefiniendo las variables para que sus valores sean los valores devueltos por las coordenadas del eje "X" y "Y"
     window.addEventListener('mousemove', function (e) {
         y = e.clientY;
         x = e.clientX;
     });
     /**
-     * ?agregando eventos a cada imágen  
+     * *agregando eventos a cada imágen  
      *///agregando eventos o fuunciones a cada imagen en particular del contenedor "excursions"
     targetAllImg.forEach((e) => {
         e.addEventListener('click', function (e) {
@@ -128,11 +128,13 @@ function dataFloat() {
             });
         }
     });
-
-    addEventListener('scroll', function () {
-        let detailsBTC = document.documentElement.querySelector('.details-BCL-content');
-        if (detailsBTC.offsetHeight > 75) {
-            detailsBTC.getElementsByClassName.overflow = 'auto'
-        };
-    });
+    /**
+     * *
+     */
+    // addEventListener('scroll', function () {
+    //     let detailsBTC = document.documentElement.querySelector('.details-BCL-content');
+    //     if (detailsBTC.offsetHeight > 75) {
+    //         detailsBTC.getElementsByClassName.overflow = 'auto'
+    //     };
+    // });
 };

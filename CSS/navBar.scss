@@ -52,12 +52,12 @@
 		background: #15aab2;
 		box-shadow: 0 0 10px #000;
 		width: 100%;
+		height: 100%;
 		z-index: 500;
 		position: relative;
 		transition: 1s cubic-bezier(.02, .07, .01, .96);
 
-		display: flex;
-		flex-direction: column;
+		display: grid;
 		// btn
 		.btn-open-navBar {
 			right: -30px;
@@ -242,6 +242,66 @@
 				}
 			}
 		}
+		// información personal
+		.info-person {
+			background: #202f3d;
+			margin-top: 10px;
+			width: 100%;
+			height: 50px;
+			align-self: flex-end;
+			transition: .3s;
+
+			display: grid;
+			&.active {
+				.info-person-content {
+					span {
+						width: 80%; //edit (remove: 0, add: 80%)
+						h3 {
+							font-size: 1rem; //edit (remove: 0, add: 1rem)
+						}
+						h4 {
+							font-size: .7rem; //edit (remove: 0, add: .7rem)
+						}
+					}
+				}
+			}
+			.info-person-content {
+				transition: .3s;
+				align-items: center;
+				
+				display: flex;
+				img {
+					border-radius: 50px;
+					object-fit: cover;
+					width: 40px;
+					height: 40px;
+					margin-left: 5px;
+					outline: 2px solid #ffffff;
+					transition: .3s;
+				}
+				span {
+					width: 0;
+					gap: 5px;
+					justify-items: center;
+					align-items: center;
+					transition: .3s;
+
+					display: grid;
+					h3 {
+						margin: 0 5px;
+						color: #ffffff;
+						font-size: 0;
+						white-space: nowrap;
+						transition: .3s;
+					}
+					h4 {
+						color: #cecbcb;
+						font-size: 0;
+						transition: .3s;
+					}
+				}
+			}
+		}
 	}
 }
 // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -262,7 +322,7 @@
 				right: -50px; //edit (remove: 30px, add: 50px)
 				width: 50px; //edit (remove: 30px, add: 50px)
 				height: 50px; //edit (remove: 30px, add: 50px)
-				&:hover {
+				&:hover { //edit (remove: ":hover")
 					.lines-btn-navBar {
 						transition: .4s;
 						background: white;
@@ -274,10 +334,9 @@
 							transition: .4s;
 							background: white;
 						}
-					}
-					//edit (remove: "hover")
+					} 
 				}
-				&:active {
+				&:active { //edit (remove: ":active")
 					.lines-btn-navBar {
 						transition: .2s;
 						background: #ff0000;
@@ -289,9 +348,9 @@
 							transition: .2s;
 							background: #ff0000;
 						}
-					}
-					//edit (remove: "active")
+					} 
 				}
+				// btns de lineas
 				.lines-btn-navBar {
 					margin-left: -10px; //edit (remove: -3px, add: -10px)
 					width: 30px; //edit (remove: 25px, add: 30px)
@@ -310,6 +369,7 @@
 					}
 				}
 			}
+			// main navigation
 			.main {
 				a {
 					li {
@@ -323,6 +383,12 @@
 							//edit(add: active)
 						}
 					}
+				}
+			}
+			// información personal
+			.info-person {
+				&.active {
+					border-bottom-right-radius: 10px; //edit(add: border-top-right-radius)
 				}
 			}
 		}

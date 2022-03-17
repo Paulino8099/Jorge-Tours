@@ -43,17 +43,13 @@
   -webkit-box-shadow: 0 0 10px #000;
           box-shadow: 0 0 10px #000;
   width: 100%;
+  height: 100%;
   z-index: 500;
   position: relative;
   -webkit-transition: 1s cubic-bezier(0.02, 0.07, 0.01, 0.96);
   transition: 1s cubic-bezier(0.02, 0.07, 0.01, 0.96);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
 }
 
 .navBar .navBar-content .btn-open-navBar {
@@ -288,6 +284,82 @@
   transition: .4s;
 }
 
+.navBar .navBar-content .info-person {
+  background: #202f3d;
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  align-self: flex-end;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: -ms-grid;
+  display: grid;
+}
+
+.navBar .navBar-content .info-person.active .info-person-content span {
+  width: 80%;
+}
+
+.navBar .navBar-content .info-person.active .info-person-content span h3 {
+  font-size: 1rem;
+}
+
+.navBar .navBar-content .info-person.active .info-person-content span h4 {
+  font-size: .7rem;
+}
+
+.navBar .navBar-content .info-person .info-person-content {
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navBar .navBar-content .info-person .info-person-content img {
+  border-radius: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  outline: 2px solid #ffffff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.navBar .navBar-content .info-person .info-person-content span {
+  width: 0;
+  gap: 5px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: -ms-grid;
+  display: grid;
+}
+
+.navBar .navBar-content .info-person .info-person-content span h3 {
+  margin: 0 5px;
+  color: #ffffff;
+  font-size: 0;
+  white-space: nowrap;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.navBar .navBar-content .info-person .info-person-content span h4 {
+  color: #cecbcb;
+  font-size: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 @media (max-width: 750px) {
   .navBar {
     height: 500px;
@@ -358,6 +430,9 @@
   .navBar .navBar-content .main a li:active {
     color: #155db1;
     background: #ffffff;
+  }
+  .navBar .navBar-content .info-person.active {
+    border-bottom-right-radius: 10px;
   }
 }
 /*# sourceMappingURL=navBar.css.map */

@@ -24,17 +24,11 @@
 .excursions .excursions-content .title-excursions {
   -ms-grid-column-align: center;
       justify-self: center;
-  width: 100%;
   display: -ms-grid;
   display: grid;
 }
 
-.excursions .excursions-content .title-excursions .title-excursions-content {
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-.excursions .excursions-content .title-excursions .title-excursions-content h1 {
+.excursions .excursions-content .title-excursions h1 {
   color: #15aab2;
   font-size: 2rem;
 }
