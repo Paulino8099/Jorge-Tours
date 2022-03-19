@@ -113,10 +113,10 @@
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
+  width: 100%;
   height: 100%;
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
-  width: 100%;
 }
 
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content div div div div span img:hover {

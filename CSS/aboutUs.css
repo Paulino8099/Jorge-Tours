@@ -1,4 +1,5 @@
-.about-us {
+@charset "UTF-8";
+.aboutUs {
   width: calc(100% - 50px);
   -webkit-transform: translateX(50px);
           transform: translateX(50px);
@@ -14,7 +15,7 @@
   grid-row: 3/4;
 }
 
-.about-us .about-us-content {
+.aboutUs .aboutUs-content {
   width: 90%;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -22,25 +23,25 @@
   display: grid;
 }
 
-.about-us .about-us-content .title-about-us {
+.aboutUs .aboutUs-content .title-aboutUs {
   -ms-grid-column-align: center;
       justify-self: center;
   display: -ms-grid;
   display: grid;
 }
 
-.about-us .about-us-content .title-about-us h1 {
+.aboutUs .aboutUs-content .title-aboutUs h1 {
   color: #15aab2;
   font-size: 2rem;
 }
 
-.about-us .about-us-content .wraper-about-us {
+.aboutUs .aboutUs-content .wraper-aboutUs {
   width: 100%;
   display: -ms-grid;
   display: grid;
 }
 
-.about-us .about-us-content .wraper-about-us .wraper-about-us-content {
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content {
   width: 100%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -56,7 +57,7 @@
       grid-template-rows: repeat(8, auto);
 }
 
-.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation {
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs {
   width: 30%;
   gap: 15px;
   justify-self: flex-end;
@@ -76,18 +77,18 @@
   grid-row: 2/3;
 }
 
-.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation::after {
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs::after {
   z-index: 30;
   content: "";
   background: #15aab2;
   width: 120%;
-  height: 50px;
+  height: 50%;
   position: absolute;
   bottom: 0;
   left: -12px;
 }
 
-.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation::before {
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs::before {
   background: #1B2631;
   z-index: 50;
   content: "";
@@ -99,7 +100,7 @@
   left: 3px;
 }
 
-.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation .title {
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .title-presentation-aboutUs {
   width: 100%;
   gap: 5px;
   padding: 5px;
@@ -114,39 +115,113 @@
   display: flex;
 }
 
-.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation .title img {
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .title-presentation-aboutUs img {
   width: 30%;
   border-radius: 10px;
 }
 
-.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation .title span {
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .title-presentation-aboutUs span {
   text-align: center;
 }
 
-.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation .title span h3 {
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .title-presentation-aboutUs span h3 {
   color: #ffffff;
   text-align: center;
 }
 
-.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation .title span h4 {
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .title-presentation-aboutUs span h4 {
   color: #ffffff;
   font-size: 1rem;
   font-weight: 300;
 }
 
-.about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation p {
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs p {
   color: #ffffff;
   padding: 10px;
   z-index: 100;
 }
 
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .img-area-presentation-aboutUs {
+  background: #1B2631;
+  width: 0%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+  z-index: 100;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transform: skew(60deg, 60deg);
+          transform: skew(60deg, 60deg);
+  pointer-events: none;
+  opacity: 0;
+  display: -ms-grid;
+  display: grid;
+}
+
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .img-area-presentation-aboutUs.active {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: skew(0);
+          transform: skew(0);
+  pointer-events: visible;
+  opacity: 1;
+}
+
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .img-area-presentation-aboutUs.active::after {
+  font-size: 1rem;
+}
+
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .img-area-presentation-aboutUs.active img {
+  width: 95%;
+}
+
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .img-area-presentation-aboutUs::after {
+  content: 'Gedeón Amparo Castillo';
+  text-shadow: 0 0 10px #155db1;
+  font-size: 0;
+  position: absolute;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-top: 5px;
+  color: #ffffff;
+  top: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .img-area-presentation-aboutUs i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  color: #ffffff;
+}
+
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .img-area-presentation-aboutUs i:hover {
+  color: #ff0000;
+}
+
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .img-area-presentation-aboutUs i:active {
+  color: #15aab2;
+}
+
+.aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .img-area-presentation-aboutUs img {
+  place-self: center;
+  border-radius: 5px;
+  width: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 @media (max-width: 750px) {
-  .about-us {
+  .aboutUs {
     width: 100%;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
-  .about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation {
+  .aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation {
     width: 95%;
     -ms-grid-column-align: center;
         justify-self: center;

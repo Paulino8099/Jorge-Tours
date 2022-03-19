@@ -5,7 +5,7 @@
 // ||||||||||||||||||||||||||||||||||||Desktop||||||Desktop|||||||||||||||||||||||||||||||||||||
 // |||||||||||||||||||||||||||||||||||||||||Desktop|||||||||||||||||||||||||||||||||||||||||||||
 // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-.about-us {
+.aboutUs {
 	width: calc(100% - 50px);
 	transform: translateX(50px);
     margin-top: 50px;
@@ -14,13 +14,13 @@
 	display: grid;
 	grid-column: 1/13;
 	grid-row: 3/4;
-	.about-us-content {
+	.aboutUs-content {
 		width: 90%;
 		justify-self: center;
 
 		display: grid;
 		// title
-		.title-about-us {
+		.title-aboutUs {
 			justify-self: center;
 
 			display: grid;
@@ -30,11 +30,11 @@
 			}
 		}
 		// wraper
-		.wraper-about-us {
+		.wraper-aboutUs {
 			width: 100%;
 
 			display: grid;
-			.wraper-about-us-content {
+			.wraper-aboutUs-content {
 				width: 100%;
 				justify-content: space-evenly;
 				row-gap: 50px;
@@ -43,7 +43,7 @@
 				display: grid;
                 grid-template-columns: repeat(8, auto);
                 grid-template-rows: repeat(8, auto);
-                .card-presentation {
+                .card-presentation-aboutUs {
                     width: 30%;
                     gap: 15px;
                     justify-self: flex-end;
@@ -61,7 +61,7 @@
                         content: "";
                         background: #15aab2;
                         width: 120%;
-                        height: 50px;
+                        height: 50%;
                         position: absolute;
                         bottom: 0;
                         left: -12px;
@@ -77,7 +77,8 @@
                         top: 3px;
                         left: 3px;
                     }
-                    .title {
+                    // title card
+                    .title-presentation-aboutUs {
                         width: 100%;
                         gap: 5px;
                         padding: 5px;
@@ -104,10 +105,71 @@
                             }
                         }
                     }
+                    // paragraph
                     p {
                         color: #ffffff;
                         padding: 10px;
                         z-index: 100;
+                    }
+                    // big
+                    .img-area-presentation-aboutUs{
+                        background: #1B2631;
+                        width: 0%;
+                        height: 0%;
+                        top: 0;
+                        left: 0;
+                        position: absolute;
+                        overflow: hidden;
+                        z-index: 100;
+                        transition: .3s;
+                        transform: skew(60deg, 60deg);
+                        pointer-events: none;
+                        opacity: 0;
+
+                        display: grid;
+                        &.active {
+                            width: 100%;
+                            height: 100%;
+                            transform: skew(0);
+                            pointer-events: visible;
+                            opacity: 1;
+                        &::after {
+                                font-size: 1rem;
+                            }
+                            img {
+                                width: 95%;
+                            }
+                        }
+                        &::after {
+                            content: 'Gedeón Amparo Castillo';
+                            text-shadow: 0 0 10px #155db1;
+                            font-size: 0;
+                            position: absolute;
+                            justify-self: center;
+                            margin-top: 5px;
+                            color: #ffffff;
+                            top: 0;
+                            transition: .3s;
+                        }
+                        i {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            margin: 5px;
+                            color: #ffffff;
+                            &:hover {
+                                color: #ff0000;
+                            }
+                            &:active {
+                                color: #15aab2;
+                            }
+                        }
+                        img {
+                            place-self: center;
+                            border-radius: 5px;
+                            width: 0;
+                            transition: .3s;
+                        }
                     }
                 }
             }
@@ -123,13 +185,13 @@
 // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 @media (max-width: 750px){
-    .about-us {
+    .aboutUs {
         width: 100%; //edit (remove: calc(100% - 50px), add: 100%)
 		transform: translateX(0); 
-        .about-us-content {
+        .aboutUs-content {
             // wraper
-            .wraper-about-us {
-                .wraper-about-us-content {
+            .wraper-aboutUs {
+                .wraper-aboutUs-content {
                     .card-presentation {
                         width: 95%; //edit (remove: 30%, add: 95%)
                         justify-self: center; //edit (remove: 50px, add: 0)
