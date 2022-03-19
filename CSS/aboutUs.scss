@@ -111,7 +111,7 @@
                         padding: 10px;
                         z-index: 100;
                     }
-                    // big
+                    // img big
                     .img-area-presentation-aboutUs{
                         background: #1B2631;
                         width: 0%;
@@ -138,6 +138,7 @@
                             }
                             img {
                                 width: 95%;
+                                height: 75%;
                             }
                         }
                         &::after {
@@ -167,7 +168,9 @@
                         img {
                             place-self: center;
                             border-radius: 5px;
+                            object-fit: cover;
                             width: 0;
+                            height: 0;
                             transition: .3s;
                         }
                     }
@@ -192,7 +195,8 @@
             // wraper
             .wraper-aboutUs {
                 .wraper-aboutUs-content {
-                    .card-presentation {
+                    // tarjeta de presentación
+                    .card-presentation-aboutUs {
                         width: 95%; //edit (remove: 30%, add: 95%)
                         justify-self: center; //edit (remove: 50px, add: 0)
                     }

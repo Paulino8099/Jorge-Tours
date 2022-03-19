@@ -175,6 +175,7 @@
 
 .aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .img-area-presentation-aboutUs.active img {
   width: 95%;
+  height: 75%;
 }
 
 .aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .img-area-presentation-aboutUs::after {
@@ -210,7 +211,10 @@
 .aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .img-area-presentation-aboutUs img {
   place-self: center;
   border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 0;
+  height: 0;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -221,7 +225,7 @@
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
-  .aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation {
+  .aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs {
     width: 95%;
     -ms-grid-column-align: center;
         justify-self: center;
