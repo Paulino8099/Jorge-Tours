@@ -45,8 +45,8 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   row-gap: 50px;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
+  -webkit-column-gap: 25px;
+          column-gap: 25px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(250px, auto))[auto-fill];
@@ -60,6 +60,11 @@
 }
 
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content div div {
+  position: relative;
+  background: -webkit-gradient(linear, left top, right top, from(#155db1), color-stop(1.2%, #155db1), color-stop(1.2%, #155db120), color-stop(98.8%, #155db120), color-stop(98.8%, #155db1), to(#155db1));
+  background: linear-gradient(90deg, #155db1 0%, #155db1 1.2%, #155db120 1.2%, #155db120 98.8%, #155db1 98.8%, #155db1 100%);
+  border-radius: 5px;
+  overflow: hidden;
   display: -ms-grid;
   display: grid;
 }
@@ -71,6 +76,9 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  z-index: 100;
+  background: none;
+  padding: 5px;
   display: block;
 }
 
@@ -115,19 +123,243 @@
 }
 
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content div div span {
-  margin-top: 10px;
   -ms-grid-column-align: center;
       justify-self: center;
-}
-
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div span div {
-  width: 100%;
+  z-index: 100;
   display: block;
 }
 
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div span div h3 {
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div span h3 {
   font-size: 1.3rem;
   color: #155db1;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir {
+  width: 95%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+  row-gap: 10px;
+  padding-bottom: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir button:nth-child(1) {
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  justify-self: flex-start;
+  background: #0E6251;
+  color: #fff;
+  z-index: 100;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  cursor: pointer;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir button:nth-child(1):hover {
+  background: #0c440c;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir button:nth-child(1) b:nth-child(1) {
+  font-size: .8rem;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir button:nth-child(2) {
+  text-align: center;
+  padding: 5px 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 5px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  background: #155db1;
+  color: #fff;
+  z-index: 100;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  cursor: pointer;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir button:nth-child(2):hover {
+  background: #0c440c;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir button:nth-child(2) b:nth-child(1) {
+  font-size: .8rem;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir button:nth-child(3) {
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  justify-self: flex-end;
+  background: #0E6251;
+  color: #fff;
+  z-index: 100;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  cursor: pointer;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir button:nth-child(3):hover {
+  background: #0c440c;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir button:nth-child(3) b:nth-child(1) {
+  font-size: .8rem;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-BCL,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-HC,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-LT,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PM,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PR,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-SL {
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  place-items: center;
+  background: #155db1;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 200;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: skew(50deg, 50deg);
+          transform: skew(50deg, 50deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  display: -ms-grid;
+  display: grid;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-BCL.active,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-HC.active,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-LT.active,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PM.active,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PR.active,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-SL.active {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  pointer-events: visible;
+  -webkit-transform: skew(0deg);
+          transform: skew(0deg);
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-BCL.active p,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-HC.active p,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-LT.active p,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PM.active p,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PR.active p,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-SL.active p {
+  font-size: 1.2rem;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-BCL p,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-HC p,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-LT p,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PM p,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PR p,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-SL p {
+  width: 90%;
+  height: 100%;
+  color: #ffffff;
+  font-size: 0;
+  overflow: auto;
+  padding-right: 25px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-BCL p::-webkit-scrollbar,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-HC p::-webkit-scrollbar,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-LT p::-webkit-scrollbar,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PM p::-webkit-scrollbar,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PR p::-webkit-scrollbar,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-SL p::-webkit-scrollbar {
+  width: 7px;
+  background: #15aab240;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-BCL p::-webkit-scrollbar-thumb,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-HC p::-webkit-scrollbar-thumb,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-LT p::-webkit-scrollbar-thumb,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PM p::-webkit-scrollbar-thumb,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PR p::-webkit-scrollbar-thumb,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-SL p::-webkit-scrollbar-thumb {
+  width: 100%;
+  background: #15aab2;
+  border-radius: 15px;
+  -webkit-box-shadow: inset 0 0 10px #fff;
+          box-shadow: inset 0 0 10px #fff;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-BCL p::-webkit-scrollbar-thumb:hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-HC p::-webkit-scrollbar-thumb:hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-LT p::-webkit-scrollbar-thumb:hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PM p::-webkit-scrollbar-thumb:hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PR p::-webkit-scrollbar-thumb:hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-SL p::-webkit-scrollbar-thumb:hover {
+  -webkit-box-shadow: inset 0 0 10px #fff;
+          box-shadow: inset 0 0 10px #fff;
+  background: #155db1;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-BCL button,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-HC button,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-LT button,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PM button,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PR button,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-SL button {
+  color: #ffffff;
+  justify-self: flex-end;
+  align-self: flex-start;
+  margin: 5px;
+  background: none;
+  font-size: 1.5rem;
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+}
+
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-BCL button:hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-HC button:hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-LT button:hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PM button:hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-PR button:hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content div div .included-SL button:hover {
+  color: #ff0000;
 }
 
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content div div aside {
@@ -135,8 +367,7 @@
       justify-self: center;
   width: 100%;
   margin-top: 10px;
-  display: -ms-grid;
-  display: grid;
+  display: none;
 }
 
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content div div aside div {
@@ -184,6 +415,42 @@
     width: 100%;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+  .excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir {
+    width: 95%;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 15px;
+    row-gap: 10px;
+    padding-bottom: 5px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+  }
+  .excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir button:nth-child(1):hover {
+    background: #155db1;
+  }
+  .excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir button:nth-child(1):active {
+    background: #304b69;
+  }
+  .excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir button:nth-child(2):hover {
+    background: #0E6251;
+  }
+  .excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir button:nth-child(2):active {
+    background: #1c3f38;
+  }
+  .excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir button:nth-child(3):hover {
+    background: #0E6251;
+  }
+  .excursions .excursions-content .wraper-excursions .wraper-excursions-content div div dir button:nth-child(3):active {
+    background: #1c3f38;
   }
 }
 /*# sourceMappingURL=excursions.css.map */

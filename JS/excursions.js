@@ -1,4 +1,8 @@
 
+/**
+ * *datos flotantes
+ */
+// datos flotantes de las imagenes principales
 dataFloat();
 function dataFloat() {
     let targetAllImg = document.documentElement.querySelectorAll('.click');
@@ -128,13 +132,42 @@ function dataFloat() {
             });
         }
     });
+};
+
+
+/**
+ * *included
+ */
+//agregando evento a cada btn de "qué incluye" de c/u de las cards
+openIncluded();
+function openIncluded() {
+    let cards = document.querySelectorAll(".cards");
+    let btnClose = document.querySelectorAll(".btn-close");
+    
     /**
-     * *
+     * ?abriendo descripción
      */
-    // addEventListener('scroll', function () {
-    //     let detailsBTC = document.documentElement.querySelector('.details-BCL-content');
-    //     if (detailsBTC.offsetHeight > 75) {
-    //         detailsBTC.getElementsByClassName.overflow = 'auto'
-    //     };
-    // });
+    //abriendo la descripción de lo que incluye la tarjeta para el viaje
+    cards.forEach((e) => {
+
+        e.addEventListener('click', function (e) {
+            let btnValue = e.target.innerHTML;
+            
+            if (btnValue == 'Qué Incluye?') {
+                //navegando dentro de la card para encontrar el elemento "includes" y activándolo
+                e.target.parentNode.parentNode.children[3].classList.toggle('active');
+            } 
+        });
+    });
+
+    /**
+     * ?cerrando descripción
+     */
+    //cerrando la descripción de lo que incluye la tarjeta para el viaje
+    btnClose.forEach((e) => {
+        e.addEventListener('click', function (e) {
+            //navegando dentro de la card para encontrar el elemento "includes" y desactivándolo
+            e.target.parentNode.parentNode.parentNode.children[3].classList.toggle('active')
+        });
+    });
 };

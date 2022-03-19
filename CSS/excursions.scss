@@ -37,7 +37,7 @@
 				width: 100%;
 				justify-content: space-evenly;
 				row-gap: 50px;
-				column-gap: 10px;
+				column-gap: 25px;
 
 				display: grid;
 				grid-template-columns: repeat(auto-fill, minmax(250px, auto));
@@ -47,12 +47,20 @@
 					display: block;
 					// cards excursions (content)
 					div {
+						position: relative;
+						background: linear-gradient(90deg, #155db1 0%, #155db1 1.2%, #155db120 1.2%, #155db120 98.8%, #155db1 98.8%, #155db1 100%);
+						border-radius: 5px;
+						overflow: hidden;
+
 						display: grid;
 						// media
 						div {
 							width: 90%;
 							justify-self: center;
 							justify-content: space-evenly;
+							z-index: 100;
+							background: none;
+							padding: 5px;
 
 							display: block;
 							// media (content)
@@ -89,15 +97,160 @@
 						}
 						// title (container)
 						span {
-							margin-top: 10px;
-							justify-self: center;
 							// title (content)
-							div {
+							justify-self: center;
+							z-index: 100;
+							display: block;
+							h3 {
+								font-size: 1.3rem;
+								color: #155db1;
+							}
+						}
+						// btns
+						dir {
+							width: 95%;
+							justify-self: center;
+							justify-items: center;
+							align-items: center;
+							margin-top: 15px;
+							row-gap: 10px;
+							padding-bottom: 5px;
+							
+							display: grid;
+							grid-template-columns: repeat(2, auto);
+							grid-template-rows: repeat(2, auto);
+							// btn "incluyed"
+							button:nth-child(1) {
+								text-align: center;
+								width: 100px;
+								height: 50px;
+								border-radius: 5px;
+								justify-self: flex-start;
+								background: #0E6251;
+								color: #fff;
+								z-index: 100;
+
+								grid-column: 1/2;
+								grid-row: 2/3;
+								cursor: pointer;
+								&:hover {
+									background: #0c440c;
+								}
+								b:nth-child(1) {
+									font-size: .8rem;
+								}
+							}
+							// btn "experiencias"
+							button:nth-child(2) {
+								text-align: center;
+								padding: 5px 10px;
+								width: max-content;
+								height: max-content;
+								border-radius: 5px;
+								justify-self: center;
+								background: #155db1;
+								color: #fff;
+								z-index: 100;
+
+								grid-column: 1/3;
+								grid-row: 1/2;
+								cursor: pointer;
+								&:hover {
+									background: #0c440c;
+								}
+								b:nth-child(1) {
+									font-size: .8rem;
+								}
+							}
+							// btn "experiencias"
+							button:nth-child(3) {
+								text-align: center;
+								width: 100px;
+								height: 50px;
+								border-radius: 5px;
+								justify-self: flex-end;
+								background: #0E6251;
+								color: #fff;
+								z-index: 100;
+
+								grid-column: 2/3;
+								grid-row: 2/3;
+								cursor: pointer;
+								&:hover {
+									background: #0c440c;
+								}
+								b:nth-child(1) {
+									font-size: .8rem;
+								}
+							}
+						}
+						// included
+						.included-BCL,
+						.included-HC,
+						.included-LT,
+						.included-PM,
+						.included-PR,
+						.included-SL {
+							width: 0;
+							height: 0;
+							top: 0;
+							left: 0;
+							position: absolute;
+							place-items: center;
+							background: #155db1;
+							opacity: 0;
+							pointer-events: none;
+							z-index: 200;
+							transition: .5s;
+							transform: skew(50deg, 50deg);
+							transform-style: preserve-3d;
+
+							display: grid;
+							&.active {
 								width: 100%;
-								display: block;
-								h3 {
-									font-size: 1.3rem;
-									color: #155db1;
+								height: 100%;
+								opacity: 1;
+								pointer-events: visible;
+								transform: skew(0deg);
+								p {
+									font-size: 1.2rem;
+								}
+							}
+							p {
+								width: 90%;
+								height: 100%;
+								color: #ffffff;
+								font-size: 0;
+								overflow: auto;
+								padding-right: 25px;
+								transition: .3s;
+								&::-webkit-scrollbar {
+									width: 7px;
+									background: #15aab240;
+								}
+								&::-webkit-scrollbar-thumb {
+									width: 100%;
+									background: #15aab2;
+									border-radius: 15px;
+									box-shadow: inset 0 0 10px #fff;
+									&:hover {
+										box-shadow: inset 0 0 10px #fff;
+										background: #155db1;
+									}
+								}
+							}
+							button {
+								color: #ffffff;
+								justify-self: flex-end;
+								align-self: flex-start;
+								margin: 5px;
+								background: none;
+								font-size: 1.5rem;
+								position: absolute;
+
+								display: grid;
+								&:hover {
+									color: #ff0000;
 								}
 							}
 						}
@@ -107,7 +260,7 @@
 							width: 100%;
 							margin-top: 10px;
 
-							display: grid;
+							display: none;
 							// details (content)
 							div {
 								width: 85%;
@@ -156,5 +309,58 @@
 	.excursions {
 		width: 100%;
 		transform: translateX(0);
+		.excursions-content {
+			.wraper-excursions {
+				.wraper-excursions-content {
+					// cards excursions (container)
+					div {
+						// cards excursions (content)
+						div {
+							// btns
+							dir {
+								width: 95%;
+								justify-self: center;
+								justify-items: center;
+								align-items: center;
+								margin-top: 15px;
+								row-gap: 10px;
+								padding-bottom: 5px;
+								
+								display: grid;
+								grid-template-columns: repeat(2, auto);
+								grid-template-rows: repeat(2, auto);
+								// btn "incluyed"
+								button:nth-child(1) {
+									&:hover {
+										background: #155db1; //edit (remove: #0c440c, add: #155db1)
+									}
+									&:active {
+										background: #304b69;
+									}
+								}
+								// btn "experiencias"
+								button:nth-child(2) {
+									&:hover {
+										background: #0E6251; //edit (remove: #0c440c, add: #0E6251)
+									}
+									&:active {
+										background: #1c3f38;
+									}
+								}
+								// btn "experiencias"
+								button:nth-child(3) {
+									&:hover {
+										background: #0E6251; //edit (remove: #0c440c, add: #0E6251)
+									}
+									&:active {
+										background: #1c3f38;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }

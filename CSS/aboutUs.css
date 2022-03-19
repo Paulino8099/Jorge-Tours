@@ -78,13 +78,13 @@
 .about-us .about-us-content .wraper-about-us .wraper-about-us-content .card-presentation::after {
   z-index: 30;
   content: "";
-  background: -webkit-gradient(linear, left top, right top, from(#155db1), color-stop(50%, #155db1), color-stop(50%, #155db1), to(#155db1));
-  background: linear-gradient(90deg, #155db1 0%, #155db1 50%, #155db1 50%, #155db1 100%);
-  width: 500px;
+  background: -webkit-gradient(linear, left top, right top, from(#155db1), to(#155db1));
+  background: linear-gradient(90deg, #155db1 0%, #155db1 100%);
+  width: 120%;
   height: 50px;
   position: absolute;
   bottom: 0;
-  left: calc(50% - 250px);
+  left: -12px;
 }
 
 @-webkit-keyframes animate-line {
