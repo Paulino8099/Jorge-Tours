@@ -18,6 +18,10 @@
           transform: translateX(0);
 }
 
+.navBar.active .navBar-content .logo-navBar-area {
+  max-height: 150px;
+}
+
 .navBar.active .navBar-content .logo-navBar-area .logo-navBar {
   opacity: 1;
 }
@@ -46,8 +50,8 @@
   height: 100%;
   z-index: 500;
   position: relative;
-  -webkit-transition: 1s cubic-bezier(0.02, 0.07, 0.01, 0.96);
-  transition: 1s cubic-bezier(0.02, 0.07, 0.01, 0.96);
+  -webkit-transition: 0.4s cubic-bezier(0.02, 0.07, 0.01, 0.96);
+  transition: 0.4s cubic-bezier(0.02, 0.07, 0.01, 0.96);
   display: -ms-grid;
   display: grid;
 }
@@ -146,13 +150,13 @@
 
 .navBar .navBar-content .logo-navBar-area {
   width: 100%;
-  max-height: 150px;
+  max-height: 50px;
   margin: 0;
   padding: 10px 0;
   border-bottom: 1px solid #ffffff80;
   position: relative;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .3s;
+  transition: .3s;
   display: -ms-grid;
   display: grid;
 }
@@ -179,11 +183,19 @@
   opacity: 1;
   z-index: 50;
   position: absolute;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.navBar .navBar-content .main {
+  -ms-grid-row-align: center;
+      align-self: center;
+  gap: 40px;
+  display: -ms-grid;
+  display: grid;
 }
 
 .navBar .navBar-content .main a {
-  gap: 30px;
-  margin-top: 30px;
   margin-left: 5px;
   width: 100%;
   -ms-flex-line-pack: center;
@@ -285,7 +297,7 @@
 }
 
 .navBar .navBar-content .info-person {
-  background: #202f3d;
+  background: #1B2631;
   margin-top: 10px;
   width: 100%;
   height: 50px;

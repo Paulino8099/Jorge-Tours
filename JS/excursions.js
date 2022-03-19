@@ -8,46 +8,41 @@ function dataFloat() {
     let targetAllImg = document.documentElement.querySelectorAll('.click');
     let mediaExcursions = document.documentElement.querySelector('.medias-excursions'); //container excurisions
     let btnCancel = document.documentElement.querySelector('.btn-medias-excursions');
-    let navBar = document.documentElement.querySelector('.navBar');
     let backdropBox = document.documentElement.querySelector('.backdrop-box');
     let body = document.documentElement.querySelector('body');
 
-    let y = 0;
-    let x = 0;
-
-    /**
-     * *buscando coordenadas del puntero mouse
-     *///redefiniendo las variables para que sus valores sean los valores devueltos por las coordenadas del eje "X" y "Y"
-    window.addEventListener('mousemove', function (e) {
-        y = e.clientY;
-        x = e.clientX;
-    });
     /**
      * *agregando eventos a cada imágen  
-     *///agregando eventos o fuunciones a cada imagen en particular del contenedor "excursions"
+     *///agregando eventos o funciones a cada imagen en particular de las tarjetas del contenedor "excursions"
     targetAllImg.forEach((e) => {
         e.addEventListener('click', function (e) {
-            /**
-             * ?activating backdrop & dataFloat
-             */
-            mediaExcursions.classList.add('active'); //active            
-            body.classList.add('active');
-            backdropBox.classList.add('active');
-
-            /**
-             * ?refilling dataFloat
-             *///
             let img = document.documentElement.querySelector('.img-medias-excursions');
             let title = document.documentElement.querySelector('.textTitle-medias-excursions');
             let description = document.documentElement.querySelector('.text-des-medias-excursions');
 
-            //refilling the img
+            /**
+             * ?activando backdrop y dataFloat
+             */
+            //activando el backdrop y la ventana flotante
+            mediaExcursions.classList.add('active'); //active            
+            body.classList.add('active');
+            backdropBox.classList.add('active');
+            /**
+             * ?rellenando la imágen
+             */
+            //rellenando la imágen de la ventana flotante
             img.innerHTML = `<img src="${e.target.src}" alt="">`;
 
-            // refilling the title
-            title.innerHTML = e.target.parentNode.parentNode.parentNode.parentNode.children[1].children[0].children[0].childNodes[0].nodeValue;
-
-            // refilling the description
+            /**
+             * ?rellenando el título
+             */
+            // rellenando el título de la ventana flotante
+            title.innerHTML = e.target.parentNode.parentNode.parentNode.parentNode.children[1].children[0].innerHTML;
+            
+            /**
+             * ?rellenando la descripción
+             */
+            // rellenando la descripción de la ventana flotante
             refillingDescription();
             function refillingDescription() {
                 /**
@@ -114,8 +109,9 @@ function dataFloat() {
         });
 
         /**
-         * ?disable ventana "dataFloat"
+         * ?desactivando la ventana flotante
          */
+        //desactivando la ventana de los datos flotantes de cada foto dentro de c/u de las tarjetas del contenedor "escursions"
         offDataFloat();
         function offDataFloat() {
             btnCancel.addEventListener('click', function () {
@@ -138,7 +134,7 @@ function dataFloat() {
 /**
  * *included
  */
-//agregando evento a cada btn de "qué incluye" de c/u de las cards
+//agregando evento a cada btn de "qué incluye" de c/u de las tarjetas
 openIncluded();
 function openIncluded() {
     let cards = document.querySelectorAll(".cards");

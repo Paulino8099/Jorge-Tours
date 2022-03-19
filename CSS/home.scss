@@ -184,6 +184,15 @@
 					width: 60%; // edit (remove: 30px, add: 60px)
 				}
 			}
+			// comment
+			.comment-home {
+				height: 25px; //edit (add: height)
+				padding: 0; //edit (remove: 1px 5px, add: 0)
+				h3 {
+					padding: 5px; //edit (add: padding)
+					font-size: .9rem; //edit (remove: calc(.5em + 1vw), add: .9rem)
+				}
+			}
 		}
 	}
 }

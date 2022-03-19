@@ -17,8 +17,12 @@
 	scroll-behavior: smooth;
 }
 
+/**
+* ? colores básicos: 
+*/ 
+//#C5E4F5, #155db1, #15aab2, #0E6251, #1B2631
+
 body {
-	// background: #202f3d;
 	background: #def7ff;
 	&::-webkit-scrollbar {
 		width: 10px;

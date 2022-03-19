@@ -239,5 +239,13 @@
   .home .home-content .logo-area-home img {
     width: 60%;
   }
+  .home .home-content .comment-home {
+    height: 25px;
+    padding: 0;
+  }
+  .home .home-content .comment-home h3 {
+    padding: 5px;
+    font-size: .9rem;
+  }
 }
 /*# sourceMappingURL=home.css.map */

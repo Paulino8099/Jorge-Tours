@@ -1,7 +1,7 @@
 .footer {
   width: calc(100% - 50px);
   margin-left: 50px;
-  background: #222222;
+  background: #1B2631;
   display: -ms-grid;
   display: grid;
   -ms-grid-column: 1;
