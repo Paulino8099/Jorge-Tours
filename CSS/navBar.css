@@ -98,8 +98,9 @@
       -ms-grid-row-align: center;
       align-self: center;
   background: #ffffff;
+  border-radius: 5px;
   width: 20px;
-  height: 2px;
+  height: 4px;
   -webkit-transition: .5s;
   transition: .5s;
   margin-left: -3px;
@@ -108,9 +109,10 @@
 .navBar .navBar-content .btn-open-navBar .lines-btn-navBar::after {
   content: "";
   background: #ffffff;
+  border-radius: 5px;
   position: absolute;
   width: 24px;
-  height: 2px;
+  height: 4px;
   top: -12px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -123,8 +125,9 @@
   content: "";
   position: absolute;
   background: #ffffff;
+  border-radius: 5px;
   width: 15px;
-  height: 2px;
+  height: 4px;
   top: 12px;
   -webkit-transition: .5s;
   transition: .5s;
@@ -421,16 +424,16 @@
   .navBar .navBar-content .btn-open-navBar .lines-btn-navBar {
     margin-left: -10px;
     width: 30px;
-    height: 4px;
+    height: 5px;
   }
   .navBar .navBar-content .btn-open-navBar .lines-btn-navBar::after {
     top: -14px;
     width: 40px;
-    height: 4px;
+    height: 5px;
   }
   .navBar .navBar-content .btn-open-navBar .lines-btn-navBar::before {
     top: 14px;
-    height: 4px;
+    height: 5px;
   }
   .navBar .navBar-content .btn-open-navBar .lines-btn-navBar.active {
     margin-left: 0;

@@ -78,7 +78,7 @@ function navBarBtn() {
     /**
      * *observando secciones...
      */
-    //indicador de secciones automatico al detectar que algunas de ellas se encuentra visible para el usuario
+    //indicador de secciones automatico al detectar que algunas de ellas se encuentra visible para el usuario (dentro de la pantalla)
     observadorSection();
     function observadorSection() {
         let sections = document.documentElement.querySelectorAll('.sections');
@@ -114,9 +114,9 @@ function navBarBtn() {
                     /**
                      * ?about-us
                      */
-                    if (entry.target.classList.value == 'about-us sections') {
+                    if (entry.target.classList.value == 'aboutUs sections') {
                         btnAbout.classList.add('active');
-                    } else if (!(entry.target.classList.value == 'about-us sections')) {
+                    } else if (!(entry.target.classList.value == 'aboutUs sections')) {
                         btnAbout.classList.remove('active');
                     }
                     /**

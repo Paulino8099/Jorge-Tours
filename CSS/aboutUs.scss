@@ -78,7 +78,7 @@
                         top: 3px;
                         left: 3px;
                     }
-                    // título principal de la tarjeta
+                    // título
                     .title-presentation-aboutUs {
                         width: 100%;
                         gap: 5px;
@@ -90,6 +90,7 @@
 
                         display: flex;
                         img {
+                            cursor: pointer;
                             width: 30%;
                             border-radius: 10px;
                         }
@@ -124,6 +125,7 @@
                         position: absolute;
                         z-index: 100;
                         transform: skew(60deg, 60deg);
+                        transform-style: preserve-3d;
                         pointer-events: none;
                         opacity: 0;
 
@@ -138,6 +140,7 @@
                                 font-size: 1rem;
                             }
                             img {
+                                outline: dashed 2px #15aab2;
                                 width: 95%;
                                 height: 75%;
                             }

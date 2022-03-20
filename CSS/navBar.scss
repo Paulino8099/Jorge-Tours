@@ -92,16 +92,18 @@
 				position: relative;
 				align-self: center;
 				background: #ffffff;
+				border-radius: 5px;
 				width: 20px;
-				height: 2px;
+				height: 4px;
 				transition: .5s;
 				margin-left: -3px;
 				&::after {
 					content: "";
 					background: #ffffff;
+					border-radius: 5px;
 					position: absolute;
 					width: 24px;
-					height: 2px;
+					height: 4px;
 					top: -12px;
 					align-self: center;
 					transition: .5s;
@@ -110,8 +112,9 @@
 					content: "";
 					position: absolute;
 					background: #ffffff;
+					border-radius: 5px;
 					width: 15px;
-					height: 2px;
+					height: 4px;
 					top: 12px;
 					transition: .5s;
 				}
@@ -322,6 +325,7 @@
 		.navBar-content {
 			box-shadow: none; //edit (remove: 0 0 10px #000, add: none)
 			border-bottom-right-radius: 10px; //edit(add: border-top-right-radius)
+			// btn5
 			.btn-open-navBar {
 				right: -50px; //edit (remove: 30px, add: 50px)
 				width: 50px; //edit (remove: 30px, add: 50px)
@@ -358,15 +362,15 @@
 				.lines-btn-navBar {
 					margin-left: -10px; //edit (remove: -3px, add: -10px)
 					width: 30px; //edit (remove: 25px, add: 30px)
-					height: 4px; //edit (remove: 2px, add: 4px)
+					height: 5px; //edit (remove: 4px, add: 5px)
 					&::after {
 						top: -14px; //edit (remove: -12px , add: -14px)
 						width: 40px; //edit (remove: 30px, add: 40px)
-						height: 4px; //edit (remove: 2px, add: 4px)
+						height: 5px; //edit (remove: 4px, add: 5px)
 					}
 					&::before {
 						top: 14px; //edit (remove: 12px , add: 14px)
-						height: 4px; //edit (remove: 2px, add: 4px)
+						height: 5px; //edit (remove: 4px, add: 5px)
 					}
 					&.active {
 						margin-left: 0; //edit (margin-left)

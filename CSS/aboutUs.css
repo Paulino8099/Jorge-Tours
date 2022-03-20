@@ -116,6 +116,7 @@
 }
 
 .aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .title-presentation-aboutUs img {
+  cursor: pointer;
   width: 30%;
   border-radius: 10px;
 }
@@ -154,6 +155,8 @@
   z-index: 100;
   -webkit-transform: skew(60deg, 60deg);
           transform: skew(60deg, 60deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   pointer-events: none;
   opacity: 0;
   display: -ms-grid;
@@ -174,6 +177,7 @@
 }
 
 .aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .img-area-presentation-aboutUs.active img {
+  outline: dashed 2px #15aab2;
   width: 95%;
   height: 75%;
 }

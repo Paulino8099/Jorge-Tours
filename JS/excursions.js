@@ -134,11 +134,11 @@ function dataFloat() {
 /**
  * *included
  */
-//agregando evento a cada btn de "qué incluye" de c/u de las tarjetas
+//agregando evento a cada btn; "qué incluye" de c/u de las tarjetas
 openIncluded();
 function openIncluded() {
     let cards = document.querySelectorAll(".cards");
-    let btnClose = document.querySelectorAll(".btn-close");
+    let btnClose = document.querySelectorAll(".wraper-excursions-content .btn-close");
     
     /**
      * ?abriendo descripción
@@ -148,10 +148,19 @@ function openIncluded() {
 
         e.addEventListener('click', function (e) {
             let btnValue = e.target.innerHTML;
+            console.log(e.target.parentNode.parentNode.parentNode.children[3])
             
             if (btnValue == 'Qué Incluye?') {
-                //navegando dentro de la card para encontrar el elemento "includes" y activándolo
+                //navegando dentro de la card para encontrar el elemento "includes" y poder activarlo
+                e.target.parentNode.parentNode.parentNode.children[3].classList.toggle('active');
+                
+                // console.log(e.target.parentNode.parentNode.parentNode)
+            } else if (btnValue == '<h3>Qué Incluye?</h3>') {
+                //navegando dentro de la card para encontrar el elemento "includes" y poder activarlo
+                //navengando para el mismo objetivo pero de forma diferente para poder encontrarlo
                 e.target.parentNode.parentNode.children[3].classList.toggle('active');
+                
+                // console.log(e.target.parentNode.parentNode)
             } 
         });
     });
