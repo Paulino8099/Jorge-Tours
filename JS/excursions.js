@@ -38,7 +38,7 @@ function dataFloat() {
              */
             // rellenando el título de la ventana flotante
             title.innerHTML = e.target.parentNode.parentNode.parentNode.parentNode.children[1].children[0].innerHTML;
-            
+
             /**
              * ?rellenando la descripción
              */
@@ -132,14 +132,14 @@ function dataFloat() {
 
 
 /**
- * *included
+ * *Incluye
  */
 //agregando evento a cada btn; "qué incluye" de c/u de las tarjetas
 openIncluded();
 function openIncluded() {
     let cards = document.querySelectorAll(".cards");
     let btnClose = document.querySelectorAll(".wraper-excursions-content .btn-close");
-    
+
     /**
      * ?abriendo descripción
      */
@@ -148,20 +148,15 @@ function openIncluded() {
 
         e.addEventListener('click', function (e) {
             let btnValue = e.target.innerHTML;
-            console.log(e.target.parentNode.parentNode.parentNode.children[3])
-            
+
             if (btnValue == 'Qué Incluye?') {
                 //navegando dentro de la card para encontrar el elemento "includes" y poder activarlo
                 e.target.parentNode.parentNode.parentNode.children[3].classList.toggle('active');
-                
-                // console.log(e.target.parentNode.parentNode.parentNode)
             } else if (btnValue == '<h3>Qué Incluye?</h3>') {
                 //navegando dentro de la card para encontrar el elemento "includes" y poder activarlo
                 //navengando para el mismo objetivo pero de forma diferente para poder encontrarlo
                 e.target.parentNode.parentNode.children[3].classList.toggle('active');
-                
-                // console.log(e.target.parentNode.parentNode)
-            } 
+            }
         });
     });
 
@@ -175,4 +170,123 @@ function openIncluded() {
             e.target.parentNode.parentNode.parentNode.children[3].classList.toggle('active')
         });
     });
+};
+
+/**
+ * *Experiencias
+ */
+allConfigExperiences();
+function allConfigExperiences() {
+    let accountant;
+    let listImg;
+
+    /**
+     * ?abriendo experiencias
+     */
+    //abriendo todo el contenido de "expereriencias"
+    openExperiences();
+    function openExperiences() {
+        let btnsExperiences = document.querySelectorAll('.wraper-excursions .btn-experiences');
+
+        btnsExperiences.forEach((e) => {
+            // abriendo experiencias al dar click en cualquiera de los btns "experiencias" de las tarjetas 
+            e.addEventListener('click', function (e) {
+                //recorriendo los elementos necesarios dentro de la card para hallar y activar 
+                // el contenido de "experiencias"
+                e.target.parentNode.parentNode.parentNode.children[4].classList.toggle('active');
+            })
+        });
+    };
+    /**
+     * ?cerrando experiencias
+     */
+    //cerrando todo el contenido de "expereriencias"
+    closeExperiences();
+    function closeExperiences() {
+        let btnsCloseExperiences = document.querySelectorAll('.wraper-excursions .btns-close');
+
+        btnsCloseExperiences.forEach((e) => {
+            e.addEventListener('click', function (e) {
+                //recorriendo los elementos necesarios dentro de la card para hallar y desactivar
+                // el contenido de "experiencias"
+                e.target.parentNode.parentNode.parentNode.parentNode.parentNode.children[4].classList.toggle('active')
+            });
+        });
+    };
+    /**
+     * ?rellenando area de imagenes
+     */
+    // rellenando las imagenes del contenido de "experiencias"
+    refillingImg();
+    function refillingImg() {
+        let btnsExperiences = document.querySelectorAll('.wraper-excursions .btn-experiences');
+
+        btnsExperiences.forEach((e) => {
+
+            e.addEventListener('click', function (e) {
+                // lista de todas las imagenes concernientes a la tarjeta que se le hizo click en "experiencias"
+                listImg = e.target.parentNode.parentNode.parentNode.children[4].children[0].children[2].children;
+                // contador
+                accountant = 0;
+                // seleccionando btn back de c/u de las tarjetas
+                let btnBack = e.target.parentNode.parentNode.parentNode.children[4].children[0].children[0].children[1];
+                // seleccionando btn next de c/u de las tarjetas
+                let btnNext = e.target.parentNode.parentNode.parentNode.children[4].children[0].children[0].children[2];
+
+                /**
+                 * +on/off btns navigation
+                 */
+                onOffBtns();
+                // desactivando o activando btns de navegación adelantar o retroceder las imagenes
+                function onOffBtns() {
+                    /**
+                     * ?on/off btn "back"
+                     */
+                    if (accountant == 0) {
+                        btnBack.classList.toggle('desactive');
+                    }
+                    /**
+                     * ?on/off btn "next"
+                     */
+                    if (accountant == listImg.length - 1) {
+                        btnNext.classList.toggle('desactive');
+                    }
+                }
+
+                /**
+                 * +navegando hacia atrás (btn back)
+                 */
+                //navegando hacia atrás entre las imagenes
+                btnBack.addEventListener('click', function () {
+                    if (accountant >= 1) {
+                        accountant -= 1;
+                    };
+                    /**
+                     * ?rellenado de imagenes
+                     */
+                    //rellenado de imagen al dar click en btn "back"
+                    e.target.parentNode.parentNode.parentNode.children[4].children[0].children[1].innerHTML = `<img src="${listImg[accountant].src}" alt="">`;
+
+                    onOffBtns();
+                });
+                /**
+                 * +navegando hacia adelante (btn next)
+                 */
+                //navegando hacia adelante entre las imagenes
+                btnNext.addEventListener('click', function () {
+                    if (accountant <= (listImg.length - 2)) {
+                        accountant += 1;
+                    };
+                    /**
+                     * ?rellenado de imagenes
+                     */
+                    //rellenado de imagen al dar click en btn "next"
+                    e.target.parentNode.parentNode.parentNode.children[4].children[0].children[1].innerHTML = `<img src="${listImg[accountant].src}" alt="">`;
+                });
+
+                e.target.parentNode.parentNode.parentNode.children[4].children[0].children[1].innerHTML = `<img src="${listImg[accountant].src}" alt="">`;
+                onOffBtns();
+            });
+        });
+    };
 };
