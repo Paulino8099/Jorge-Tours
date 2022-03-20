@@ -193,6 +193,7 @@
 }
 
 .aboutUs .aboutUs-content .wraper-aboutUs .wraper-aboutUs-content .card-presentation-aboutUs .img-area-presentation-aboutUs i {
+  z-index: 100;
   position: absolute;
   top: 0;
   right: 0;
