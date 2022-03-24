@@ -398,6 +398,16 @@ function allConfigExperiences() {
                         btnRightScreen.removeEventListener('click', btnRight2);
                     });
 
+                    // removiendo fondo de imágen
+                    btnCloseScreen.addEventListener('click', function () {
+                        backdropBox.style.background = ``;
+                    });
+
+                    // removiendo fondo de imágen
+                    backdropBox.addEventListener('click', function () {
+                        backdropBox.style.background = ``;
+                    });
+
                     function btnLeft2() {
                         if (accountant >= 1) {
                             accountant -= 1;
