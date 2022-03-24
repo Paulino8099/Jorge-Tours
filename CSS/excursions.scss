@@ -65,12 +65,7 @@
 
 						display: grid;
 						// 3 medias
-						.media-BCL,
-						.media-HC,
-						.media-PR,
-						.media-PM,
-						.media-SL,
-						.media-LT {
+						article:nth-child(1) {
 							width: 90%;
 							margin: 5px 0;
 							padding: 5px;
@@ -120,12 +115,8 @@
 							}
 						}
 						// title (container)
-						.title-BCL,
-						.title-HC,
-						.title-PR,
-						.title-PM,
-						.title-SL,
-						.title-LT {
+						
+						article:nth-child(2) {
 							width: 100%;
 							padding: 5px 0;
 							z-index: 100;
@@ -139,7 +130,7 @@
 							}
 						}
 						// btns
-						dir {
+						article:nth-child(3) {
 							width: 95%;
 							justify-self: center;
 							justify-items: center;
@@ -243,12 +234,7 @@
 							}
 						}
 						// incluye
-						.included-BCL,
-						.included-HC,
-						.included-LT,
-						.included-PM,
-						.included-PR,
-						.included-SL {
+						article:nth-child(4) {
 							width: 0;
 							height: 0;
 							left: 0;
@@ -315,8 +301,7 @@
 							}
 						}
 						// experiencias
-						.experiences-BCL,
-						.experiences-HC {
+						article:nth-child(5) {
 							position: absolute;
 							width: 0;
 							height: 0;

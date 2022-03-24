@@ -2,7 +2,7 @@
 /**
  * *datos flotantes
  */
-// datos flotantes de las imagenes principales
+// datos flotantes de las imagenes principales "3medias"
 dataFloat();
 function dataFloat() {
     let targetAllImg = document.documentElement.querySelectorAll('.click');
@@ -12,7 +12,7 @@ function dataFloat() {
     let body = document.documentElement.querySelector('body');
 
     /**
-     * *agregando eventos a cada imágen  
+     * *agregando eventos a cada imágen
      *///agregando eventos o funciones a cada imagen en particular de las tarjetas del contenedor "excursions"
     targetAllImg.forEach((e) => {
         e.addEventListener('click', function (e) {
@@ -134,7 +134,7 @@ function dataFloat() {
 /**
  * *Incluye
  */
-//agregando evento a cada btn; "qué incluye" de c/u de las tarjetas
+//agregando evento a cada btn "qué incluye" de c/u de las tarjetas
 openIncluded();
 function openIncluded() {
     let cards = document.querySelectorAll(".cards");
@@ -179,65 +179,108 @@ allConfigExperiences();
 function allConfigExperiences() {
     let accountant;
     let listImg;
+    let btnBack;
+    let btnNext;
+    let experiencesContainer;
 
     /**
-     * ?abriendo experiencias
+     * ?on/off experiencias (container)
      */
-    //abriendo todo el contenido de "expereriencias"
-    openExperiences();
-    function openExperiences() {
+    onOffExperiences();
+    function onOffExperiences() {
+        // abriendo o cerrando contenedor "experiencias" al dar click en cualquiera de los btns 
+        // "experiencias" que están dentro de las tarjetas.
         let btnsExperiences = document.querySelectorAll('.wraper-excursions .btn-experiences');
+        experiencesContainer = document.documentElement.querySelectorAll('.wraper-excursions article');
 
         btnsExperiences.forEach((e) => {
-            // abriendo experiencias al dar click en cualquiera de los btns "experiencias" de las tarjetas 
             e.addEventListener('click', function (e) {
-                //recorriendo los elementos necesarios dentro de la card para hallar y activar 
-                // el contenido de "experiencias"
-                e.target.parentNode.parentNode.parentNode.children[4].classList.toggle('active');
-            })
-        });
-    };
-    /**
-     * ?cerrando experiencias
-     */
-    //cerrando todo el contenido de "expereriencias"
-    closeExperiences();
-    function closeExperiences() {
-        let btnsCloseExperiences = document.querySelectorAll('.wraper-excursions .btns-close');
+                /**
+                 * +cerrando contenedores "experiencias"
+                 */
+                closeContainersExperiences();
+                function closeContainersExperiences() {
+                    experiencesContainer.forEach((e) => {
+                        // cerrando todos los contenedores "experiencias" al dar click en cualquiera de los btns
+                        // "experiencias" ubicado en c/u de las tarjetas.
 
-        btnsCloseExperiences.forEach((e) => {
-            e.addEventListener('click', function (e) {
-                //recorriendo los elementos necesarios dentro de la card para hallar y desactivar
-                // el contenido de "experiencias"
-                e.target.parentNode.parentNode.parentNode.parentNode.parentNode.children[4].classList.toggle('active')
+                        accountant = 0;
+                        listImg = '';
+                        e.classList.remove('active');
+                    });
+                };
+                /**
+                 * +abriendo contenedor "experiencias"
+                 */
+                openContainerExperiences();
+                function openContainerExperiences() {
+                    // abriendo contenedor "experiencias" de la tarjeta a la que se le dió click.
+
+                    e.target.parentNode.parentNode.parentNode.children[4].classList.toggle('active');
+                };
             });
         });
+
+        /**
+         * +cerrando contenedor "experiencias"
+         */
+        closeExperiences();
+        function closeExperiences() {
+            //cerrando todo el contenedor "expereriencias" al dar click en btn "close".
+            let btnsCloseExperiences = document.querySelectorAll('.wraper-excursions .btns-close');
+
+            btnsCloseExperiences.forEach((e) => {
+                e.addEventListener('click', function (e) {
+                    //recorriendo los elementos necesarios dentro de la card para hallar y desactivar
+                    // el contenido de "experiencias"
+                    e.target.parentNode.parentNode.parentNode.parentNode.parentNode.children[4].classList.toggle('active')
+                });
+            });
+        };
     };
     /**
-     * ?rellenando area de imagenes
+     * ?rellenando area de imágen
      */
-    // rellenando las imagenes del contenido de "experiencias"
     refillingImg();
     function refillingImg() {
+        // rellenando las imagenes del contenedor "experiencias"
         let btnsExperiences = document.querySelectorAll('.wraper-excursions .btn-experiences');
 
         btnsExperiences.forEach((e) => {
-
             e.addEventListener('click', function (e) {
+                /**
+                 * +variables
+                 */
                 // lista de todas las imagenes concernientes a la tarjeta que se le hizo click en "experiencias"
                 listImg = e.target.parentNode.parentNode.parentNode.children[4].children[0].children[2].children;
                 // contador
                 accountant = 0;
                 // seleccionando btn back de c/u de las tarjetas
-                let btnBack = e.target.parentNode.parentNode.parentNode.children[4].children[0].children[0].children[1];
+                btnBack = e.target.parentNode.parentNode.parentNode.children[4].children[0].children[0].children[1];
                 // seleccionando btn next de c/u de las tarjetas
-                let btnNext = e.target.parentNode.parentNode.parentNode.children[4].children[0].children[0].children[2];
+                btnNext = e.target.parentNode.parentNode.parentNode.children[4].children[0].children[0].children[2];
+                /**
+                 * +funciones
+                 */
+                //escogiendo una imagen de la lista de imagenes (que se encuentra al hacer click en alguna de las tarjetas)
+                //al dar click en btn "back". Esto para rellenar con la imágen siguiente o la imágen anterior.
+                refillingIMg();
+                function refillingIMg() {
+                    e.target.parentNode.parentNode.parentNode.children[4].children[0].children[1].innerHTML = `<img src="${listImg[accountant].src}" alt="">`;
+                };
+
+                /**
+                 * ??????????????????????????????????????????????????????????????????????????????????????
+                 * ??????????????????????????????????????????????????????????????????????????????????????
+                 * ??????????????????????????????????????????????????????????????????????????????????????
+                 */
 
                 /**
                  * +on/off btns navigation
                  */
+                // activando o desactivando los botones de navegación. Esto solo va a suceder en caso de que ya 
+                //no hayan mas imagenes que mostrar al retroceder o adelantar
                 onOffBtns();
-                // desactivando o activando btns de navegación adelantar o retroceder las imagenes
                 function onOffBtns() {
                     /**
                      * ?on/off btn "back"
@@ -254,38 +297,40 @@ function allConfigExperiences() {
                 }
 
                 /**
-                 * +navegando hacia atrás (btn back)
+                 * +navegando con btns (left, back)
                  */
-                //navegando hacia atrás entre las imagenes
-                btnBack.addEventListener('click', function () {
-                    if (accountant >= 1) {
-                        accountant -= 1;
-                    };
-                    /**
-                     * ?rellenado de imagenes
-                     */
-                    //rellenado de imagen al dar click en btn "back"
-                    e.target.parentNode.parentNode.parentNode.children[4].children[0].children[1].innerHTML = `<img src="${listImg[accountant].src}" alt="">`;
+                btnLeftBack();
+                function btnLeftBack() {
+                    //navegando hacia atrás entre las imagenes
+                    btnBack.addEventListener('click', btnBack2);
+                    //navegando hacia adelante entre las imagenes
+                    btnNext.addEventListener('click', btnNext2);
+                    
+                    // removiendo eventListener del btn 
+                    btnsExperiences.forEach((e) => {
+                        e.addEventListener('click', function () {
+                            btnBack.removeEventListener('click', btnBack2);
+                            btnNext.removeEventListener('click', btnNext2);
+                        });
+                    });
+                    
+                    function btnBack2() {
+                        if (accountant >= 1) {
+                            accountant -= 1;
+                        };
 
-                    onOffBtns();
-                });
-                /**
-                 * +navegando hacia adelante (btn next)
-                 */
-                //navegando hacia adelante entre las imagenes
-                btnNext.addEventListener('click', function () {
-                    if (accountant <= (listImg.length - 2)) {
-                        accountant += 1;
+                        refillingIMg();
+                        onOffBtns();
                     };
-                    /**
-                     * ?rellenado de imagenes
-                     */
-                    //rellenado de imagen al dar click en btn "next"
-                    e.target.parentNode.parentNode.parentNode.children[4].children[0].children[1].innerHTML = `<img src="${listImg[accountant].src}" alt="">`;
-                });
-
-                e.target.parentNode.parentNode.parentNode.children[4].children[0].children[1].innerHTML = `<img src="${listImg[accountant].src}" alt="">`;
-                onOffBtns();
+                    function btnNext2() {
+                        if (accountant <= (listImg.length - 2)) {
+                            accountant += 1;
+                        };
+                        
+                        refillingIMg();
+                        onOffBtns();
+                    };
+                };
             });
         });
     };
