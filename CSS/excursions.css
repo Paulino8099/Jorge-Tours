@@ -712,11 +712,7 @@
   height: max-content;
   -ms-grid-column-align: center;
       justify-self: center;
-  background: #15aab2;
-  overflow: hidden;
-  position: relative;
-  -webkit-transition: .3s;
-  transition: .3s;
+  background: #0E6251;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
@@ -725,175 +721,43 @@
   grid-row: 1/2;
 }
 
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .BCL-content article:nth-child(3) button:nth-child(2):hover::after, .excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .BCL-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .HC-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .HC-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .PR-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .PR-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .PM-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .PM-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .SL-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .SL-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .LT-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .LT-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .BCL-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .BCL-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .HC-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .HC-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .PR-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .PR-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .PM-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .PM-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .SL-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .SL-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .LT-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .LT-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .BCL-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .BCL-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .HC-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .HC-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .PR-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .PR-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .PM-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .PM-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .SL-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .SL-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .LT-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .LT-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .BCL-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .BCL-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .HC-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .HC-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .PR-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .PR-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .PM-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .PM-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .SL-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .SL-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .LT-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .LT-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .BCL-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .BCL-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .HC-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .HC-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .PR-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .PR-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .PM-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .PM-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .SL-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .SL-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .LT-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .LT-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .BCL-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .BCL-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .HC-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .HC-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .PR-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .PR-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .PM-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .PM-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .SL-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .SL-content article:nth-child(3) button:nth-child(2):hover::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .LT-content article:nth-child(3) button:nth-child(2):hover::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .LT-content article:nth-child(3) button:nth-child(2):hover::before {
-  height: 50%;
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .BCL-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .HC-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .PR-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .PM-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .SL-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .LT-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .BCL-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .HC-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .PR-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .PM-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .SL-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .LT-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .BCL-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .HC-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .PR-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .PM-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .SL-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .LT-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .BCL-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .HC-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .PR-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .PM-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .SL-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .LT-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .BCL-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .HC-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .PR-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .PM-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .SL-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .LT-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .BCL-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .HC-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .PR-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .PM-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .SL-content article:nth-child(3) button:nth-child(2):hover,
+.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .LT-content article:nth-child(3) button:nth-child(2):hover {
   background: #15aab2;
-}
-
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .BCL-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .HC-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .PR-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .PM-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .SL-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .LT-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .BCL-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .HC-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .PR-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .PM-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .SL-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .LT-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .BCL-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .HC-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .PR-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .PM-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .SL-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .LT-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .BCL-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .HC-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .PR-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .PM-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .SL-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .LT-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .BCL-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .HC-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .PR-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .PM-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .SL-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .LT-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .BCL-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .HC-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .PR-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .PM-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .SL-content article:nth-child(3) button:nth-child(2)::after,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .LT-content article:nth-child(3) button:nth-child(2)::after {
-  content: "";
-  background: #0E6251;
-  width: 100%;
-  height: 10%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: 50;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .BCL-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .HC-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .PR-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .PM-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .SL-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .LT-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .BCL-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .HC-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .PR-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .PM-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .SL-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .HC .LT-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .BCL-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .HC-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .PR-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .PM-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .SL-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PR .LT-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .BCL-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .HC-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .PR-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .PM-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .SL-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .PM .LT-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .BCL-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .HC-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .PR-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .PM-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .SL-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .SL .LT-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .BCL-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .HC-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .PR-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .PM-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .SL-content article:nth-child(3) button:nth-child(2)::before,
-.excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .LT-content article:nth-child(3) button:nth-child(2)::before {
-  content: "";
-  background: #0E6251;
-  width: 100%;
-  height: 10%;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  z-index: 50;
-  -webkit-transition: .3s;
-  transition: .3s;
 }
 
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .BCL-content article:nth-child(3) button:nth-child(3),
@@ -1116,7 +980,7 @@
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .SL-content article:nth-child(4).active,
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .LT-content article:nth-child(4).active {
   width: 100%;
-  height: 100%;
+  height: calc(100% + 5px);
   opacity: 1;
   pointer-events: visible;
   -webkit-transform: skew(0deg);
@@ -1878,7 +1742,8 @@
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .PM-content article:nth-child(5) div span:nth-child(1) button:nth-child(2).desactive,
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .SL-content article:nth-child(5) div span:nth-child(1) button:nth-child(2).desactive,
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .LT-content article:nth-child(5) div span:nth-child(1) button:nth-child(2).desactive {
-  opacity: .8;
+  opacity: .1;
+  color: #ff0000;
 }
 
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .BCL-content article:nth-child(5) div span:nth-child(1) button:nth-child(3),
@@ -1960,7 +1825,8 @@
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .PM-content article:nth-child(5) div span:nth-child(1) button:nth-child(3).desactive,
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .SL-content article:nth-child(5) div span:nth-child(1) button:nth-child(3).desactive,
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content .LT .LT-content article:nth-child(5) div span:nth-child(1) button:nth-child(3).desactive {
-  opacity: .8;
+  opacity: .1;
+  color: #ff0000;
 }
 
 .excursions .excursions-content .wraper-excursions .wraper-excursions-content .BCL .BCL-content article:nth-child(5) div span:nth-child(1) button:nth-child(4),
@@ -2044,9 +1910,9 @@
   position: absolute;
   place-self: center;
   place-items: center;
-  width: 95%;
+  width: 97%;
   height: 95%;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
   z-index: 90;
   display: -ms-grid;

@@ -64,18 +64,16 @@ body.active {
 }
 
 body .backdrop-box {
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  background: #00000080;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
   width: 100vw;
   height: 100vh;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  outline: 10px solid #155db1;
   position: fixed;
-  -webkit-transition: .5s;
-  transition: .5s;
-  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
   z-index: 0;
+  opacity: 0;
   pointer-events: none;
 }
 
@@ -85,7 +83,7 @@ body .backdrop-box.active {
   pointer-events: visible;
 }
 
-body .medias-excursions {
+body .fullscreen {
   position: fixed;
   width: 60%;
   max-height: 460px;
@@ -105,13 +103,13 @@ body .medias-excursions {
   display: grid;
 }
 
-body .medias-excursions.active {
+body .fullscreen.active {
   z-index: 11000;
   opacity: 1;
   pointer-events: visible;
 }
 
-body .medias-excursions .medias-excursions-content {
+body .fullscreen .fullscreen-content {
   width: 100%;
   place-content: center;
   position: relative;
@@ -124,29 +122,75 @@ body .medias-excursions .medias-excursions-content {
           flex-direction: column;
 }
 
-body .medias-excursions .medias-excursions-content .btn-medias-excursions {
+body .fullscreen .fullscreen-content .btn-close-fullscreen {
   position: absolute;
-  top: 2px;
+  top: 0;
   right: 5px;
+  z-index: 150;
+  cursor: pointer;
 }
 
-body .medias-excursions .medias-excursions-content .btn-medias-excursions i {
-  color: #444444;
-  font-size: calc(.8rem + 1vw);
-}
-
-body .medias-excursions .medias-excursions-content .btn-medias-excursions i:hover {
+body .fullscreen .fullscreen-content .btn-close-fullscreen:hover i {
   color: #ff0000;
 }
 
-body .medias-excursions .medias-excursions-content .title-medias-excursions {
+body .fullscreen .fullscreen-content .btn-close-fullscreen i {
+  color: #ffffff;
+  -webkit-filter: drop-shadow(0 0 10px #000000);
+          filter: drop-shadow(0 0 10px #000000);
+  font-size: 2rem;
+}
+
+body .fullscreen .fullscreen-content .btns-navigation-fullscreen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+}
+
+body .fullscreen .fullscreen-content .btns-navigation-fullscreen button:hover {
+  color: #155db1;
+}
+
+body .fullscreen .fullscreen-content .btns-navigation-fullscreen .btn-left-fullscreen {
+  position: absolute;
+  color: #ffffff;
+  width: 25px;
+  height: 50px;
+  font-size: 2rem;
+  border-radius: 5px;
+  place-items: center;
+  background: #ffffff20;
+  left: 5px;
+  top: calc(50% - 12px);
+  display: -ms-grid;
+  display: grid;
+}
+
+body .fullscreen .fullscreen-content .btns-navigation-fullscreen .btn-right-fullscreen {
+  position: absolute;
+  color: #ffffff;
+  width: 25px;
+  height: 50px;
+  font-size: 2rem;
+  border-radius: 5px;
+  place-items: center;
+  background: #ffffff20;
+  right: 5px;
+  top: calc(50% - 12px);
+  display: -ms-grid;
+  display: grid;
+}
+
+body .fullscreen .fullscreen-content .title-fullscreen {
   width: 100%;
   text-align: center;
   display: -ms-grid;
   display: grid;
 }
 
-body .medias-excursions .medias-excursions-content .title-medias-excursions h3 {
+body .fullscreen .fullscreen-content .title-fullscreen h3 {
   -ms-grid-column-align: center;
       justify-self: center;
   font-size: calc(.8rem + 1vw);
@@ -154,7 +198,7 @@ body .medias-excursions .medias-excursions-content .title-medias-excursions h3 {
   text-shadow: 0 0 5px #00000080;
 }
 
-body .medias-excursions .medias-excursions-content .img-medias-excursions {
+body .fullscreen .fullscreen-content .img-fullscreen {
   width: 100%;
   place-items: center;
   border-radius: 10px;
@@ -164,11 +208,11 @@ body .medias-excursions .medias-excursions-content .img-medias-excursions {
   display: grid;
 }
 
-body .medias-excursions .medias-excursions-content .img-medias-excursions.active {
+body .fullscreen .fullscreen-content .img-fullscreen.active {
   z-index: 11000;
 }
 
-body .medias-excursions .medias-excursions-content .img-medias-excursions img {
+body .fullscreen .fullscreen-content .img-fullscreen img {
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: .5s;
@@ -177,7 +221,7 @@ body .medias-excursions .medias-excursions-content .img-medias-excursions img {
   height: 410px;
 }
 
-body .medias-excursions .medias-excursions-content .des-medias-excursions {
+body .fullscreen .fullscreen-content .des-fullscreen {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -191,12 +235,12 @@ body .medias-excursions .medias-excursions-content .des-medias-excursions {
 }
 
 @media (max-width: 750px) {
-  body .medias-excursions {
+  body .fullscreen {
     top: 25%;
     left: 5%;
     width: 90%;
   }
-  body .medias-excursions .medias-excursions-content .img-medias-excursions img {
+  body .fullscreen .fullscreen-content .img-fullscreen img {
     max-height: -webkit-min-content;
     max-height: -moz-min-content;
     max-height: min-content;

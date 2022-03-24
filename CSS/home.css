@@ -224,10 +224,42 @@
 .home .home-content .comment-presenting-home .comment-presenting-home-content span h4 {
   color: #ffffff;
   font-size: calc(1rem + 1vw);
-  -webkit-animation: presentintComment 2s cubic-bezier(0.1, 0.1, 0.855, 0.06) infinite;
-          animation: presentintComment 2s cubic-bezier(0.1, 0.1, 0.855, 0.06) infinite;
+  -webkit-animation: animate 2s cubic-bezier(0.1, 0.1, 0.855, 0.06) infinite;
+          animation: animate 2s cubic-bezier(0.1, 0.1, 0.855, 0.06) infinite;
   -webkit-animation-delay: calc(.2s * var(--i));
           animation-delay: calc(.2s * var(--i));
+}
+
+@-webkit-keyframes animate {
+  50% {
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+  }
+  50% {
+    text-shadow: 0 0 5px #00ff00;
+    -webkit-transform: translateY(-10px) scale(1.4);
+            transform: translateY(-10px) scale(1.4);
+  }
+  100% {
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes animate {
+  50% {
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+  }
+  50% {
+    text-shadow: 0 0 5px #00ff00;
+    -webkit-transform: translateY(-10px) scale(1.4);
+            transform: translateY(-10px) scale(1.4);
+  }
+  100% {
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+  }
 }
 
 @media (max-width: 750px) {

@@ -53,15 +53,15 @@ body {
 	// ||||||||||||||||||||||||||||||||||||||||backdrop|||||||||||||||||||||||||||||||||||||||||
 	// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 	.backdrop-box {
-		filter: grayscale(100%);
-		background: #00000080;
+		filter: blur(5px);
 		width: 100vw;
 		height: 100vh;
-		justify-self: center;
+		// justify-self: center;
+		outline: 10px solid #155db1;
 		position: fixed;
-		transition: .5s;
-		opacity: 0;
+		transition: .3s;
 		z-index: 0;
+		opacity: 0;
 		pointer-events: none;
 		&.active {
 			z-index: 10000;
@@ -71,14 +71,14 @@ body {
 	}
 	
 	// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-	// ||||||||||||||||||||||||||||||||||||||||Excurisions||||||||||||||||||||||||||||||||||||||
-	// ||||||||||||||||||||||||||||Excurisions|||||||||||||Excurisions||||||||||||||||||||||||||
-	// ||||||||||||||||Excurisions|||||||||||||||||||||||||||||||||||||Excurisions||||||||||||||
-	// ||||||||||||||||||||||||||||Excurisions|||||||||||||Excurisions||||||||||||||||||||||||||
-	// ||||||||||||||||||||||||||||||||||||||||Excurisions||||||||||||||||||||||||||||||||||||||
+	// ||||||||||||||||||||||||||||||||||||||||Fullscreen|||||||||||||||||||||||||||||||||||||||
+	// ||||||||||||||||||||||||||||Fullscreen|||||||||||||Fullscreen||||||||||||||||||||||||||||
+	// ||||||||||||||||Fullscreen|||||||||||||||||||||||||||||||||||||Fullscreen||||||||||||||||
+	// ||||||||||||||||||||||||||||Fullscreen|||||||||||||Fullscreen||||||||||||||||||||||||||||
+	// ||||||||||||||||||||||||||||||||||||||||Fullscreen|||||||||||||||||||||||||||||||||||||||
 	// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 	// wraper medias excursions
-	.medias-excursions {
+	.fullscreen {
 		position: fixed;
 		width: 60%;
 		max-height: 460px;
@@ -99,28 +99,74 @@ body {
 			opacity: 1;
 			pointer-events: visible;
 		}
-		.medias-excursions-content {
+		.fullscreen-content {
 			width: 100%;
 			place-content: center;
 			position: relative;
 
 			display: flex;
 			flex-direction: column;
-			// btn
-			.btn-medias-excursions {
+			// btn close
+			.btn-close-fullscreen {
 				position: absolute;
-				top: 2px;
+				top: 0;
 				right: 5px;
-				i {
-					color: #444444;
-					font-size: calc(.8rem + 1vw);
-					&:hover {
+				z-index: 150;
+				cursor: pointer;
+				&:hover {
+					i {
 						color: #ff0000;
 					}
 				}
+				i {
+					color: #ffffff;
+					filter: drop-shadow(0 0 10px #000000);
+					font-size: 2rem;
+				}
+			}
+			// btns navigation
+			.btns-navigation-fullscreen {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+
+				display: grid;
+				button {
+					&:hover {
+						color: #155db1;
+					}
+				}
+				.btn-left-fullscreen {
+					position: absolute;
+					color: #ffffff;
+					width: 25px;
+					height: 50px;
+					font-size: 2rem;
+					border-radius: 5px;
+					place-items: center;
+					background: #ffffff20;
+					left: 5px;
+					top: calc(50% - 12px);
+
+					display: grid;
+				}
+				.btn-right-fullscreen {
+					position: absolute;
+					color: #ffffff;
+					width: 25px;
+					height: 50px;
+					font-size: 2rem;
+					border-radius: 5px;
+					place-items: center;
+					background: #ffffff20;
+					right: 5px;
+					top: calc(50% - 12px);
+
+					display: grid;
+				}
 			}
 			// title
-			.title-medias-excursions {
+			.title-fullscreen {
 				width: 100%;
 				text-align: center;
 
@@ -133,7 +179,7 @@ body {
 				}
 			}
 			// img
-			.img-medias-excursions {
+			.img-fullscreen {
 				width: 100%;
 				place-items: center;
 				border-radius: 10px;
@@ -151,7 +197,7 @@ body {
 				}
 			}
 			// description
-			.des-medias-excursions {
+			.des-fullscreen {
 				position: absolute;
 				bottom: 0;
 				left: 0;
@@ -166,12 +212,12 @@ body {
 		}
 	}
 	@media (max-width: 750px) {
-		.medias-excursions {
+		.fullscreen {
 			top: 25%;
 			left: 5%;
 			width: 90%;
-			.medias-excursions-content {
-				.img-medias-excursions {
+			.fullscreen-content {
+				.img-fullscreen {
 					img {
 						max-height: min-content;
 					}
