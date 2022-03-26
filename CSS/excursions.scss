@@ -142,7 +142,7 @@
 							display: grid;
 							grid-template-columns: repeat(2, auto);
 							grid-template-rows: repeat(2, auto);
-							// btn en Gral 
+							// btns en General 
 							button {
 								cursor: pointer;
 								border-radius: 5px;
@@ -294,7 +294,7 @@
 							div {
 								width: 100%;
 								height: 100%;
-								background-color: #15aab2;
+								background-color: #155db1;
 								position: relative;
 
 								display: grid;
@@ -372,7 +372,8 @@
 									display: grid;
 									img {
 										width: 100%;
-										object-fit: cover;
+										height: 100%;
+										object-fit: fill;
 										border-radius: 10px;
 									}
 								}

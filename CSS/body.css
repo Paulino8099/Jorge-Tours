@@ -64,14 +64,13 @@ body.active {
 }
 
 body .backdrop-box {
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
   width: 100vw;
   height: 100vh;
-  outline: 10px solid #155db1;
+  outline: 50px solid #155db1;
   position: fixed;
   -webkit-transition: .3s;
   transition: .3s;
+  background: #000000bf;
   z-index: 0;
   opacity: 0;
   pointer-events: none;
@@ -86,14 +85,14 @@ body .backdrop-box.active {
 body .fullscreen {
   position: fixed;
   width: 60%;
-  max-height: 460px;
-  top: 5%;
-  left: 20%;
+  max-height: 100%;
+  -ms-grid-column-align: center;
+      justify-self: center;
   z-index: 800;
   border-radius: 10px;
   background: #def7ff;
-  -webkit-box-shadow: 0 0 10px 2px #00000090;
-          box-shadow: 0 0 10px 2px #00000090;
+  -webkit-box-shadow: 0 0 10px #00000080;
+          box-shadow: 0 0 10px #00000080;
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
@@ -109,8 +108,12 @@ body .fullscreen.active {
   pointer-events: visible;
 }
 
-body .fullscreen .fullscreen-content {
+body .fullscreen.active .fullscreen-content {
   width: 100%;
+}
+
+body .fullscreen .fullscreen-content {
+  width: 0;
   place-content: center;
   position: relative;
   display: -webkit-box;
@@ -149,38 +152,35 @@ body .fullscreen .fullscreen-content .btns-navigation-fullscreen {
   display: grid;
 }
 
+body .fullscreen .fullscreen-content .btns-navigation-fullscreen button {
+  position: absolute;
+  color: #0E6251;
+  background: #ffffff40;
+  width: 25px;
+  height: 50px;
+  font-size: 2rem;
+  border-radius: 5px;
+  place-items: center;
+  display: -ms-grid;
+  display: grid;
+}
+
 body .fullscreen .fullscreen-content .btns-navigation-fullscreen button:hover {
   color: #155db1;
 }
 
+body .fullscreen .fullscreen-content .btns-navigation-fullscreen button:active {
+  background: #ffffff80;
+}
+
 body .fullscreen .fullscreen-content .btns-navigation-fullscreen .btn-left-fullscreen {
-  position: absolute;
-  color: #ffffff;
-  width: 25px;
-  height: 50px;
-  font-size: 2rem;
-  border-radius: 5px;
-  place-items: center;
-  background: #ffffff20;
   left: 5px;
   top: calc(50% - 12px);
-  display: -ms-grid;
-  display: grid;
 }
 
 body .fullscreen .fullscreen-content .btns-navigation-fullscreen .btn-right-fullscreen {
-  position: absolute;
-  color: #ffffff;
-  width: 25px;
-  height: 50px;
-  font-size: 2rem;
-  border-radius: 5px;
-  place-items: center;
-  background: #ffffff20;
   right: 5px;
   top: calc(50% - 12px);
-  display: -ms-grid;
-  display: grid;
 }
 
 body .fullscreen .fullscreen-content .title-fullscreen {
@@ -201,9 +201,10 @@ body .fullscreen .fullscreen-content .title-fullscreen h3 {
 body .fullscreen .fullscreen-content .img-fullscreen {
   width: 100%;
   place-items: center;
-  border-radius: 10px;
   -webkit-transition: .5s;
   transition: .5s;
+  border-radius: 10px;
+  overflow: hidden;
   display: -ms-grid;
   display: grid;
 }
@@ -213,12 +214,13 @@ body .fullscreen .fullscreen-content .img-fullscreen.active {
 }
 
 body .fullscreen .fullscreen-content .img-fullscreen img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-transition: .5s;
-  transition: .5s;
   width: 100%;
   height: 410px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  -webkit-transition: .5s;
+  transition: .5s;
+  place-self: center;
 }
 
 body .fullscreen .fullscreen-content .des-fullscreen {
@@ -241,6 +243,8 @@ body .fullscreen .fullscreen-content .des-fullscreen {
     width: 90%;
   }
   body .fullscreen .fullscreen-content .img-fullscreen img {
+    -o-object-fit: cover;
+       object-fit: cover;
     max-height: -webkit-min-content;
     max-height: -moz-min-content;
     max-height: min-content;

@@ -53,13 +53,12 @@ body {
 	// ||||||||||||||||||||||||||||||||||||||||backdrop|||||||||||||||||||||||||||||||||||||||||
 	// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 	.backdrop-box {
-		filter: blur(5px);
 		width: 100vw;
 		height: 100vh;
-		// justify-self: center;
-		outline: 10px solid #155db1;
+		outline: 50px solid #155db1;
 		position: fixed;
 		transition: .3s;
+		background: #000000bf;
 		z-index: 0;
 		opacity: 0;
 		pointer-events: none;
@@ -81,13 +80,12 @@ body {
 	.fullscreen {
 		position: fixed;
 		width: 60%;
-		max-height: 460px;
-		top: 5%;
-		left: 20%;
+		max-height: 100%;
+		justify-self: center;
 		z-index: 800;
 		border-radius: 10px;
 		background: #def7ff;
-		box-shadow: 0 0 10px 2px #00000090;
+		box-shadow: 0 0 10px #00000080;
 		overflow: hidden;
 		opacity: 0;
 		pointer-events: none;
@@ -98,9 +96,12 @@ body {
 			z-index: 11000;
 			opacity: 1;
 			pointer-events: visible;
+			.fullscreen-content {
+				width: 100%;
+			}
 		}
 		.fullscreen-content {
-			width: 100%;
+			width: 0;
 			place-content: center;
 			position: relative;
 
@@ -132,37 +133,30 @@ body {
 
 				display: grid;
 				button {
+					position: absolute;
+					color: #0E6251;
+					background: #ffffff40;
+					width: 25px;
+					height: 50px;
+					font-size: 2rem;
+					border-radius: 5px;
+					place-items: center;
+
+					display: grid;
 					&:hover {
 						color: #155db1;
 					}
+					&:active {
+						background: #ffffff80;
+					}
 				}
 				.btn-left-fullscreen {
-					position: absolute;
-					color: #ffffff;
-					width: 25px;
-					height: 50px;
-					font-size: 2rem;
-					border-radius: 5px;
-					place-items: center;
-					background: #ffffff20;
 					left: 5px;
 					top: calc(50% - 12px);
-
-					display: grid;
 				}
 				.btn-right-fullscreen {
-					position: absolute;
-					color: #ffffff;
-					width: 25px;
-					height: 50px;
-					font-size: 2rem;
-					border-radius: 5px;
-					place-items: center;
-					background: #ffffff20;
 					right: 5px;
 					top: calc(50% - 12px);
-
-					display: grid;
 				}
 			}
 			// title
@@ -182,18 +176,20 @@ body {
 			.img-fullscreen {
 				width: 100%;
 				place-items: center;
-				border-radius: 10px;
 				transition: .5s;
+				border-radius: 10px;
+				overflow: hidden;
 
 				display: grid;
 				&.active {
 					z-index: 11000;
 				}
 				img {
-					object-fit: cover;
-					transition: .5s;
 					width: 100%;
 					height: 410px;
+					object-fit: fill;
+					transition: .5s;
+					place-self: center;
 				}
 			}
 			// description
@@ -219,7 +215,8 @@ body {
 			.fullscreen-content {
 				.img-fullscreen {
 					img {
-						max-height: min-content;
+						object-fit: cover; //edit (remove: fill)
+						max-height: min-content; //edit (remove: 410px)
 					}
 				}
 			}
